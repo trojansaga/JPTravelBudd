@@ -1,0 +1,719 @@
+TTravelBudd
+v6
+r1
+cCheck dependencies
+cCpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/ResourceRules.plist DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/ResourceRules.plist
+cProcessPCH /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-adysmygumbctwifqlzewmesselqd/TravelBudd-Prefix.pch.pch TravelBudd/TravelBudd-Prefix.pch normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/RFImageToDataTransformer.o /Users/trojansaga/Documents/ios/TravelBudd/Utilities/RFImageToDataTransformer.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/NSNumber+XMPP.o /Users/trojansaga/Documents/ios/TravelBudd/Categories/NSNumber+XMPP.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPDeprecatedPlainAuthentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Plain/XMPPDeprecatedPlainAuthentication.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/GCDAsyncSocket.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaAsyncSocket/GCDAsyncSocket.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/ResourceRules.plist
+c00000000532468330000000000000096
+t1394894899
+s150
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/SDKSettings.plist
+c0000000053246833000000000000036B
+t1394894899
+s875
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/CoreServices/SystemVersion.plist
+c0000000053246834000000000000019E
+t1394894900
+s414
+
+N/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/include/module.map
+c000000005324687E0000000000000ADC
+t1394894974
+s2780
+
+N/Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Plain/XMPPDeprecatedPlainAuthentication.m
+c000000005339AB4A0000000000000FF4
+t1396288330
+s4084
+
+N/Users/trojansaga/Documents/ios/TravelBudd/Categories/NSNumber+XMPP.m
+c000000005339AB4A0000000000001920
+t1396288330
+s6432
+
+N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-adysmygumbctwifqlzewmesselqd/TravelBudd-Prefix.pch.pch
+t1396615629
+s111104
+
+N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/GCDAsyncSocket.o
+t2
+s0
+
+N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/NSNumber+XMPP.o
+t2
+s0
+
+N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/RFImageToDataTransformer.o
+t2
+s0
+
+N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPDeprecatedPlainAuthentication.o
+t2
+s0
+
+N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPSRVResolver.o
+t2
+s0
+
+N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/ResourceRules.plist
+t2
+s0
+
+N/Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/TravelBudd-Prefix.pch
+c00000000533CB8D30000000000000158
+t1396488403
+s344
+
+N/Users/trojansaga/Documents/ios/TravelBudd/Utilities/RFImageToDataTransformer.m
+c000000005339AB4A0000000000000378
+t1396288330
+s888
+
+N/Users/trojansaga/Documents/ios/TravelBudd/Utilities/XMPPSRVResolver.m
+c000000005339AB4A000000000000470C
+t1396288330
+s18188
+
+N/Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaAsyncSocket/GCDAsyncSocket.m
+c000000005339AB4A000000000003087F
+t1396288330
+s198783
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Anonymous/XMPPAnonymousAuthentication.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Digest/XMPPDeprecatedDigestAuthentication.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Plain/XMPPDeprecatedPlainAuthentication.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Digest-MD5/XMPPDigestMD5Authentication.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Plain/XMPPPlainAuthentication.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Authentication/SCRAM-SHA-1/XMPPSCRAMSHA1Authentication.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Authentication/X-Facebook-Platform/XMPPXFacebookPlatformAuthentication.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Authentication/X-OAuth2-Google/XMPPXOAuth2Google.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Categories/NSData+XMPP.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Categories/NSNumber+XMPP.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Categories/NSXMLElement+XMPP.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPElement.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPIQ.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPJID.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPMessage.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPModule.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPParser.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPPresence.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPStream.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/JPLoginViewController.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/JPAppDelegate.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/main.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Utilities/DDList.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Utilities/GCDMulticastDelegate.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Utilities/RFImageToDataTransformer.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Utilities/XMPPIDTracker.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Utilities/XMPPSRVResolver.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Utilities/XMPPStringPrep.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaAsyncSocket/GCDAsyncSocket.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/DDASLLogger.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/DDAbstractDatabaseLogger.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/DDFileLogger.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/DDLog.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/DDTTYLogger.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/Extensions/ContextFilterLogFormatter.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/Extensions/DispatchQueueLogFormatter.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/Categories/NSString+DDXML.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/DDXMLDocument.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/DDXMLElement.m
+r0
+
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/DDXMLNode.m
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies07ef1f4ce1eeb841^edef504ce1eeb841^---0#1#1#--18"Check dependencies36"D5A0D2AC-0829-4920-B855-DD05B5C0DAF9-
+
+CCodeSign /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app
+r0
+
+CCompileAssetCatalog /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app /Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/Images.xcassets
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/ContextFilterLogFormatter.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/Extensions/ContextFilterLogFormatter.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/DDASLLogger.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/DDASLLogger.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/DDAbstractDatabaseLogger.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/DDAbstractDatabaseLogger.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/DDFileLogger.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/DDFileLogger.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/DDList.o /Users/trojansaga/Documents/ios/TravelBudd/Utilities/DDList.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/DDLog.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/DDLog.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/DDTTYLogger.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/DDTTYLogger.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/DDXMLDocument.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/DDXMLDocument.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/DDXMLElement.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/DDXMLElement.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/DDXMLNode.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/DDXMLNode.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/DispatchQueueLogFormatter.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/Extensions/DispatchQueueLogFormatter.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/GCDAsyncSocket.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaAsyncSocket/GCDAsyncSocket.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418308429.848629
+e418308430.566495
+r1
+xCompileC
+xDerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/GCDAsyncSocket.o
+x/Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaAsyncSocket/GCDAsyncSocket.m
+xnormal
+xarm64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaAsyncSocket/GCDAsyncSocket.m
+d/Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaAsyncSocket/GCDAsyncSocket.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaAsyncSocket/GCDAsyncSocket.m248"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/GCDAsyncSocket.o Vendor/CocoaAsyncSocket/GCDAsyncSocket.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler3563d94de1eeb841^6407914ee1eeb841^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaAsyncSocket/GCDAsyncSocket.m0000000000000000^4091"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/GCDAsyncSocket.o Vendor/CocoaAsyncSocket/GCDAsyncSocket.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/trojansaga/Documents/ios/TravelBudd    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.1 -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-generated-files.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-own-target-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-all-target-headers.hmap -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-project-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources/arm64 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources -F/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/include/libxml2 -include /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-adysmygumbctwifqlzewmesselqd/TravelBudd-Prefix.pch -MMD -MT dependencies -MF /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/GCDAsyncSocket.d --serialize-diagnostics /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/GCDAsyncSocket.dia -c /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaAsyncSocket/GCDAsyncSocket.m -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/GCDAsyncSocket.o36"0E0D283B-48CE-4B32-85DE-DE4FE09CFD0E-
+bDEBCEE80-5B28-473D-806B-B7E4A3EB5C99
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/GCDMulticastDelegate.o /Users/trojansaga/Documents/ios/TravelBudd/Utilities/GCDMulticastDelegate.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPAppDelegate.o /Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/JPAppDelegate.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPLoginViewController.o /Users/trojansaga/Documents/ios/TravelBudd/JPLoginViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/NSData+XMPP.o /Users/trojansaga/Documents/ios/TravelBudd/Categories/NSData+XMPP.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/NSNumber+XMPP.o /Users/trojansaga/Documents/ios/TravelBudd/Categories/NSNumber+XMPP.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418308429.847542
+e418308430.064056
+r1
+xCompileC
+xDerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/NSNumber+XMPP.o
+x/Users/trojansaga/Documents/ios/TravelBudd/Categories/NSNumber+XMPP.m
+xnormal
+xarm64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/trojansaga/Documents/ios/TravelBudd/Categories/NSNumber+XMPP.m
+d/Users/trojansaga/Documents/ios/TravelBudd/Categories/NSNumber+XMPP.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/trojansaga/Documents/ios/TravelBudd/Categories/NSNumber+XMPP.m233"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/NSNumber+XMPP.o Categories/NSNumber+XMPP.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler9626d94de1eeb841^be143e4ee1eeb841^---0#0#1#-19%DVTDocumentLocation2@76"file:///Users/trojansaga/Documents/ios/TravelBudd/Categories/NSNumber+XMPP.m0000000000000000^4059"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/NSNumber+XMPP.o Categories/NSNumber+XMPP.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/trojansaga/Documents/ios/TravelBudd    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.1 -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-generated-files.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-own-target-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-all-target-headers.hmap -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-project-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources/arm64 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources -F/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/include/libxml2 -include /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-adysmygumbctwifqlzewmesselqd/TravelBudd-Prefix.pch -MMD -MT dependencies -MF /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/NSNumber+XMPP.d --serialize-diagnostics /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/NSNumber+XMPP.dia -c /Users/trojansaga/Documents/ios/TravelBudd/Categories/NSNumber+XMPP.m -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/NSNumber+XMPP.o36"ADD358A2-544B-4787-9DA2-5CEE41E8C67F-
+bDEBCEE80-5B28-473D-806B-B7E4A3EB5C99
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/NSString+DDXML.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/Categories/NSString+DDXML.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/NSXMLElement+XMPP.o /Users/trojansaga/Documents/ios/TravelBudd/Categories/NSXMLElement+XMPP.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/RFImageToDataTransformer.o /Users/trojansaga/Documents/ios/TravelBudd/Utilities/RFImageToDataTransformer.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418308429.846015
+e418308430.063508
+r1
+xCompileC
+xDerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/RFImageToDataTransformer.o
+x/Users/trojansaga/Documents/ios/TravelBudd/Utilities/RFImageToDataTransformer.m
+xnormal
+xarm64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/trojansaga/Documents/ios/TravelBudd/Utilities/RFImageToDataTransformer.m
+d/Users/trojansaga/Documents/ios/TravelBudd/Utilities/RFImageToDataTransformer.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/trojansaga/Documents/ios/TravelBudd/Utilities/RFImageToDataTransformer.m254"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/RFImageToDataTransformer.o Utilities/RFImageToDataTransformer.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler24b9d84de1eeb841^520e3e4ee1eeb841^---0#0#1#-19%DVTDocumentLocation2@86"file:///Users/trojansaga/Documents/ios/TravelBudd/Utilities/RFImageToDataTransformer.m0000000000000000^4123"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/RFImageToDataTransformer.o Utilities/RFImageToDataTransformer.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/trojansaga/Documents/ios/TravelBudd    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.1 -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-generated-files.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-own-target-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-all-target-headers.hmap -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-project-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources/arm64 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources -F/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/include/libxml2 -include /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-adysmygumbctwifqlzewmesselqd/TravelBudd-Prefix.pch -MMD -MT dependencies -MF /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/RFImageToDataTransformer.d --serialize-diagnostics /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/RFImageToDataTransformer.dia -c /Users/trojansaga/Documents/ios/TravelBudd/Utilities/RFImageToDataTransformer.m -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/RFImageToDataTransformer.o36"64E0B45D-8593-4ACE-9E6A-5645619C1FC2-
+bDEBCEE80-5B28-473D-806B-B7E4A3EB5C99
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPAnonymousAuthentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Anonymous/XMPPAnonymousAuthentication.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPDeprecatedDigestAuthentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Digest/XMPPDeprecatedDigestAuthentication.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPDeprecatedPlainAuthentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Plain/XMPPDeprecatedPlainAuthentication.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418308429.848111
+e418308429.962327
+r0
+xCompileC
+xDerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPDeprecatedPlainAuthentication.o
+x/Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Plain/XMPPDeprecatedPlainAuthentication.m
+xnormal
+xarm64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Plain/XMPPDeprecatedPlainAuthentication.m:1:
+oIn file included from /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Plain/XMPPDeprecatedPlainAuthentication.h:2:
+oIn file included from /Users/trojansaga/Documents/ios/TravelBudd/Authentication/XMPPSASLAuthentication.h:3:
+oIn file included from /Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/DDXML.h:19:
+o/Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/DDXMLNode.h:2:9: fatal error: 'libxml/tree.h' file not found
+o#import <libxml/tree.h>
+o        ^
+o1 error generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection118"Compile /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Plain/XMPPDeprecatedPlainAuthentication.m294"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPDeprecatedPlainAuthentication.o Authentication/Deprecated-Plain/XMPPDeprecatedPlainAuthentication.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compilereba9d94de1eeb841^a245f64de1eeb841^-644"In file included from /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Plain/XMPPDeprecatedPlainAuthentication.m:1:In file included from /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Plain/XMPPDeprecatedPlainAuthentication.h:2:In file included from /Users/trojansaga/Documents/ios/TravelBudd/Authentication/XMPPSASLAuthentication.h:3:In file included from /Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/DDXML.h:19:/Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/DDXMLNode.h:2:9: fatal error: 'libxml/tree.h' file not found#import <libxml/tree.h>        ^1 error generated.1(36%IDEClangDiagnosticActivityLogMessage2@30"'libxml/tree.h' file not found-418308429#18446744073709551615#0#4(2@135"In file included from /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Plain/XMPPDeprecatedPlainAuthentication.m:1:-418308429#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@117"file:///Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Plain/XMPPDeprecatedPlainAuthentication.m0000000000000000^0#8#0#8#8#0#21"Apple LLVM 5.1 Notice--2@135"In file included from /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Plain/XMPPDeprecatedPlainAuthentication.h:2:-418308429#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@117"file:///Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Plain/XMPPDeprecatedPlainAuthentication.h0000000000000000^1#8#1#8#42#0#21"Apple LLVM 5.1 Notice--2@107"In file included from /Users/trojansaga/Documents/ios/TravelBudd/Authentication/XMPPSASLAuthentication.h:3:-418308429#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@89"file:///Users/trojansaga/Documents/ios/TravelBudd/Authentication/XMPPSASLAuthentication.h0000000000000000^2#10#2#10#65#0#21"Apple LLVM 5.1 Notice--2@91"In file included from /Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/DDXML.h:19:-418308429#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@72"file:///Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/DDXML.h0000000000000000^18#8#18#8#630#0#21"Apple LLVM 5.1 Notice--2#27"com.apple.dt.IDE.diagnostic3@76"file:///Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/DDXMLNode.h0000000000000000^1#8#1#8#42#0#29"Lexical or Preprocessor Issue--0#0#1#-19%DVTDocumentLocation4@117"file:///Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Plain/XMPPDeprecatedPlainAuthentication.m0000000000000000^4221"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPDeprecatedPlainAuthentication.o Authentication/Deprecated-Plain/XMPPDeprecatedPlainAuthentication.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/trojansaga/Documents/ios/TravelBudd    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.1 -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-generated-files.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-own-target-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-all-target-headers.hmap -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-project-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources/arm64 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources -F/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/include/libxml2 -include /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-adysmygumbctwifqlzewmesselqd/TravelBudd-Prefix.pch -MMD -MT dependencies -MF /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPDeprecatedPlainAuthentication.d --serialize-diagnostics /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPDeprecatedPlainAuthentication.dia -c /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Plain/XMPPDeprecatedPlainAuthentication.m -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPDeprecatedPlainAuthentication.o36"9B00A5AE-2F0F-4A10-949E-5760D2D8E1DA-
+bDEBCEE80-5B28-473D-806B-B7E4A3EB5C99
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPDigestMD5Authentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Digest-MD5/XMPPDigestMD5Authentication.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPElement.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPElement.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPIDTracker.o /Users/trojansaga/Documents/ios/TravelBudd/Utilities/XMPPIDTracker.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPIQ.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPIQ.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPJID.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPJID.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPMessage.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPMessage.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPModule.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPModule.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPParser.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPParser.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPPlainAuthentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Plain/XMPPPlainAuthentication.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPPresence.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPPresence.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPSCRAMSHA1Authentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/SCRAM-SHA-1/XMPPSCRAMSHA1Authentication.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPSRVResolver.o /Users/trojansaga/Documents/ios/TravelBudd/Utilities/XMPPSRVResolver.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPStream.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPStream.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPStringPrep.o /Users/trojansaga/Documents/ios/TravelBudd/Utilities/XMPPStringPrep.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPXFacebookPlatformAuthentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/X-Facebook-Platform/XMPPXFacebookPlatformAuthentication.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPXOAuth2Google.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/X-OAuth2-Google/XMPPXOAuth2Google.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/main.o /Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/main.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/ContextFilterLogFormatter.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/Extensions/ContextFilterLogFormatter.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/DDASLLogger.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/DDASLLogger.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/DDAbstractDatabaseLogger.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/DDAbstractDatabaseLogger.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/DDFileLogger.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/DDFileLogger.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/DDList.o /Users/trojansaga/Documents/ios/TravelBudd/Utilities/DDList.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/DDLog.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/DDLog.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/DDTTYLogger.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/DDTTYLogger.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/DDXMLDocument.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/DDXMLDocument.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/DDXMLElement.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/DDXMLElement.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/DDXMLNode.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/DDXMLNode.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/DispatchQueueLogFormatter.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/Extensions/DispatchQueueLogFormatter.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/GCDAsyncSocket.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaAsyncSocket/GCDAsyncSocket.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/GCDMulticastDelegate.o /Users/trojansaga/Documents/ios/TravelBudd/Utilities/GCDMulticastDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/JPAppDelegate.o /Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/JPAppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/JPLoginViewController.o /Users/trojansaga/Documents/ios/TravelBudd/JPLoginViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/NSData+XMPP.o /Users/trojansaga/Documents/ios/TravelBudd/Categories/NSData+XMPP.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/NSNumber+XMPP.o /Users/trojansaga/Documents/ios/TravelBudd/Categories/NSNumber+XMPP.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/NSString+DDXML.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/Categories/NSString+DDXML.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/NSXMLElement+XMPP.o /Users/trojansaga/Documents/ios/TravelBudd/Categories/NSXMLElement+XMPP.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/RFImageToDataTransformer.o /Users/trojansaga/Documents/ios/TravelBudd/Utilities/RFImageToDataTransformer.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/XMPPAnonymousAuthentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Anonymous/XMPPAnonymousAuthentication.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/XMPPDeprecatedDigestAuthentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Digest/XMPPDeprecatedDigestAuthentication.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/XMPPDeprecatedPlainAuthentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Plain/XMPPDeprecatedPlainAuthentication.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/XMPPDigestMD5Authentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Digest-MD5/XMPPDigestMD5Authentication.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/XMPPElement.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPElement.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/XMPPIDTracker.o /Users/trojansaga/Documents/ios/TravelBudd/Utilities/XMPPIDTracker.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/XMPPIQ.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPIQ.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/XMPPJID.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPJID.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/XMPPMessage.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPMessage.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/XMPPModule.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPModule.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/XMPPParser.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPParser.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/XMPPPlainAuthentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Plain/XMPPPlainAuthentication.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/XMPPPresence.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPPresence.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/XMPPSCRAMSHA1Authentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/SCRAM-SHA-1/XMPPSCRAMSHA1Authentication.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/XMPPSRVResolver.o /Users/trojansaga/Documents/ios/TravelBudd/Utilities/XMPPSRVResolver.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/XMPPStream.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPStream.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/XMPPStringPrep.o /Users/trojansaga/Documents/ios/TravelBudd/Utilities/XMPPStringPrep.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/XMPPXFacebookPlatformAuthentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/X-Facebook-Platform/XMPPXFacebookPlatformAuthentication.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/XMPPXOAuth2Google.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/X-OAuth2-Google/XMPPXOAuth2Google.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/main.o /Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/ContextFilterLogFormatter.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/Extensions/ContextFilterLogFormatter.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/DDASLLogger.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/DDASLLogger.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/DDAbstractDatabaseLogger.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/DDAbstractDatabaseLogger.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/DDFileLogger.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/DDFileLogger.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/DDList.o /Users/trojansaga/Documents/ios/TravelBudd/Utilities/DDList.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/DDLog.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/DDLog.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/DDTTYLogger.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/DDTTYLogger.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/DDXMLDocument.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/DDXMLDocument.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/DDXMLElement.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/DDXMLElement.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/DDXMLNode.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/DDXMLNode.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/DispatchQueueLogFormatter.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaLumberjack/Extensions/DispatchQueueLogFormatter.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/GCDAsyncSocket.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/CocoaAsyncSocket/GCDAsyncSocket.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/GCDMulticastDelegate.o /Users/trojansaga/Documents/ios/TravelBudd/Utilities/GCDMulticastDelegate.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/JPAppDelegate.o /Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/JPAppDelegate.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/JPLoginViewController.o /Users/trojansaga/Documents/ios/TravelBudd/JPLoginViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/NSData+XMPP.o /Users/trojansaga/Documents/ios/TravelBudd/Categories/NSData+XMPP.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/NSNumber+XMPP.o /Users/trojansaga/Documents/ios/TravelBudd/Categories/NSNumber+XMPP.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/NSString+DDXML.o /Users/trojansaga/Documents/ios/TravelBudd/Vendor/KissXML/Categories/NSString+DDXML.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/NSXMLElement+XMPP.o /Users/trojansaga/Documents/ios/TravelBudd/Categories/NSXMLElement+XMPP.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/RFImageToDataTransformer.o /Users/trojansaga/Documents/ios/TravelBudd/Utilities/RFImageToDataTransformer.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/XMPPAnonymousAuthentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Anonymous/XMPPAnonymousAuthentication.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/XMPPDeprecatedDigestAuthentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Digest/XMPPDeprecatedDigestAuthentication.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/XMPPDeprecatedPlainAuthentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Deprecated-Plain/XMPPDeprecatedPlainAuthentication.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/XMPPDigestMD5Authentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Digest-MD5/XMPPDigestMD5Authentication.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/XMPPElement.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPElement.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/XMPPIDTracker.o /Users/trojansaga/Documents/ios/TravelBudd/Utilities/XMPPIDTracker.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/XMPPIQ.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPIQ.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/XMPPJID.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPJID.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/XMPPMessage.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPMessage.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/XMPPModule.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPModule.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/XMPPParser.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPParser.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/XMPPPlainAuthentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/Plain/XMPPPlainAuthentication.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/XMPPPresence.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPPresence.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/XMPPSCRAMSHA1Authentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/SCRAM-SHA-1/XMPPSCRAMSHA1Authentication.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/XMPPSRVResolver.o /Users/trojansaga/Documents/ios/TravelBudd/Utilities/XMPPSRVResolver.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/XMPPStream.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPStream.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/XMPPStringPrep.o /Users/trojansaga/Documents/ios/TravelBudd/Utilities/XMPPStringPrep.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/XMPPXFacebookPlatformAuthentication.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/X-Facebook-Platform/XMPPXFacebookPlatformAuthentication.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/XMPPXOAuth2Google.o /Users/trojansaga/Documents/ios/TravelBudd/Authentication/X-OAuth2-Google/XMPPXOAuth2Google.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/main.o /Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/main.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileXIB /Users/trojansaga/Documents/ios/TravelBudd/JPLoginViewController.xib
+r0
+
+CCopyStringsFile /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/en.lproj/InfoPlist.strings TravelBudd/en.lproj/InfoPlist.strings
+r0
+
+CCpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/ResourceRules.plist DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/ResourceRules.plist
+s418308428.320685
+e418308428.333745
+r1
+xCpResource
+x/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/ResourceRules.plist
+xDerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/ResourceRules.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Copy DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/ResourceRules.plist220"CpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/ResourceRules.plist DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/ResourceRules.plist7827534ce1eeb841^8387554ce1eeb841^---0#0#1#-19%DVTDocumentLocation2@137"file:///Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/ResourceRules.plist00347050deffdf42^804"CpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/ResourceRules.plist DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/ResourceRules.plist    cd /Users/trojansaga/Documents/ios/TravelBudd    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/ResourceRules.plist /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app36"48C66853-C675-4274-8A92-A9B41B4441F6-
+bDEBCEE80-5B28-473D-806B-B7E4A3EB5C99
+
+CCpResource Vendor/CocoaLumberjack/Extensions/README.txt DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/README.txt
+r0
+
+CCpResource Vendor/libidn/build-libidn.sh DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/build-libidn.sh
+r0
+
+CCreateUniversalBinary /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd normal armv7\ armv7s\ arm64
+r0
+
+CGenerateDSYMFile /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app.dSYM /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd
+r0
+
+CLd /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/TravelBudd normal arm64
+r0
+
+CLd /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/TravelBudd normal armv7
+r0
+
+CLd /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/TravelBudd normal armv7s
+r0
+
+CLd /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd normal arm64
+r0
+
+CProcessInfoPlistFile /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/Info.plist /Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/TravelBudd-Info.plist
+r0
+
+CProcessPCH /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-adysmygumbctwifqlzewmesselqd/TravelBudd-Prefix.pch.pch TravelBudd/TravelBudd-Prefix.pch normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418308428.334722
+e418308429.844693
+r1
+xProcessPCH
+x/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-adysmygumbctwifqlzewmesselqd/TravelBudd-Prefix.pch.pch
+xTravelBudd/TravelBudd-Prefix.pch
+xnormal
+xarm64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/TravelBudd-Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Precompile TravelBudd/TravelBudd-Prefix.pch247"ProcessPCH DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-adysmygumbctwifqlzewmesselqd/TravelBudd-Prefix.pch.pch TravelBudd/TravelBudd-Prefix.pch normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compilerc9cc554ce1eeb841^2d3fd84de1eeb841^---0#0#1#-19%DVTDocumentLocation2@82"file:///Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/TravelBudd-Prefix.pch0000000000000000^3917"ProcessPCH DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-adysmygumbctwifqlzewmesselqd/TravelBudd-Prefix.pch.pch TravelBudd/TravelBudd-Prefix.pch normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/trojansaga/Documents/ios/TravelBudd    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.1 -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-generated-files.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-own-target-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-all-target-headers.hmap -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-project-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources/arm64 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources -F/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/include/libxml2 --serialize-diagnostics /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-adysmygumbctwifqlzewmesselqd/TravelBudd-Prefix.pch.dia -MMD -MT dependencies -MF /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-adysmygumbctwifqlzewmesselqd/TravelBudd-Prefix.pch.d -c /Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/TravelBudd-Prefix.pch -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-adysmygumbctwifqlzewmesselqd/TravelBudd-Prefix.pch.pch36"A40A63D3-04CD-4AC8-A588-0ED736C9DC8C-
+bDEBCEE80-5B28-473D-806B-B7E4A3EB5C99
+
+CProcessPCH /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-cridgrbpojboodfjfiuujdahnjfl/TravelBudd-Prefix.pch.pch TravelBudd/TravelBudd-Prefix.pch normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CProcessPCH /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-hjnbpjjvqusuxeatjkfgwsymrdhk/TravelBudd-Prefix.pch.pch TravelBudd/TravelBudd-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CProcessPCH /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Index/PrecompiledHeaders/TravelBudd-Prefix-ajvxsnkmirpioughmljjmpgwdyct_ast/TravelBudd-Prefix.pch.pch TravelBudd/TravelBudd-Prefix.pch normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Index/PrecompiledHeaders/TravelBudd-Prefix-cqgnpvvuixsqvsfkxchiqmecjvdm_ast/TravelBudd-Prefix.pch.pch TravelBudd/TravelBudd-Prefix.pch normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Index/PrecompiledHeaders/TravelBudd-Prefix-gcbwsbbajirpzaccyayfrkcqsthe_ast/TravelBudd-Prefix.pch.pch TravelBudd/TravelBudd-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/Entitlements.plist /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd.xcent
+r0
+
+CProcessProductPackaging /Users/trojansaga/Library/MobileDevice/Provisioning\ Profiles/A9B7AF60-368E-4B90-8798-ECFF79513A38.mobileprovision /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/embedded.mobileprovision
+r0
+
+CTouch /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app
+r0
+
