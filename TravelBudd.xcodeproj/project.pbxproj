@@ -16,6 +16,8 @@
 		153A729318F2458500C7ABB7 /* JPChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153A729118F2458500C7ABB7 /* JPChatViewController.xib */; };
 		153A729718F2459700C7ABB7 /* JPSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153A729518F2459700C7ABB7 /* JPSettingViewController.m */; };
 		153A729818F2459700C7ABB7 /* JPSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153A729618F2459700C7ABB7 /* JPSettingViewController.xib */; };
+		1540BAD8191DDAEC00B1DBE0 /* JPMakeChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1540BAD6191DDAEC00B1DBE0 /* JPMakeChatRoomViewController.m */; };
+		1540BAD9191DDAEC00B1DBE0 /* JPMakeChatRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1540BAD7191DDAEC00B1DBE0 /* JPMakeChatRoomViewController.xib */; };
 		15951C7E18ECF053008A8868 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15951C7D18ECF053008A8868 /* Foundation.framework */; };
 		15951C8018ECF053008A8868 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15951C7F18ECF053008A8868 /* CoreGraphics.framework */; };
 		15951C8218ECF053008A8868 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15951C8118ECF053008A8868 /* UIKit.framework */; };
@@ -191,6 +193,9 @@
 		153A729418F2459700C7ABB7 /* JPSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPSettingViewController.h; sourceTree = "<group>"; };
 		153A729518F2459700C7ABB7 /* JPSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPSettingViewController.m; sourceTree = "<group>"; };
 		153A729618F2459700C7ABB7 /* JPSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JPSettingViewController.xib; sourceTree = "<group>"; };
+		1540BAD5191DDAEC00B1DBE0 /* JPMakeChatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPMakeChatRoomViewController.h; sourceTree = "<group>"; };
+		1540BAD6191DDAEC00B1DBE0 /* JPMakeChatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPMakeChatRoomViewController.m; sourceTree = "<group>"; };
+		1540BAD7191DDAEC00B1DBE0 /* JPMakeChatRoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JPMakeChatRoomViewController.xib; sourceTree = "<group>"; };
 		15951C7A18ECF053008A8868 /* TravelBudd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelBudd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15951C7D18ECF053008A8868 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		15951C7F18ECF053008A8868 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -517,12 +522,12 @@
 		1534649819193B4700D271A5 /* Not Working Group */ = {
 			isa = PBXGroup;
 			children = (
+				153A728718F2455300C7ABB7 /* JPMapViewController.h */,
+				153A728818F2455300C7ABB7 /* JPMapViewController.m */,
+				153A728918F2455300C7ABB7 /* JPMapViewController.xib */,
 				15951CAD18ECF0B0008A8868 /* JPLoginViewController.h */,
 				15951CAE18ECF0B0008A8868 /* JPLoginViewController.m */,
 				15951CAF18ECF0B0008A8868 /* JPLoginViewController.xib */,
-				153A728F18F2458400C7ABB7 /* JPChatViewController.h */,
-				153A729018F2458500C7ABB7 /* JPChatViewController.m */,
-				153A729118F2458500C7ABB7 /* JPChatViewController.xib */,
 				15951D4B18EEAE78008A8868 /* XMPPFramework.h */,
 				153A729418F2459700C7ABB7 /* JPSettingViewController.h */,
 				153A729518F2459700C7ABB7 /* JPSettingViewController.m */,
@@ -615,11 +620,14 @@
 				1534649819193B4700D271A5 /* Not Working Group */,
 				15951C8C18ECF053008A8868 /* JPAppDelegate.h */,
 				15951C8D18ECF053008A8868 /* JPAppDelegate.m */,
-				153A728718F2455300C7ABB7 /* JPMapViewController.h */,
-				153A728818F2455300C7ABB7 /* JPMapViewController.m */,
-				153A728918F2455300C7ABB7 /* JPMapViewController.xib */,
+				153A728F18F2458400C7ABB7 /* JPChatViewController.h */,
+				153A729018F2458500C7ABB7 /* JPChatViewController.m */,
+				153A729118F2458500C7ABB7 /* JPChatViewController.xib */,
 				153464951919208F00D271A5 /* JPConnectionDelegateObject.h */,
 				153464961919208F00D271A5 /* JPConnectionDelegateObject.m */,
+				1540BAD5191DDAEC00B1DBE0 /* JPMakeChatRoomViewController.h */,
+				1540BAD6191DDAEC00B1DBE0 /* JPMakeChatRoomViewController.m */,
+				1540BAD7191DDAEC00B1DBE0 /* JPMakeChatRoomViewController.xib */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1507,6 +1515,7 @@
 				153A729318F2458500C7ABB7 /* JPChatViewController.xib in Resources */,
 				15951C8818ECF053008A8868 /* InfoPlist.strings in Resources */,
 				15951C9018ECF053008A8868 /* Images.xcassets in Resources */,
+				1540BAD9191DDAEC00B1DBE0 /* JPMakeChatRoomViewController.xib in Resources */,
 				153A728618F244C100C7ABB7 /* JPTabbarController.xib in Resources */,
 				15951CE318ED0F09008A8868 /* README.txt in Resources */,
 				15951CB118ECF0B0008A8868 /* JPLoginViewController.xib in Resources */,
@@ -1545,6 +1554,7 @@
 				15951E8518EEE283008A8868 /* XMPPAutoTime.m in Sources */,
 				15951D4118EE40B5008A8868 /* XMPPPresence.m in Sources */,
 				15951E7B18EEE283008A8868 /* XMPPMessageArchivingCoreDataStorage.m in Sources */,
+				1540BAD8191DDAEC00B1DBE0 /* JPMakeChatRoomViewController.m in Sources */,
 				15951E4918EEE283008A8868 /* XMPPLastActivity.m in Sources */,
 				15951E5618EEE283008A8868 /* XMPPMessage+XEP0045.m in Sources */,
 				15951D3718EE40B5008A8868 /* XMPPXOAuth2Google.m in Sources */,

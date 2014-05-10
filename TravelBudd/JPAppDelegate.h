@@ -38,6 +38,4 @@
 - (BOOL)connect;
 - (void)disconnect;
 
-- (void) sendHttp:(NSString*)urlStr data:(NSDictionary *) dic;
-
 @end

@@ -14,6 +14,7 @@
     IBOutlet UIView *joinUsView;
     IBOutlet UITextField *textFieldForJoinUsID;
     IBOutlet UITextField *textFieldForJoinUsPW;
+    IBOutlet UITextField *textFieldForJoinUsName;
 
 }
 

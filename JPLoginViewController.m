@@ -29,6 +29,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self.view addSubview:joinUsView];
+    joinUsView.hidden = YES;
 
     //auto login
     [self login:nil];
@@ -48,7 +51,6 @@
 
 - (IBAction)login:(id)sender {
 
-        NSLog(@"??");
 //    NSString *tempStr = [textFieldForID.text stringByAppendingString:@"@test.com"];
 //    NSLog(tempStr);
     [[NSUserDefaults standardUserDefaults] setObject:textFieldForID.text forKey:@"xmppJID"];
@@ -58,13 +60,8 @@
                          dictionaryWithObjectsAndKeys:
                          textFieldForID.text,@"member_email",
                          textFieldForPW.text,@"member_password", nil];
-
-    JPAppDelegate *appDelegate = (JPAppDelegate *)[[UIApplication sharedApplication] delegate];
-    [appDelegate sendHttp:@"http://54.199.143.8:8080/TravelBudd/Member/Login" data:dic];
     
-    
-    
-    //아래부분은 원래 코드.... 왜 app delegate로 이전하면 안될까??
+    //아래부분은 원래 코드.... 왜 app delegate로 이전하면 안될까?? -> setdelegate:self 때문에 안됨
     NSString *urlStr = @"http://54.199.143.8:8080/TravelBudd/Member/Login";
     
     
@@ -80,20 +77,39 @@
     NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     [conn start];
 
-
 }
 - (IBAction)joinUs:(id)sender {
 //    JPAppDelegate *appDelegate = (JPAppDelegate *)[[UIApplication sharedApplication] delegate];
 //    [appDelegate disconnect];
 
-    //temp setting
-    [self.view addSubview:joinUsView];
+    joinUsView.hidden = NO;
     
 
 }
 - (IBAction)join:(id)sender {
-    //temp setting
+
     joinUsView.hidden = YES;
+    
+    NSDictionary *dic = [NSDictionary
+                         dictionaryWithObjectsAndKeys:
+                         textFieldForJoinUsID.text,@"member_email",
+                         textFieldForJoinUsName.text,@"member_name",
+                         textFieldForJoinUsPW.text,@"member_password", nil];
+    
+    NSString *urlStr = @"http://54.199.143.8:8080/TravelBudd/Member/Join";
+    
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:0 error:nil];
+    
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:data];
+    
+    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    [conn start];
+
 }
 
 #pragma mark NSURLConnection Delegate
@@ -103,29 +119,44 @@
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+//    NSArray *arr = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    NSLog(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!login delegate");
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    NSString *str = [dic objectForKey:@"message"];
-    NSLog(@"//Data received : %@",str);
-    
-    if ([str isEqualToString:@"success"]) {
-        NSString *m_id = [dic objectForKey:@"m_id"];
-        [[NSUserDefaults standardUserDefaults] setObject:m_id forKey:@"m_id"];
+    NSString* responseType = [dic objectForKey:@"data_type"];
+    NSLog(@"responseType = %@",responseType);
+
+    //response type 안나옴....
+    if (![responseType isEqualToString:@"Joining Member"]) {
+        NSLog(@"로그인 하기");
         
-        JPAppDelegate *appDelegate = (JPAppDelegate *)[[UIApplication sharedApplication] delegate];
-        [appDelegate connect];
-        //원래는 jid 체크를 한번 더 해야하지만 서버에서 success를 리턴할 경우 서버에서 체크한 것으로 간주
+        NSString *str = [dic objectForKey:@"message"];
+        NSLog(@"//Data received : %@",str);
         
-        JPTabbarController *tabbarController = [[JPTabbarController alloc] initWithNibName:@"JPTabbarController" bundle:nil];
-        [self presentViewController:tabbarController animated:YES completion:nil];
+        if ([str isEqualToString:@"success"]) {
+            NSString *m_id = [dic objectForKey:@"m_id"];
+            [[NSUserDefaults standardUserDefaults] setObject:m_id forKey:@"m_id"];
+            
+            JPAppDelegate *appDelegate = (JPAppDelegate *)[[UIApplication sharedApplication] delegate];
+            [appDelegate connect];
+            //원래는 jid 체크를 한번 더 해야하지만 서버에서 success를 리턴할 경우 서버에서 체크한 것으로 간주
+            
+            JPTabbarController *tabbarController = [[JPTabbarController alloc] initWithNibName:@"JPTabbarController" bundle:nil];
+            [self presentViewController:tabbarController animated:YES completion:nil];
+        }
+        else {
+            UIAlertView *alertView = [[UIAlertView alloc]
+                                      initWithTitle:@"Login Denied"
+                                      message:@"try again" delegate:self
+                                      cancelButtonTitle:@"ok"
+                                      otherButtonTitles:nil, nil];
+            
+            [alertView show];
+        }
     }
-    else {
-        UIAlertView *alertView = [[UIAlertView alloc]
-                                  initWithTitle:@"Login Denied"
-                                  message:@"try again" delegate:self
-                                  cancelButtonTitle:@"ok"
-                                  otherButtonTitles:nil, nil];
-        
-        [alertView show];
+    
+    // 회원가입이랑 로그인이랑 타입이 같음
+    if ([responseType isEqualToString:@"Joining Member"]) {
+        NSLog(@"회원가입하기");
     }
 }
 

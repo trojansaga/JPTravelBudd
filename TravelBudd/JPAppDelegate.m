@@ -356,24 +356,6 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	}
 }
 
-#pragma mark - HttpSend
-
-- (void) sendHttp:(NSString*)urlStr data:(NSDictionary *) dic {
-
-    NSLog(@"??");
-    NSURL *url = [NSURL URLWithString:urlStr];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    
-    NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:0 error:nil];
-    
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:data];
-    
-    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    [conn start];
-
-}
 
 
 @end

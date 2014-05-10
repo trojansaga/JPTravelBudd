@@ -16,6 +16,7 @@
     
 }
 
--(void)sendData:(NSArray *)objects :(NSArray *)keys :(NSString *)to;
+-(void)sendDataHttp:(NSArray *)objects keyForDic:(NSArray *)keys urlString:(NSString *)urlStr;
+
 
 @end

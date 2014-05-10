@@ -10,5 +10,5 @@
 
 @interface JPConnectionDelegateObject : NSObject <NSURLConnectionDataDelegate,NSURLConnectionDelegate>
 
-- (void) sendHttp:(NSString*)url httpType:(NSString*)str;
+
 @end

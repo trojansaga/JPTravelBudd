@@ -7,6 +7,8 @@
 //
 
 #import "JPChatViewController.h"
+#import "JPMakeChatRoomViewController.h"
+
 
 @interface JPChatViewController ()
 
@@ -51,16 +53,13 @@
     
     NSURL *url = [NSURL URLWithString:urlStr];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    
     NSDictionary *dic = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
-    
     NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:0 error:nil];
     
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPMethod:@"POST"];
     [request setHTTPBody:data];
 
-    
     NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     [conn start];
 }
@@ -69,24 +68,8 @@
     [chatRoomListTableView reloadData];
 }
 - (IBAction)makeRoom:(id)sender {
-  
-//    NSURL *urlForLogin = [NSURL URLWithString:@"http://54.199.143.8:8080/TravelBudd/Member/Login"];
-//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:urlForLogin];
-//    
-//    
-//    NSDictionary *dic = [NSDictionary
-//                         dictionaryWithObjectsAndKeys:
-//                         @"dd",@"member_email",
-//                         @"g",@"member_password", nil];
-//    
-//    NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:0 error:nil];
-//    
-//    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-//    [request setHTTPMethod:@"POST"];
-//    [request setHTTPBody:data];
-//    
-//    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-//    [conn start];
+    JPMakeChatRoomViewController *makeChatRoomViewController = [[JPMakeChatRoomViewController alloc] initWithNibName:@"JPMakeChatRoomViewController" bundle:nil];
+    [self.navigationController pushViewController:makeChatRoomViewController animated:YES];
 
 }
 
@@ -115,44 +98,53 @@
 #pragma mark - Conn delegate
 
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    NSLog(@"//Response received");
+
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    
-    NSLog(@"채팅방 리스트 출력");
-    NSArray *arr = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    NSString *responseType = [dic objectForKey:@"data_type"];
 
-    //    NSString *str = [dic objectForKey:@"message"];
-//    NSLog(@"//Data received : %@",str);
-    
-    //채팅방 리프레시
-    numOfChatRooms = [arr count];
-    NSLog(@"arr count = %i", numOfChatRooms);
-    if (numOfChatRooms == 0) {
-        NSLog(@"cr_id: %@", [dic objectForKey:@"cr_id"]);
-    }
-    else {
+    //채팅방 리스트
+    if ([responseType  isEqual: @"ChatRoom List"]) {
+        NSLog(@"채팅방리스트");
+        
+        NSArray *arr = [dic objectForKey:@"data"];
+        numOfChatRooms = (int)[arr count];
         chatRoomListArray = arr;
         [chatRoomListTableView reloadData];
     }
     
-//    if ([str isEqualToString:@"success"]) {
-//        NSString *m_id = [dic objectForKey:@"m_id"];
-//        [[NSUserDefaults standardUserDefaults] setObject:m_id forKey:@"m_id"];
-//        
-//    }
-//    else {
-//        UIAlertView *alertView = [[UIAlertView alloc]
-//                                  initWithTitle:@"Login Denied"
-//                                  message:@"try again" delegate:self
-//                                  cancelButtonTitle:@"ok"
-//                                  otherButtonTitles:nil, nil];
-//        
-//        [alertView show];
-//    }
-
+    else if ([responseType isEqualToString:@"Create ChatRoom"]) {
+        NSLog(@"채팅방 만들기");
+    }
+    
+    else if ([responseType isEqualToString:@"Joining ChatRoom"]) {
+        NSLog(@"채팅방 조인하기");
+    }
+    
+    else if ([responseType isEqualToString:@"My ChatRoom"]) {
+        NSLog(@"내가 조인한 채팅방 리스트");
+    }
+    
+    else if ([responseType isEqualToString:@"ChatRoom Info"]) {
+        NSLog(@"채팅방 정보");
+    }
+    
+    else if ([responseType isEqualToString:@"ChatRoom Member List"]) {
+        NSLog(@"채팅방 내 조인한 유저들 리스트");
+    }
+    
+    //채팅방 탈퇴랑 조인이랑 값이 같음 ㅡㅡ;;
+    else if ([responseType isEqualToString:@"Joining ChatRoom"]) {
+        NSLog(@"채팅방 탈퇴하기");
+    }
+    
+    //얘도..
+    else if ([responseType isEqualToString:@"Create ChatRoom"]) {
+        NSLog(@"채팅방 지우기");
+    }
+    
     
 }
 
