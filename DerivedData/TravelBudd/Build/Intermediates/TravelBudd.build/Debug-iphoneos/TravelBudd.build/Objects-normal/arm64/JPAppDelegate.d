@@ -66,4 +66,6 @@ dependencies: \
   /Users/trojansaga/Documents/ios/TravelBudd/Extensions/XEP-0045/CoreDataStorage/XMPPRoomOccupantCoreDataStorageObject.h \
   /Users/trojansaga/Documents/ios/TravelBudd/Extensions/XEP-0115/XMPPCapabilities.h \
   /Users/trojansaga/Documents/ios/TravelBudd/Extensions/XEP-0115/CoreDataStorage/XMPPCapabilitiesCoreDataStorage.h \
-  /Users/trojansaga/Documents/ios/TravelBudd/JPLoginViewController.h
+  /Users/trojansaga/Documents/ios/TravelBudd/JPLoginViewController.h \
+  /Users/trojansaga/Documents/ios/TravelBudd/JPConnectionDelegateObject.h \
+  /Users/trojansaga/Documents/ios/TravelBudd/JPDefs.h

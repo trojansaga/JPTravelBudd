@@ -9,6 +9,7 @@
 #import "JPLoginViewController.h"
 #import "JPAppDelegate.h"
 #import "JPTabbarController.h"
+#import "JPDefs.h"
 
 @interface JPLoginViewController ()
 
@@ -33,8 +34,14 @@
     [self.view addSubview:joinUsView];
     joinUsView.hidden = YES;
 
-    //auto login
-    [self login:nil];
+    
+    //커넥션 담당 오브젝트 만들어서 해보고 싶은데.......
+    jpConnectionDelegate = [[JPConnectionDelegateObject alloc] init];
+    jpConnectionDelegate.delegate = self;
+    
+
+//    //auto login
+//    [self login:nil];
     
 
 }
@@ -51,31 +58,29 @@
 
 - (IBAction)login:(id)sender {
 
-//    NSString *tempStr = [textFieldForID.text stringByAppendingString:@"@test.com"];
-//    NSLog(tempStr);
-    [[NSUserDefaults standardUserDefaults] setObject:textFieldForID.text forKey:@"xmppJID"];
+    NSString *domain = @"@54.199.143.8";
+    NSString *xmppJID = [textFieldForID.text stringByAppendingString:domain];
+
+    [[NSUserDefaults standardUserDefaults] setObject:textFieldForID.text forKey:@"userName"];
+    [[NSUserDefaults standardUserDefaults] setObject:xmppJID forKey:@"xmppJID"];
     [[NSUserDefaults standardUserDefaults] setObject:textFieldForPW.text forKey:@"xmppPASSWORD"];
 
-    NSDictionary *dic = [NSDictionary
-                         dictionaryWithObjectsAndKeys:
-                         textFieldForID.text,@"member_email",
-                         textFieldForPW.text,@"member_password", nil];
+//    NSDictionary *dic = [NSDictionary
+//                         dictionaryWithObjectsAndKeys:
+//                         textFieldForID.text,@"member_email",
+//                         textFieldForPW.text,@"member_password", nil];
     
-    //아래부분은 원래 코드.... 왜 app delegate로 이전하면 안될까?? -> setdelegate:self 때문에 안됨
-    NSString *urlStr = @"http://54.199.143.8:8080/TravelBudd/Member/Login";
+    NSArray *dataArr = @[
+                         xmppJID,
+                         textFieldForPW.text
+                         ];
     
+    NSArray *keyArr = @[
+                        @"member_email",
+                        @"member_password"
+                        ];
     
-    NSURL *url = [NSURL URLWithString:urlStr];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    
-    NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:0 error:nil];
-    
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:data];
-    
-    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    [conn start];
+    [jpConnectionDelegate sendDataHttp:dataArr keyForDic:keyArr urlString:URL_FOR_LOGIN setDelegate:self];
 
 }
 - (IBAction)joinUs:(id)sender {
@@ -90,25 +95,24 @@
 
     joinUsView.hidden = YES;
     
-    NSDictionary *dic = [NSDictionary
-                         dictionaryWithObjectsAndKeys:
-                         textFieldForJoinUsID.text,@"member_email",
-                         textFieldForJoinUsName.text,@"member_name",
-                         textFieldForJoinUsPW.text,@"member_password", nil];
+    NSString *domain = @"@54.199.143.8";
+    NSString *xmppJID = [textFieldForJoinUsID.text stringByAppendingString:domain];
+
+    NSLog(@"%@",xmppJID);
     
-    NSString *urlStr = @"http://54.199.143.8:8080/TravelBudd/Member/Join";
+    NSArray *dataArr = @[
+                         xmppJID,
+                         textFieldForJoinUsName.text,
+                         textFieldForJoinUsPW.text
+                         ];
     
-    NSURL *url = [NSURL URLWithString:urlStr];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    NSArray *keyArr = @[
+                        @"member_email",
+                        @"member_name",
+                        @"member_password"
+                        ];
     
-    NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:0 error:nil];
-    
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:data];
-    
-    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    [conn start];
+    [jpConnectionDelegate sendDataHttp:dataArr keyForDic:keyArr urlString:URL_FOR_MEMBER_JOIN setDelegate:self];
 
 }
 
@@ -120,13 +124,14 @@
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
 //    NSArray *arr = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    NSLog(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!login delegate");
+
+    NSArray *arr = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     NSString* responseType = [dic objectForKey:@"data_type"];
     NSLog(@"responseType = %@",responseType);
 
     //response type 안나옴....
-    if (![responseType isEqualToString:@"Joining Member"]) {
+    if ([responseType isEqualToString:@"Login"]) {
         NSLog(@"로그인 하기");
         
         NSString *str = [dic objectForKey:@"message"];
@@ -134,6 +139,7 @@
         
         if ([str isEqualToString:@"success"]) {
             NSString *m_id = [dic objectForKey:@"m_id"];
+            NSLog(@"login success");
             [[NSUserDefaults standardUserDefaults] setObject:m_id forKey:@"m_id"];
             
             JPAppDelegate *appDelegate = (JPAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -141,6 +147,7 @@
             //원래는 jid 체크를 한번 더 해야하지만 서버에서 success를 리턴할 경우 서버에서 체크한 것으로 간주
             
             JPTabbarController *tabbarController = [[JPTabbarController alloc] initWithNibName:@"JPTabbarController" bundle:nil];
+            
             [self presentViewController:tabbarController animated:YES completion:nil];
         }
         else {
@@ -155,8 +162,20 @@
     }
     
     // 회원가입이랑 로그인이랑 타입이 같음
-    if ([responseType isEqualToString:@"Joining Member"]) {
+    if ([responseType isEqualToString:@"Joining"]) {
         NSLog(@"회원가입하기");
+        if ([[dic objectForKey:@"message"] isEqualToString:@"success"]) {
+            NSLog(@"joining success");
+        }
+        else {
+            UIAlertView *alertView = [[UIAlertView alloc]
+                                      initWithTitle:@"Join Denied"
+                                      message:@"try again" delegate:self
+                                      cancelButtonTitle:@"ok"
+                                      otherButtonTitles:nil, nil];
+            
+            [alertView show];
+        }
     }
 }
 

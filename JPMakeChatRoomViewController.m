@@ -8,6 +8,8 @@
 
 #import "JPMakeChatRoomViewController.h"
 #import "JPChatViewController.h"
+#import "JPConnectionDelegateObject.h"
+
 
 @interface JPMakeChatRoomViewController ()
 
@@ -37,8 +39,16 @@
 }
 
 - (IBAction)createRoom:(id)sender {
+    NSString *strForSecret;
+    if (switchForSecret.on) {
+        strForSecret = @"true";
+    }
+    else {
+        strForSecret = @"false";
+    }
     NSArray *keyArr = @[
                         @"chat_room_maker",
+                        @"userEmail",
                         @"chat_room_name",
                         @"chat_room_description",
                         @"chat_room_lng",
@@ -48,16 +58,43 @@
                         ];
     NSArray *dataArr = @[
                          [[NSUserDefaults standardUserDefaults] objectForKey:@"m_id"],
+                         @"email",
                          textFieldForRoomName.text,
                          textFieldForRoomDesc.text,
                          @"0.0",
                          @"0.0",
-                         @"false",
+                         strForSecret,
                          textFieldForRoomMaxNum.text
                          ];
-    NSString *urlStr = @"http://54.199.143.8:8080/TravelBudd/ChatRoom/Create";
-    [self.navigationController popViewControllerAnimated:YES];
-//    [(JPChatViewController*)[[self.navigationController viewControllers] objectAtIndex:1] sendDataHttp:dataArr keyForDic:keyArr urlString:urlStr];
+   
+    JPConnectionDelegateObject *object = [[JPConnectionDelegateObject alloc] init];
+    [object sendDataHttp:dataArr keyForDic:keyArr urlString:URL_FOR_CREATE_ROOM setDelegate:self];
+
+}
+
+
+#pragma mark - connection Delegate
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    NSString *responseType = [dic objectForKey:@"data_type"];
+
+    if ([responseType isEqualToString:@"Create ChatRoom"] && [[dic objectForKey:@"message"] isEqualToString:@"success"]) {
+        NSLog(@"채팅방 만들기 success");
+        
+        [self.navigationController popViewControllerAnimated:YES];
+        
+    }
+    else {
+        NSLog(@"채팅방 만들기 fail");
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:@"Fail to create"
+                              message:@"i said fail"
+                              delegate:nil
+                              cancelButtonTitle:@"ok"
+                              otherButtonTitles:nil, nil];
+        [alert show];
+    }
 }
 
 @end

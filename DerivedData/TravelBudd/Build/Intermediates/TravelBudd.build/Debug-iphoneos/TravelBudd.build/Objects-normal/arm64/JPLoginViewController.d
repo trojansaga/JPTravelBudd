@@ -1,6 +1,8 @@
 dependencies: \
   /Users/trojansaga/Documents/ios/TravelBudd/JPLoginViewController.m \
   /Users/trojansaga/Documents/ios/TravelBudd/JPLoginViewController.h \
+  /Users/trojansaga/Documents/ios/TravelBudd/JPConnectionDelegateObject.h \
+  /Users/trojansaga/Documents/ios/TravelBudd/JPDefs.h \
   /Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/JPAppDelegate.h \
   /Users/trojansaga/Documents/ios/TravelBudd/XMPPFramework.h \
   /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPP.h \

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JPMakeChatRoomViewController : UIViewController {
+@interface JPMakeChatRoomViewController : UIViewController <NSURLConnectionDataDelegate> {
     IBOutlet UITextField *textFieldForRoomName;
     IBOutlet UITextField *textFieldForRoomMaxNum;
     IBOutlet UITextField *textFieldForRoomDesc;

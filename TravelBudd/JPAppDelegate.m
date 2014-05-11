@@ -148,12 +148,11 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 		return YES;
 	}
     
-//	NSString *myJID = [[NSUserDefaults standardUserDefaults] stringForKey:@"xmppJID"];
-//	NSString *myPassword = [[NSUserDefaults standardUserDefaults] stringForKey:@"xmppPASSWORD"];
+    // JID = userName@domain
+    
+	NSString *myJID = [[NSUserDefaults standardUserDefaults] stringForKey:@"xmppJID"];
+	NSString *myPassword = [[NSUserDefaults standardUserDefaults] stringForKey:@"xmppPASSWORD"];
 
-    //임의로 지정한 xmpp jid, password -> 추후에 통합해야함
-    NSString *myJID = @"tester2@54.199.143.8";
-	NSString *myPassword = @"1234";
 
 	//
 	// If you don't want to use the Settings view to set the JID,
