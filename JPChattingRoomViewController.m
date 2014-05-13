@@ -8,6 +8,7 @@
 
 #import "JPChattingRoomViewController.h"
 #import "JPConnectionDelegateObject.h"
+#import "JPAppDelegate.h"
 
 
 @interface JPChattingRoomViewController ()
@@ -71,7 +72,14 @@
     
 }
 
-#pragma mark - Private Func
+#pragma mark - 
+
+- (IBAction)clickRefreshButton:(id)sender {
+    NSLog(@"button");
+    JPAppDelegate *delegate = (JPAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    
+}
 
 
 #pragma mark - TableView delegate
@@ -120,7 +128,5 @@
         [alert show];
     }
 }
-
-
 
 @end

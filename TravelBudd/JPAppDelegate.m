@@ -124,7 +124,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     XMPPPresence *presence = [XMPPPresence presence];
     NSString *domain = [_xmppStream.myJID domain];
     if ([domain isEqualToString:@"54.199.143.8"]) {
-        NSLog(@"ok, ip : 54.199.143.8");
+        NSLog(@"ok, domain : 54.199.143.8");
     }
     [[self xmppStream] sendElement:presence];
 }
@@ -141,8 +141,6 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 
 - (BOOL)connect
 {
-
-    NSLog(@"conn?");
 	if (![_xmppStream isDisconnected]) {
 
 		return YES;
@@ -300,7 +298,9 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 		                                               managedObjectContext:[self managedObjectContext_roster]];
 		
 		NSString *body = [[message elementForName:@"body"] stringValue];
-		NSString *displayName = [user displayName];
+//		NSString *displayName = [user displayName];
+        NSString *displayName = [message fromStr];
+
         
 		if ([[UIApplication sharedApplication] applicationState] == UIApplicationStateActive)
 		{
@@ -313,18 +313,10 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
           			[alertView show];
             
             
-//            // add into chattingContents
-//            NSArray *msgArray = @[displayName, body];
-//            _chattingContents = [_chattingContents arrayByAddingObject:msgArray];
             
 		}
 		else
 		{
-//            NSLog(@"background processing...");
-//            NSArray *msgArray = @[displayName, body];
-//            _chattingContents = [_chattingContents arrayByAddingObject:msgArray];
-            
-            
 			// We are not active, so use a local notification instead
 			UILocalNotification *localNotification = [[UILocalNotification alloc] init];
 			localNotification.alertAction = @"Ok";

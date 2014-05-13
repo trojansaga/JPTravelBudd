@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JPChattingRoomViewController : UIViewController<UITableViewDataSource, UITableViewDelegate,  NSURLConnectionDataDelegate> {
+@interface JPChattingRoomViewController : UIViewController<UITableViewDataSource, UITableViewDelegate,  NSURLConnectionDataDelegate > {
     IBOutlet UITextField *textFieldForMessage;
     IBOutlet UITableView *chattingTableView;
     

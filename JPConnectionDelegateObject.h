@@ -11,7 +11,7 @@
 
 @protocol JPConnectionDelegate <NSObject>
 
--(void)sendDataHttp:(NSArray *)objects keyForDic:(NSArray *)keys urlString:(NSString *)urlStr;
+- (void) readChattingContents;
 
 @end
 
