@@ -35,14 +35,21 @@
     joinUsView.hidden = YES;
 
     
-    //커넥션 담당 오브젝트 만들어서 해보고 싶은데.......
+    //커넥션 담당 오브젝트
     jpConnectionDelegate = [[JPConnectionDelegateObject alloc] init];
     jpConnectionDelegate.delegate = self;
     
 
-//    //auto login
-//    [self login:nil];
+    //auto login
+    [self login:nil];
+
     
+
+
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
 
 }
 
@@ -81,11 +88,11 @@
                         ];
     
     [jpConnectionDelegate sendDataHttp:dataArr keyForDic:keyArr urlString:URL_FOR_LOGIN setDelegate:self];
+    
+    
 
 }
 - (IBAction)joinUs:(id)sender {
-//    JPAppDelegate *appDelegate = (JPAppDelegate *)[[UIApplication sharedApplication] delegate];
-//    [appDelegate disconnect];
 
     joinUsView.hidden = NO;
     
@@ -102,14 +109,14 @@
     
     NSArray *dataArr = @[
                          xmppJID,
-                         textFieldForJoinUsName.text,
-                         textFieldForJoinUsPW.text
+                         textFieldForJoinUsPW.text,
+                         textFieldForJoinUsName.text
                          ];
     
     NSArray *keyArr = @[
                         @"member_email",
-                        @"member_name",
-                        @"member_password"
+                        @"member_password",
+                        @"member_name"
                         ];
     
     [jpConnectionDelegate sendDataHttp:dataArr keyForDic:keyArr urlString:URL_FOR_MEMBER_JOIN setDelegate:self];
@@ -146,14 +153,16 @@
             [appDelegate connect];
             //원래는 jid 체크를 한번 더 해야하지만 서버에서 success를 리턴할 경우 서버에서 체크한 것으로 간주
             
-            JPTabbarController *tabbarController = [[JPTabbarController alloc] initWithNibName:@"JPTabbarController" bundle:nil];
+
             
+            JPTabbarController *tabbarController = [[JPTabbarController alloc] initWithNibName:@"JPTabbarController" bundle:nil];
+
             [self presentViewController:tabbarController animated:YES completion:nil];
         }
         else {
             UIAlertView *alertView = [[UIAlertView alloc]
                                       initWithTitle:@"Login Denied"
-                                      message:@"try again" delegate:self
+                                      message:@"check ID or PW, try again" delegate:self
                                       cancelButtonTitle:@"ok"
                                       otherButtonTitles:nil, nil];
             
@@ -162,7 +171,7 @@
     }
     
     // 회원가입이랑 로그인이랑 타입이 같음
-    if ([responseType isEqualToString:@"Joining"]) {
+    else if ([responseType isEqualToString:@"Joining"]) {
         NSLog(@"회원가입하기");
         if ([[dic objectForKey:@"message"] isEqualToString:@"success"]) {
             NSLog(@"joining success");
@@ -176,6 +185,16 @@
             
             [alertView show];
         }
+    }
+    else {
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"Login Denied"
+                                  message:@"try again" delegate:self
+                                  cancelButtonTitle:@"ok"
+                                  otherButtonTitles:nil, nil];
+        
+        [alertView show];
+
     }
 }
 

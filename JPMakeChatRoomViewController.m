@@ -48,7 +48,8 @@
     }
     NSArray *keyArr = @[
                         @"chat_room_maker",
-                        @"userEmail",
+                        @"userName",
+                        @"userPwd",
                         @"chat_room_name",
                         @"chat_room_description",
                         @"chat_room_lng",
@@ -58,7 +59,8 @@
                         ];
     NSArray *dataArr = @[
                          [[NSUserDefaults standardUserDefaults] objectForKey:@"m_id"],
-                         @"email",
+                         @"testios", //temp
+                         @"1234", // temp
                          textFieldForRoomName.text,
                          textFieldForRoomDesc.text,
                          @"0.0",
@@ -85,7 +87,7 @@
         [self.navigationController popViewControllerAnimated:YES];
         
     }
-    else {
+    else if([responseType isEqualToString:@"fail"]) {
         NSLog(@"채팅방 만들기 fail");
         UIAlertView *alert = [[UIAlertView alloc]
                               initWithTitle:@"Fail to create"

@@ -41,6 +41,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     jpConnectionDelegate = [[JPConnectionDelegateObject alloc] init];
+    
+    self.navigationItem.title = @"Chatting";
+    
+    
+    
+
+    
 
 }
 
@@ -102,7 +109,10 @@
         NSLog(@"채팅방 내 조인한 유저들 리스트");
         JPChattingRoomViewController *chattingRoomViewController = [[JPChattingRoomViewController alloc] initWithNibName:@"JPChattingRoomViewController" bundle:nil];
         chattingRoomViewController.joinedMemberListArray = [dic objectForKey:@"data"];
+        
         [self.navigationController pushViewController:chattingRoomViewController animated:YES];
+        
+        
 
     }
     

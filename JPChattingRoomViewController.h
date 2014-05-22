@@ -11,11 +11,12 @@
 @interface JPChattingRoomViewController : UIViewController<UITableViewDataSource, UITableViewDelegate,  NSURLConnectionDataDelegate > {
     IBOutlet UITextField *textFieldForMessage;
     IBOutlet UITableView *chattingTableView;
-    
+
 
     
 }
 
 @property (nonatomic, strong) NSArray *joinedMemberListArray;
+@property (nonatomic, assign) int cr_id_room;
 
 @end

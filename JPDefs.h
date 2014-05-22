@@ -19,3 +19,4 @@
 #define URL_FOR_ROOM_EXIT @"http://54.199.143.8:8080/TravelBudd/ChatRoom/Deactivate"
 #define URL_FOR_ROOM_DELETE @"http://54.199.143.8:8080/TravelBudd/ChatRoom/Delete"
 #define URL_FOR_MESSAGE @"http://54.199.143.8:8080/TravelBudd/Chat/Send"
+#define URL_FOR_GROUP_MESSAGE @"http://54.199.143.8:8080/TravelBudd/Chat/Send/Group"

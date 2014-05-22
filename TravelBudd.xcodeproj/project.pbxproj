@@ -20,7 +20,6 @@
 		1540BAD9191DDAEC00B1DBE0 /* JPMakeChatRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1540BAD7191DDAEC00B1DBE0 /* JPMakeChatRoomViewController.xib */; };
 		1540BADE191E544100B1DBE0 /* JPChattingRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1540BADC191E544100B1DBE0 /* JPChattingRoomViewController.m */; };
 		1540BADF191E544100B1DBE0 /* JPChattingRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1540BADD191E544100B1DBE0 /* JPChattingRoomViewController.xib */; };
-		1540BAE2191E803F00B1DBE0 /* JPChattingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1540BAE1191E803F00B1DBE0 /* JPChattingController.m */; };
 		15951C7E18ECF053008A8868 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15951C7D18ECF053008A8868 /* Foundation.framework */; };
 		15951C8018ECF053008A8868 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15951C7F18ECF053008A8868 /* CoreGraphics.framework */; };
 		15951C8218ECF053008A8868 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15951C8118ECF053008A8868 /* UIKit.framework */; };
@@ -169,6 +168,14 @@
 		15951E8C18EEE283008A8868 /* XMPPMessage+XEP_0308.m in Sources */ = {isa = PBXBuildFile; fileRef = 15951E2F18EEE283008A8868 /* XMPPMessage+XEP_0308.m */; };
 		15951E8D18EEE283008A8868 /* XMPPMessage+XEP_0333.m in Sources */ = {isa = PBXBuildFile; fileRef = 15951E3218EEE283008A8868 /* XMPPMessage+XEP_0333.m */; };
 		15951E8E18EEE283008A8868 /* NSXMLElement+XEP_0335.m in Sources */ = {isa = PBXBuildFile; fileRef = 15951E3518EEE283008A8868 /* NSXMLElement+XEP_0335.m */; };
+		159779F41922734A00C7A3DB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159779F31922734A00C7A3DB /* MapKit.framework */; };
+		159779F61922796500C7A3DB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159779F51922796500C7A3DB /* CoreLocation.framework */; };
+		159779F81922798400C7A3DB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159779F71922798400C7A3DB /* CoreData.framework */; };
+		159779FB192285D500C7A3DB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 159779F9192285D500C7A3DB /* Model.xcdatamodeld */; };
+		159779FE1922866D00C7A3DB /* ChatRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 159779FD1922866D00C7A3DB /* ChatRecord.m */; };
+		1597DF1A192C69A100E28417 /* JPMapCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1597DF18192C69A100E28417 /* JPMapCreationViewController.m */; };
+		1597DF1B192C69A100E28417 /* JPMapCreationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1597DF19192C69A100E28417 /* JPMapCreationViewController.xib */; };
+		1597DF1E192C773500E28417 /* JPAno.m in Sources */ = {isa = PBXBuildFile; fileRef = 1597DF1D192C773500E28417 /* JPAno.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,8 +209,6 @@
 		1540BADB191E544100B1DBE0 /* JPChattingRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPChattingRoomViewController.h; sourceTree = "<group>"; };
 		1540BADC191E544100B1DBE0 /* JPChattingRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPChattingRoomViewController.m; sourceTree = "<group>"; };
 		1540BADD191E544100B1DBE0 /* JPChattingRoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JPChattingRoomViewController.xib; sourceTree = "<group>"; };
-		1540BAE0191E803F00B1DBE0 /* JPChattingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPChattingController.h; sourceTree = "<group>"; };
-		1540BAE1191E803F00B1DBE0 /* JPChattingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPChattingController.m; sourceTree = "<group>"; };
 		1540BAE3191E9AA900B1DBE0 /* JPDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPDefs.h; sourceTree = "<group>"; };
 		15951C7A18ECF053008A8868 /* TravelBudd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelBudd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15951C7D18ECF053008A8868 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -496,6 +501,18 @@
 		15951E3218EEE283008A8868 /* XMPPMessage+XEP_0333.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XMPPMessage+XEP_0333.m"; sourceTree = "<group>"; };
 		15951E3418EEE283008A8868 /* NSXMLElement+XEP_0335.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSXMLElement+XEP_0335.h"; sourceTree = "<group>"; };
 		15951E3518EEE283008A8868 /* NSXMLElement+XEP_0335.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSXMLElement+XEP_0335.m"; sourceTree = "<group>"; };
+		1597799A1921C14700C7A3DB /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		159779F31922734A00C7A3DB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		159779F51922796500C7A3DB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		159779F71922798400C7A3DB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		159779FA192285D500C7A3DB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		159779FC1922866D00C7A3DB /* ChatRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRecord.h; sourceTree = "<group>"; };
+		159779FD1922866D00C7A3DB /* ChatRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRecord.m; sourceTree = "<group>"; };
+		1597DF17192C69A100E28417 /* JPMapCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPMapCreationViewController.h; sourceTree = "<group>"; };
+		1597DF18192C69A100E28417 /* JPMapCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPMapCreationViewController.m; sourceTree = "<group>"; };
+		1597DF19192C69A100E28417 /* JPMapCreationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JPMapCreationViewController.xib; sourceTree = "<group>"; };
+		1597DF1C192C773500E28417 /* JPAno.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPAno.h; sourceTree = "<group>"; };
+		1597DF1D192C773500E28417 /* JPAno.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPAno.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -503,6 +520,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				159779F81922798400C7A3DB /* CoreData.framework in Frameworks */,
+				159779F61922796500C7A3DB /* CoreLocation.framework in Frameworks */,
+				159779F41922734A00C7A3DB /* MapKit.framework in Frameworks */,
 				15951D4F18EEE20E008A8868 /* libxml2.2.dylib in Frameworks */,
 				15951D4D18EEE1BA008A8868 /* libxml2.dylib in Frameworks */,
 				15951D4A18EE40EC008A8868 /* libresolv.dylib in Frameworks */,
@@ -528,24 +548,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1534649819193B4700D271A5 /* Not Working Group */ = {
+		1534649819193B4700D271A5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				153A728718F2455300C7ABB7 /* JPMapViewController.h */,
-				153A728818F2455300C7ABB7 /* JPMapViewController.m */,
-				153A728918F2455300C7ABB7 /* JPMapViewController.xib */,
 				15951CAD18ECF0B0008A8868 /* JPLoginViewController.h */,
 				15951CAE18ECF0B0008A8868 /* JPLoginViewController.m */,
 				15951CAF18ECF0B0008A8868 /* JPLoginViewController.xib */,
-				15951D4B18EEAE78008A8868 /* XMPPFramework.h */,
-				153A729418F2459700C7ABB7 /* JPSettingViewController.h */,
-				153A729518F2459700C7ABB7 /* JPSettingViewController.m */,
-				153A729618F2459700C7ABB7 /* JPSettingViewController.xib */,
-				153A728218F244C100C7ABB7 /* JPTabbarController.h */,
-				153A728318F244C100C7ABB7 /* JPTabbarController.m */,
-				153A728418F244C100C7ABB7 /* JPTabbarController.xib */,
 			);
-			name = "Not Working Group";
+			name = Login;
 			sourceTree = "<group>";
 		};
 		1540BADA191E538800B1DBE0 /* Chatting */ = {
@@ -560,8 +570,6 @@
 				1540BADB191E544100B1DBE0 /* JPChattingRoomViewController.h */,
 				1540BADC191E544100B1DBE0 /* JPChattingRoomViewController.m */,
 				1540BADD191E544100B1DBE0 /* JPChattingRoomViewController.xib */,
-				1540BAE0191E803F00B1DBE0 /* JPChattingController.h */,
-				1540BAE1191E803F00B1DBE0 /* JPChattingController.m */,
 			);
 			name = Chatting;
 			sourceTree = "<group>";
@@ -590,6 +598,10 @@
 		15951C7C18ECF053008A8868 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				159779F71922798400C7A3DB /* CoreData.framework */,
+				159779F51922796500C7A3DB /* CoreLocation.framework */,
+				159779F31922734A00C7A3DB /* MapKit.framework */,
+				1597799A1921C14700C7A3DB /* libsqlite3.dylib */,
 				15951D4E18EEE20E008A8868 /* libxml2.2.dylib */,
 				15951D4C18EEE1BA008A8868 /* libxml2.dylib */,
 				15951D4918EE40EC008A8868 /* libresolv.dylib */,
@@ -644,10 +656,17 @@
 		15951CAC18ECF090008A8868 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				15977A5A1925D62100C7A3DB /* Setting */,
+				159779F21922730C00C7A3DB /* Map */,
+				1597799C1921C1B800C7A3DB /* ChattingDB */,
 				1540BADA191E538800B1DBE0 /* Chatting */,
-				1534649819193B4700D271A5 /* Not Working Group */,
+				1534649819193B4700D271A5 /* Login */,
 				15951C8C18ECF053008A8868 /* JPAppDelegate.h */,
 				15951C8D18ECF053008A8868 /* JPAppDelegate.m */,
+				15951D4B18EEAE78008A8868 /* XMPPFramework.h */,
+				153A728218F244C100C7ABB7 /* JPTabbarController.h */,
+				153A728318F244C100C7ABB7 /* JPTabbarController.m */,
+				153A728418F244C100C7ABB7 /* JPTabbarController.xib */,
 				153464951919208F00D271A5 /* JPConnectionDelegateObject.h */,
 				153464961919208F00D271A5 /* JPConnectionDelegateObject.m */,
 				1540BAE3191E9AA900B1DBE0 /* JPDefs.h */,
@@ -1456,6 +1475,41 @@
 			path = "XEP-0335";
 			sourceTree = "<group>";
 		};
+		1597799C1921C1B800C7A3DB /* ChattingDB */ = {
+			isa = PBXGroup;
+			children = (
+				159779F9192285D500C7A3DB /* Model.xcdatamodeld */,
+				159779FC1922866D00C7A3DB /* ChatRecord.h */,
+				159779FD1922866D00C7A3DB /* ChatRecord.m */,
+			);
+			name = ChattingDB;
+			sourceTree = "<group>";
+		};
+		159779F21922730C00C7A3DB /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				153A728718F2455300C7ABB7 /* JPMapViewController.h */,
+				153A728818F2455300C7ABB7 /* JPMapViewController.m */,
+				153A728918F2455300C7ABB7 /* JPMapViewController.xib */,
+				1597DF17192C69A100E28417 /* JPMapCreationViewController.h */,
+				1597DF18192C69A100E28417 /* JPMapCreationViewController.m */,
+				1597DF19192C69A100E28417 /* JPMapCreationViewController.xib */,
+				1597DF1C192C773500E28417 /* JPAno.h */,
+				1597DF1D192C773500E28417 /* JPAno.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		15977A5A1925D62100C7A3DB /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				153A729418F2459700C7ABB7 /* JPSettingViewController.h */,
+				153A729518F2459700C7ABB7 /* JPSettingViewController.m */,
+				153A729618F2459700C7ABB7 /* JPSettingViewController.xib */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1540,6 +1594,7 @@
 				15951C8818ECF053008A8868 /* InfoPlist.strings in Resources */,
 				15951C9018ECF053008A8868 /* Images.xcassets in Resources */,
 				1540BAD9191DDAEC00B1DBE0 /* JPMakeChatRoomViewController.xib in Resources */,
+				1597DF1B192C69A100E28417 /* JPMapCreationViewController.xib in Resources */,
 				153A728618F244C100C7ABB7 /* JPTabbarController.xib in Resources */,
 				15951CE318ED0F09008A8868 /* README.txt in Resources */,
 				15951CB118ECF0B0008A8868 /* JPLoginViewController.xib in Resources */,
@@ -1586,7 +1641,6 @@
 				15951CDD18ED0F09008A8868 /* DDASLLogger.m in Sources */,
 				153A729218F2458500C7ABB7 /* JPChatViewController.m in Sources */,
 				15951E3C18EEE283008A8868 /* XMPPResourceCoreDataStorageObject.m in Sources */,
-				1540BAE2191E803F00B1DBE0 /* JPChattingController.m in Sources */,
 				15951D4218EE40B5008A8868 /* XMPPStream.m in Sources */,
 				15951CE418ED0F09008A8868 /* NSString+DDXML.m in Sources */,
 				15951CE118ED0F09008A8868 /* ContextFilterLogFormatter.m in Sources */,
@@ -1608,12 +1662,15 @@
 				15951CE018ED0F09008A8868 /* DDTTYLogger.m in Sources */,
 				153A728518F244C100C7ABB7 /* JPTabbarController.m in Sources */,
 				15951E6218EEE283008A8868 /* XMPPvCardTempEmail.m in Sources */,
+				159779FB192285D500C7A3DB /* Model.xcdatamodeld in Sources */,
 				15951E3E18EEE283008A8868 /* XMPPRosterCoreDataStorage.m in Sources */,
 				15951E5518EEE283008A8868 /* XMPPRoomOccupantMemoryStorageObject.m in Sources */,
+				1597DF1A192C69A100E28417 /* JPMapCreationViewController.m in Sources */,
 				15951D3B18EE40B5008A8868 /* XMPPElement.m in Sources */,
 				15951E5818EEE283008A8868 /* XMPPRoom.m in Sources */,
 				15951E6018EEE283008A8868 /* XMPPvCardTempAdrTypes.m in Sources */,
 				15951E8E18EEE283008A8868 /* NSXMLElement+XEP_0335.m in Sources */,
+				1597DF1E192C773500E28417 /* JPAno.m in Sources */,
 				15951D4418EE40B5008A8868 /* GCDMulticastDelegate.m in Sources */,
 				15951D3C18EE40B5008A8868 /* XMPPIQ.m in Sources */,
 				15951D3318EE40B5008A8868 /* XMPPDigestMD5Authentication.m in Sources */,
@@ -1685,6 +1742,7 @@
 				15951E5B18EEE283008A8868 /* XMPPvCardCoreDataStorage.m in Sources */,
 				15951D4618EE40B5008A8868 /* XMPPIDTracker.m in Sources */,
 				15951E8B18EEE283008A8868 /* NSXMLElement+XEP_0297.m in Sources */,
+				159779FE1922866D00C7A3DB /* ChatRecord.m in Sources */,
 				15951E7918EEE283008A8868 /* XMPPMessageArchiving_Contact_CoreDataObject.m in Sources */,
 				15951D3518EE40B5008A8868 /* XMPPSCRAMSHA1Authentication.m in Sources */,
 				15951D3618EE40B5008A8868 /* XMPPXFacebookPlatformAuthentication.m in Sources */,
@@ -1967,6 +2025,16 @@
 			);
 			currentVersion = 15951DFC18EEE283008A8868 /* XMPPMessageArchiving.xcdatamodel */;
 			path = XMPPMessageArchiving.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		159779F9192285D500C7A3DB /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				159779FA192285D500C7A3DB /* Model.xcdatamodel */,
+			);
+			currentVersion = 159779FA192285D500C7A3DB /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

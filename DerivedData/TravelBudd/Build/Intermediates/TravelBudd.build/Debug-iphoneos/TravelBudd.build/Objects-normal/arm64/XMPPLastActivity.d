@@ -57,6 +57,7 @@ dependencies: \
   /Users/trojansaga/Documents/ios/TravelBudd/Extensions/Roster/CoreDataStorage/XMPPUserCoreDataStorageObject.h \
   /Users/trojansaga/Documents/ios/TravelBudd/Extensions/Roster/CoreDataStorage/XMPPGroupCoreDataStorageObject.h \
   /Users/trojansaga/Documents/ios/TravelBudd/Extensions/Roster/CoreDataStorage/XMPPResourceCoreDataStorageObject.h \
+  /Users/trojansaga/Documents/ios/TravelBudd/Extensions/XEP-0045/XMPPMessage+XEP0045.h \
   /Users/trojansaga/Documents/ios/TravelBudd/Extensions/XEP-0045/XMPPMUC.h \
   /Users/trojansaga/Documents/ios/TravelBudd/Extensions/XEP-0045/XMPPRoom.h \
   /Users/trojansaga/Documents/ios/TravelBudd/Extensions/XEP-0045/XMPPRoomMessage.h \

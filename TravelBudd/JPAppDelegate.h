@@ -28,6 +28,12 @@
 @property (strong, nonatomic) XMPPRosterCoreDataStorage *xmppRosterStorage;
 @property (strong, nonatomic) XMPPCapabilities *xmppCapabilities;
 @property (strong, nonatomic) XMPPCapabilitiesCoreDataStorage *xmppCapabilitiesStorage;
+//@property (strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
 
 - (void)setupStream;
 - (void)teardownStream;

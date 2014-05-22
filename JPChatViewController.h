@@ -14,6 +14,7 @@
     int numOfChatRooms;
     NSArray *chatRoomListArray;
 
+
     JPConnectionDelegateObject *jpConnectionDelegate;
     
     
@@ -22,6 +23,8 @@
 
 
 -(void)sendDataHttp:(NSArray *)objects keyForDic:(NSArray *)keys urlString:(NSString *)urlStr delegate:(id) delegate;
+
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 
 @end

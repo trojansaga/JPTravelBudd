@@ -31,9 +31,13 @@
     chatViewController = [[JPChatViewController alloc] initWithNibName:@"JPChatViewController" bundle:nil];
     settingViewController = [[JPSettingViewController alloc] initWithNibName:@"JPSettingViewController" bundle:nil];
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:chatViewController];
+    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:mapViewController];
+    UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:chatViewController];
+    UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:settingViewController];
     
-    self.viewControllers = @[mapViewController,navigationController,settingViewController];
+//    self.viewControllers = @[mapViewController,chatViewController,settingViewController];
+    self.viewControllers = @[nav1,nav2,nav3];
+    self.navigationItem.title = @"fu";
     
     NSArray *tabbarItems = [[self tabBar] items];
     UITabBarItem *mapViewTabbarItem = [tabbarItems objectAtIndex:0];

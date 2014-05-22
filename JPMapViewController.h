@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface JPMapViewController : UIViewController
+@interface JPMapViewController : UIViewController <CLLocationManagerDelegate, UISearchBarDelegate, MKMapViewDelegate> {
+    IBOutlet MKMapView *mapView;
+    CLLocationManager *clmgr;
+    CLLocationCoordinate2D curPos;
+    IBOutlet UISearchBar *searchBar;
+    
+    IBOutlet UINavigationBar *navBar;
+    IBOutlet UILabel <MKAnnotation> *annoLabel;
+}
+
+
 
 @end
