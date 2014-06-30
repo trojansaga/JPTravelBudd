@@ -8,7 +8,7 @@
 
 #import "JPMakeChatRoomViewController.h"
 #import "JPChatViewController.h"
-#import "JPConnectionDelegateObject.h"
+
 
 
 @interface JPMakeChatRoomViewController ()
@@ -39,12 +39,12 @@
 }
 
 - (IBAction)createRoom:(id)sender {
-    NSString *strForSecret;
+    NSString *isSectetRoom;
     if (switchForSecret.on) {
-        strForSecret = @"true";
+        isSectetRoom = @"true";
     }
     else {
-        strForSecret = @"false";
+        isSectetRoom = @"false";
     }
     NSArray *keyArr = @[
                         @"chat_room_maker",
@@ -58,19 +58,19 @@
                         @"chat_room_no_of_people",
                         ];
     NSArray *dataArr = @[
-                         [[NSUserDefaults standardUserDefaults] objectForKey:@"m_id"],
-                         @"testios", //temp
-                         @"1234", // temp
+                         [[NSUserDefaults standardUserDefaults] objectForKey:@"M_ID"],
+                         [[NSUserDefaults standardUserDefaults] objectForKey:@"ID"],
+                         [[NSUserDefaults standardUserDefaults] objectForKey:@"PASSWORD"],
                          textFieldForRoomName.text,
                          textFieldForRoomDesc.text,
                          @"0.0",
                          @"0.0",
-                         strForSecret,
+                         isSectetRoom,
                          textFieldForRoomMaxNum.text
                          ];
    
-    JPConnectionDelegateObject *object = [[JPConnectionDelegateObject alloc] init];
-    [object sendDataHttp:dataArr keyForDic:keyArr urlString:URL_FOR_CREATE_ROOM setDelegate:self];
+    JPAppDelegate *appDelegate = (JPAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate sendDataHttp:dataArr keyForDic:keyArr urlString:URL_FOR_CREATE_ROOM setDelegate:self];
 
 }
 

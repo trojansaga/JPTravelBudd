@@ -9,7 +9,7 @@
 #import "JPChatViewController.h"
 #import "JPMakeChatRoomViewController.h"
 #import "JPChattingRoomViewController.h"
-#import "JPConnectionDelegateObject.h"
+
 
 @interface JPChatViewController ()
 
@@ -29,25 +29,35 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     
-    NSString *str = [[NSUserDefaults standardUserDefaults] objectForKey:@"xmppJID"];
+    NSString *str = [[NSUserDefaults standardUserDefaults] objectForKey:@"XMPPJID"];
     NSArray *objects = @[str];
     NSArray *keys = @[@"member_email"];
     
-    [jpConnectionDelegate sendDataHttp:objects keyForDic:keys urlString:URL_FOR_ROOM_LIST setDelegate:self];
+    [appDelegate sendDataHttp:objects keyForDic:keys urlString:URL_FOR_ROOM_LIST setDelegate:self];
+    
+    
+    //로딩 바 돌아감
+//    UIView *loadingBGView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+//    loadingBGView.backgroundColor = [UIColor blackColor];
+//    loadingBGView.alpha = 0.2;
+    
+    indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    indicator.center = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/2);
+    [indicator setColor:[UIColor blackColor]];
+    indicator.hidesWhenStopped = YES;
+    [self.view addSubview:indicator];
+    [indicator startAnimating];
+    
+    
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    jpConnectionDelegate = [[JPConnectionDelegateObject alloc] init];
+    appDelegate = (JPAppDelegate *)[[UIApplication sharedApplication] delegate];
     
     self.navigationItem.title = @"Chatting";
-    
-    
-    
-
-    
 
 }
 
@@ -80,50 +90,58 @@
 
     //채팅방 리스트
     if ([responseType  isEqual: @"ChatRoom List"]) {
-        NSLog(@"채팅방리스트");
+        NSLog(@"채팅방리스트 성공");
         
         NSArray *arr = [dic objectForKey:@"data"];
         numOfChatRooms = (int)[arr count];
         chatRoomListArray = arr;
         [chatRoomListTableView reloadData];
+        
     }
     
     else if ([responseType isEqualToString:@"Create ChatRoom"]) {
-        NSLog(@"채팅방 만들기");
+        NSLog(@"채팅방 만들기 성공");
     }
     
     else if ([responseType isEqualToString:@"Joining ChatRoom"]) {
-        NSLog(@"채팅방 조인하기");
+        NSLog(@"채팅방 조인하기 성공");
+        
+        NSString *crmID = [dic objectForKey:@"crm_id"];
+
+        chattingRoomViewController.crm_id = crmID;
+        
+        [self.navigationController pushViewController:chattingRoomViewController animated:YES];
+
+        
         
     }
     
     else if ([responseType isEqualToString:@"My ChatRoom List"]) {
-        NSLog(@"내가 조인한 채팅방 리스트");
+        NSLog(@"내가 조인한 채팅방 리스트 성공");
     }
     
     else if ([responseType isEqualToString:@"ChatRoom Info"]) {
-        NSLog(@"채팅방 정보");
+        NSLog(@"채팅방 정보 성공");
     }
     
     else if ([responseType isEqualToString:@"Member List"]) {
-        NSLog(@"채팅방 내 조인한 유저들 리스트");
-        JPChattingRoomViewController *chattingRoomViewController = [[JPChattingRoomViewController alloc] initWithNibName:@"JPChattingRoomViewController" bundle:nil];
-        chattingRoomViewController.joinedMemberListArray = [dic objectForKey:@"data"];
+        NSLog(@"채팅방 내 조인한 유저들 리스트 성공");
         
-        [self.navigationController pushViewController:chattingRoomViewController animated:YES];
-        
-        
+
 
     }
     
     else if ([responseType isEqualToString:@"Deactivate ChatRoom Member"]) {
-        NSLog(@"채팅방 탈퇴하기");
+        NSLog(@"채팅방 탈퇴하기 성공");
     }
     
     else if ([responseType isEqualToString:@"Delete ChatRoom"]) {
-        NSLog(@"채팅방 지우기");
+        NSLog(@"채팅방 지우기 성공");
     }
     
+    
+    [indicator stopAnimating];
+
     
 }
 
@@ -146,26 +164,43 @@
     return numOfChatRooms;
 }
 
+
+// 선택한 열의 채팅방에 로그인 (= 조인)
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
     NSString *crID = [[chatRoomListArray objectAtIndex:indexPath.row] objectForKey:@"cr_id"];
-//    NSLog(@"crid = %@", crID);
+    NSLog(@"crid = %@", crID);
     NSString *str = [NSString stringWithFormat:@"%@",crID];
-//    NSLog(@"class of crid = %@", [crID class]);
-//    NSLog(@"class of str = %@", [str class]);
-    
+    NSLog(@"class of crid = %@", [crID class]);
+    NSLog(@"class of str = %@", [str class]);
 
 
-    NSArray *dataArr = @[[[NSUserDefaults standardUserDefaults] objectForKey:@"m_id"],crID];
-    NSArray *keyArr = @[@"m_id", @"cr_id"];
+    NSArray *dataArr = @[
+                         [[NSUserDefaults standardUserDefaults] objectForKey:@"M_ID"],
+                         crID,
+                         [[NSUserDefaults standardUserDefaults] objectForKey:@"ID"],
+                         [[NSUserDefaults standardUserDefaults] objectForKey:@"PASSWORD"],
+                         ];
+    NSArray *keyArr = @[
+                        @"m_id",
+                        @"cr_id",
+                        @"userName",
+                        @"userPwd",
+                        ];
     
-    [jpConnectionDelegate sendDataHttp:dataArr keyForDic:keyArr urlString:URL_FOR_ROOM_JOIN setDelegate:self];
+    [appDelegate sendDataHttp:dataArr keyForDic:keyArr urlString:URL_FOR_ROOM_JOIN setDelegate:self];
     
-    NSString *urlStr = URL_FOR_ROOM_JOINEDMEMBER_LIST_WITHOUT_CRID;
-    urlStr = [urlStr stringByAppendingString:str];
-    NSLog(@"%@",urlStr);
-    [jpConnectionDelegate sendDataHttp:nil keyForDic:nil urlString:urlStr setDelegate:self];
-   
+    chattingRoomViewController = [[JPChattingRoomViewController alloc] initWithNibName:@"JPChattingRoomViewController" bundle:nil];
+    chattingRoomViewController.m_id = [[NSUserDefaults standardUserDefaults] objectForKey:@"M_ID"];
+    chattingRoomViewController.cr_id_room = str;
+    NSLog(@"mid = %@, crid = %@", [chattingRoomViewController.m_id class], [chattingRoomViewController.cr_id_room class]);
+    
+
+//    //조인멤버 확인,
+//    NSString *urlStr = URL_FOR_ROOM_JOINEDMEMBER_LIST_WITHOUT_CRID;
+//    urlStr = [urlStr stringByAppendingString:str];
+//    NSLog(@"%@",urlStr);
+//    [jpConnectionDelegate sendDataHttp:nil keyForDic:nil urlString:urlStr setDelegate:self];
 
 }
 

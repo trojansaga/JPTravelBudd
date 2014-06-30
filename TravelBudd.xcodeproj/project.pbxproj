@@ -20,6 +20,10 @@
 		1540BAD9191DDAEC00B1DBE0 /* JPMakeChatRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1540BAD7191DDAEC00B1DBE0 /* JPMakeChatRoomViewController.xib */; };
 		1540BADE191E544100B1DBE0 /* JPChattingRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1540BADC191E544100B1DBE0 /* JPChattingRoomViewController.m */; };
 		1540BADF191E544100B1DBE0 /* JPChattingRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1540BADD191E544100B1DBE0 /* JPChattingRoomViewController.xib */; };
+		155DCBC219435D320040C6A0 /* JPMapListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 155DCBC019435D320040C6A0 /* JPMapListViewController.m */; };
+		155DCBC319435D320040C6A0 /* JPMapListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155DCBC119435D320040C6A0 /* JPMapListViewController.xib */; };
+		155DCBE1194821E30040C6A0 /* PinRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 155DCBE0194821E30040C6A0 /* PinRecord.m */; };
+		155DCBE7194822410040C6A0 /* MapRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 155DCBE6194822410040C6A0 /* MapRecord.m */; };
 		15951C7E18ECF053008A8868 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15951C7D18ECF053008A8868 /* Foundation.framework */; };
 		15951C8018ECF053008A8868 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15951C7F18ECF053008A8868 /* CoreGraphics.framework */; };
 		15951C8218ECF053008A8868 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15951C8118ECF053008A8868 /* UIKit.framework */; };
@@ -173,9 +177,6 @@
 		159779F81922798400C7A3DB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159779F71922798400C7A3DB /* CoreData.framework */; };
 		159779FB192285D500C7A3DB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 159779F9192285D500C7A3DB /* Model.xcdatamodeld */; };
 		159779FE1922866D00C7A3DB /* ChatRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 159779FD1922866D00C7A3DB /* ChatRecord.m */; };
-		1597DF1A192C69A100E28417 /* JPMapCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1597DF18192C69A100E28417 /* JPMapCreationViewController.m */; };
-		1597DF1B192C69A100E28417 /* JPMapCreationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1597DF19192C69A100E28417 /* JPMapCreationViewController.xib */; };
-		1597DF1E192C773500E28417 /* JPAno.m in Sources */ = {isa = PBXBuildFile; fileRef = 1597DF1D192C773500E28417 /* JPAno.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +211,13 @@
 		1540BADC191E544100B1DBE0 /* JPChattingRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPChattingRoomViewController.m; sourceTree = "<group>"; };
 		1540BADD191E544100B1DBE0 /* JPChattingRoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JPChattingRoomViewController.xib; sourceTree = "<group>"; };
 		1540BAE3191E9AA900B1DBE0 /* JPDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPDefs.h; sourceTree = "<group>"; };
+		155DCBBF19435D320040C6A0 /* JPMapListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPMapListViewController.h; sourceTree = "<group>"; };
+		155DCBC019435D320040C6A0 /* JPMapListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPMapListViewController.m; sourceTree = "<group>"; };
+		155DCBC119435D320040C6A0 /* JPMapListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JPMapListViewController.xib; sourceTree = "<group>"; };
+		155DCBDF194821E30040C6A0 /* PinRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinRecord.h; sourceTree = "<group>"; };
+		155DCBE0194821E30040C6A0 /* PinRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinRecord.m; sourceTree = "<group>"; };
+		155DCBE5194822410040C6A0 /* MapRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapRecord.h; sourceTree = "<group>"; };
+		155DCBE6194822410040C6A0 /* MapRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapRecord.m; sourceTree = "<group>"; };
 		15951C7A18ECF053008A8868 /* TravelBudd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelBudd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15951C7D18ECF053008A8868 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		15951C7F18ECF053008A8868 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -508,11 +516,6 @@
 		159779FA192285D500C7A3DB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		159779FC1922866D00C7A3DB /* ChatRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRecord.h; sourceTree = "<group>"; };
 		159779FD1922866D00C7A3DB /* ChatRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRecord.m; sourceTree = "<group>"; };
-		1597DF17192C69A100E28417 /* JPMapCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPMapCreationViewController.h; sourceTree = "<group>"; };
-		1597DF18192C69A100E28417 /* JPMapCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPMapCreationViewController.m; sourceTree = "<group>"; };
-		1597DF19192C69A100E28417 /* JPMapCreationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JPMapCreationViewController.xib; sourceTree = "<group>"; };
-		1597DF1C192C773500E28417 /* JPAno.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPAno.h; sourceTree = "<group>"; };
-		1597DF1D192C773500E28417 /* JPAno.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPAno.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1481,6 +1484,10 @@
 				159779F9192285D500C7A3DB /* Model.xcdatamodeld */,
 				159779FC1922866D00C7A3DB /* ChatRecord.h */,
 				159779FD1922866D00C7A3DB /* ChatRecord.m */,
+				155DCBDF194821E30040C6A0 /* PinRecord.h */,
+				155DCBE0194821E30040C6A0 /* PinRecord.m */,
+				155DCBE5194822410040C6A0 /* MapRecord.h */,
+				155DCBE6194822410040C6A0 /* MapRecord.m */,
 			);
 			name = ChattingDB;
 			sourceTree = "<group>";
@@ -1491,11 +1498,9 @@
 				153A728718F2455300C7ABB7 /* JPMapViewController.h */,
 				153A728818F2455300C7ABB7 /* JPMapViewController.m */,
 				153A728918F2455300C7ABB7 /* JPMapViewController.xib */,
-				1597DF17192C69A100E28417 /* JPMapCreationViewController.h */,
-				1597DF18192C69A100E28417 /* JPMapCreationViewController.m */,
-				1597DF19192C69A100E28417 /* JPMapCreationViewController.xib */,
-				1597DF1C192C773500E28417 /* JPAno.h */,
-				1597DF1D192C773500E28417 /* JPAno.m */,
+				155DCBBF19435D320040C6A0 /* JPMapListViewController.h */,
+				155DCBC019435D320040C6A0 /* JPMapListViewController.m */,
+				155DCBC119435D320040C6A0 /* JPMapListViewController.xib */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -1588,13 +1593,13 @@
 			files = (
 				153A729818F2459700C7ABB7 /* JPSettingViewController.xib in Resources */,
 				1540BADF191E544100B1DBE0 /* JPChattingRoomViewController.xib in Resources */,
+				155DCBC319435D320040C6A0 /* JPMapListViewController.xib in Resources */,
 				153A728B18F2455300C7ABB7 /* JPMapViewController.xib in Resources */,
 				15951CE818ED0F09008A8868 /* build-libidn.sh in Resources */,
 				153A729318F2458500C7ABB7 /* JPChatViewController.xib in Resources */,
 				15951C8818ECF053008A8868 /* InfoPlist.strings in Resources */,
 				15951C9018ECF053008A8868 /* Images.xcassets in Resources */,
 				1540BAD9191DDAEC00B1DBE0 /* JPMakeChatRoomViewController.xib in Resources */,
-				1597DF1B192C69A100E28417 /* JPMapCreationViewController.xib in Resources */,
 				153A728618F244C100C7ABB7 /* JPTabbarController.xib in Resources */,
 				15951CE318ED0F09008A8868 /* README.txt in Resources */,
 				15951CB118ECF0B0008A8868 /* JPLoginViewController.xib in Resources */,
@@ -1665,12 +1670,10 @@
 				159779FB192285D500C7A3DB /* Model.xcdatamodeld in Sources */,
 				15951E3E18EEE283008A8868 /* XMPPRosterCoreDataStorage.m in Sources */,
 				15951E5518EEE283008A8868 /* XMPPRoomOccupantMemoryStorageObject.m in Sources */,
-				1597DF1A192C69A100E28417 /* JPMapCreationViewController.m in Sources */,
 				15951D3B18EE40B5008A8868 /* XMPPElement.m in Sources */,
 				15951E5818EEE283008A8868 /* XMPPRoom.m in Sources */,
 				15951E6018EEE283008A8868 /* XMPPvCardTempAdrTypes.m in Sources */,
 				15951E8E18EEE283008A8868 /* NSXMLElement+XEP_0335.m in Sources */,
-				1597DF1E192C773500E28417 /* JPAno.m in Sources */,
 				15951D4418EE40B5008A8868 /* GCDMulticastDelegate.m in Sources */,
 				15951D3C18EE40B5008A8868 /* XMPPIQ.m in Sources */,
 				15951D3318EE40B5008A8868 /* XMPPDigestMD5Authentication.m in Sources */,
@@ -1682,6 +1685,7 @@
 				15951E6B18EEE283008A8868 /* XMPPIQ+XEP_0066.m in Sources */,
 				15951E8818EEE283008A8868 /* XEP_0223.m in Sources */,
 				15951E7F18EEE283008A8868 /* XMPPPresence+XEP_0172.m in Sources */,
+				155DCBE1194821E30040C6A0 /* PinRecord.m in Sources */,
 				15951E3F18EEE283008A8868 /* XMPPUserCoreDataStorageObject.m in Sources */,
 				153A729718F2459700C7ABB7 /* JPSettingViewController.m in Sources */,
 				15951D4318EE40B5008A8868 /* DDList.m in Sources */,
@@ -1741,6 +1745,8 @@
 				15951E4718EEE283008A8868 /* XMPPJabberRPCModule.m in Sources */,
 				15951E5B18EEE283008A8868 /* XMPPvCardCoreDataStorage.m in Sources */,
 				15951D4618EE40B5008A8868 /* XMPPIDTracker.m in Sources */,
+				155DCBE7194822410040C6A0 /* MapRecord.m in Sources */,
+				155DCBC219435D320040C6A0 /* JPMapListViewController.m in Sources */,
 				15951E8B18EEE283008A8868 /* NSXMLElement+XEP_0297.m in Sources */,
 				159779FE1922866D00C7A3DB /* ChatRecord.m in Sources */,
 				15951E7918EEE283008A8868 /* XMPPMessageArchiving_Contact_CoreDataObject.m in Sources */,

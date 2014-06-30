@@ -15,11 +15,15 @@
 #import "JPAppDelegate.h"
 #import "JPLoginViewController.h"
 
+#import "ChatRecord.h"
+
 // Log levels: off, error, warn, info, verbose
 #if DEBUG
-static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+//static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+static const int ddLogLevel = LOG_LEVEL_OFF;
 #else
 static const int ddLogLevel = LOG_LEVEL_INFO;
+
 #endif
 
 
@@ -41,8 +45,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     self.window.rootViewController = loginViewController;
     [self.window makeKeyAndVisible];
     
-    
-    
+        
     return YES;
 }
 
@@ -155,8 +158,8 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     
     // JID = userName@domain
     
-	NSString *myJID = [[NSUserDefaults standardUserDefaults] stringForKey:@"xmppJID"];
-	NSString *myPassword = [[NSUserDefaults standardUserDefaults] stringForKey:@"xmppPASSWORD"];
+	NSString *myJID = [[NSUserDefaults standardUserDefaults] stringForKey:@"XMPPJID"];
+	NSString *myPassword = [[NSUserDefaults standardUserDefaults] stringForKey:@"PASSWORD"];
 
 
 	//
@@ -187,7 +190,6 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 		[alertView show];
         
 		DDLogError(@"Error connecting: %@", error);
-        
 		return NO;
 	}
     
@@ -239,7 +241,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"PracCoreData" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -252,7 +254,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
         return _persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"PracCoreData.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"TravelBudd.sqlite"];
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
@@ -293,6 +295,24 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+#pragma mark - Http Connection
+
+-(void)sendDataHttp:(NSArray *)objects keyForDic:(NSArray *)keys urlString:(NSString *)urlStr setDelegate:(id)instance {
+    
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    NSDictionary *dic = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:0 error:nil];
+    
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:data];
+    
+    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:instance];
+    [conn start];
+    
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -383,12 +403,22 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
         NSString *displayName = [message fromStr];
         NSString *body = [message body];
         
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:displayName
-                                                            message:body
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"Ok"
-                                                  otherButtonTitles:nil];
-        [alertView show];
+        NSLog(@"name : %@ , body : %@", displayName, body);
+        
+//
+//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:displayName
+//                                                            message:body
+//                                                           delegate:nil
+//                                                  cancelButtonTitle:@"Ok"
+//                                                  otherButtonTitles:nil];
+//        [alertView show];
+        
+        ChatRecord *record = [NSEntityDescription insertNewObjectForEntityForName:@"ChatRecord" inManagedObjectContext:_managedObjectContext];
+        [record setBody:body];
+        [record setFromWho:displayName];
+        [_managedObjectContext save:nil];
+        
+        
     }
     
 	if ([message isChatMessageWithBody])
@@ -434,11 +464,11 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
         //		NSString *displayName = [user displayName];
         NSString *displayName = [message fromStr];
 
-        UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-        localNotification.alertAction = @"Ok";
-        localNotification.alertBody = [NSString stringWithFormat:@"%@,%@",displayName,body];
-        
-        [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
+//        UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+//        localNotification.alertAction = @"Ok";
+//        localNotification.alertBody = [NSString stringWithFormat:@"%@,%@",displayName,body];
+//        
+//        [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
 
         if ([[UIApplication sharedApplication] applicationState] == UIApplicationStateActive) {
             

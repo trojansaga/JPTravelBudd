@@ -69,6 +69,7 @@ dependencies: \
   /Users/trojansaga/Documents/ios/TravelBudd/Extensions/XEP-0115/XMPPCapabilities.h \
   /Users/trojansaga/Documents/ios/TravelBudd/Extensions/XEP-0115/CoreDataStorage/XMPPCapabilitiesCoreDataStorage.h \
   /Users/trojansaga/Documents/ios/TravelBudd/JPTabbarController.h \
-  /Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.h \
+  /Users/trojansaga/Documents/ios/TravelBudd/JPMapListViewController.h \
   /Users/trojansaga/Documents/ios/TravelBudd/JPChatViewController.h \
+  /Users/trojansaga/Documents/ios/TravelBudd/JPChattingRoomViewController.h \
   /Users/trojansaga/Documents/ios/TravelBudd/JPSettingViewController.h

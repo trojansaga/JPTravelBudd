@@ -7,16 +7,28 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JPAppDelegate.h"
 
 @interface JPChattingRoomViewController : UIViewController<UITableViewDataSource, UITableViewDelegate,  NSURLConnectionDataDelegate > {
     IBOutlet UITextField *textFieldForMessage;
     IBOutlet UITableView *chattingTableView;
 
-
+    NSMutableArray *chattingContents;
+    NSString *nickName;
+    JPAppDelegate *appDelegate;
+    
+    NSString *conferenceDomain;
+    NSString *domain;
+    
     
 }
 
 @property (nonatomic, strong) NSArray *joinedMemberListArray;
-@property (nonatomic, assign) int cr_id_room;
+@property (nonatomic, strong) NSString *cr_id_room;
+@property (nonatomic, strong) NSString *crm_id;
+@property (nonatomic, strong) NSString *m_id;
+@property (nonatomic, strong) NSManagedObjectContext *mob;
+
+
 
 @end

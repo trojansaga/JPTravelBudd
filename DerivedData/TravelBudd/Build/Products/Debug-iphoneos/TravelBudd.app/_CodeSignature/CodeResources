@@ -6,39 +6,43 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		KJwkbjdU2+6+Yq2Zy650eU07+ns=
+		3ks0WA0Giu+1h7SwGA7p9mkIlr4=
 		</data>
 		<key>JPChatViewController.nib</key>
 		<data>
-		WlWzyKsZ7DwPD+EieA7cBq6MC64=
+		pfUbnCwIbklizI1vsiUZ44XMf5U=
 		</data>
 		<key>JPChattingRoomViewController.nib</key>
 		<data>
-		sGvgTT92vGxVkt8XGUASKR6LyFg=
+		WqBHcLhLNP2tV3ZfhXxqqwxihGI=
 		</data>
 		<key>JPLoginViewController.nib</key>
 		<data>
-		9TQ343fcIysld9fGxE+4elvnECM=
+		thOWDUno3Ks3WLljY8YvKUm8cwA=
 		</data>
 		<key>JPMakeChatRoomViewController.nib</key>
 		<data>
-		bYhJH34/vr6lcx5JlCHu4ByHDys=
+		9CFangwV/H3qGPeqyO+m7lX1vUs=
 		</data>
 		<key>JPMapCreationViewController.nib</key>
 		<data>
-		WatzmYYnaCSHbtRNJ1g+1662etg=
+		Jb2PdqyVgqfXWP32Qm4jSHS4Ctc=
+		</data>
+		<key>JPMapListViewController.nib</key>
+		<data>
+		T6KSrtgKEi9g2AIAr08SsosDDYA=
 		</data>
 		<key>JPMapViewController.nib</key>
 		<data>
-		UWyyXMCFSi1EcHJhLN+TFDGBY3I=
+		1q0tSapFdmFV0IzZeCo7UX43rZI=
 		</data>
 		<key>JPSettingViewController.nib</key>
 		<data>
-		f+8fH9oVu46SMk8q3uOKixk07wI=
+		58x2mCxteWUHUF3SJGQ/ST6K/QU=
 		</data>
 		<key>JPTabbarController.nib</key>
 		<data>
-		mUltdsQ/TWfsWrZyXAV1YV1oYgA=
+		aqAvW6idtcEtsmxq9xCNzYDZ/2Y=
 		</data>
 		<key>LaunchImage-700-568h@2x.png</key>
 		<data>
@@ -46,7 +50,7 @@
 		</data>
 		<key>Model.momd/Model.mom</key>
 		<data>
-		BD3KOftOdwlTzzcN6/idKk0YkWw=
+		2QEOx1r7TaIgUJfx0rkR1PKMfMk=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -66,7 +70,7 @@
 		</data>
 		<key>XMPPMessageArchiving.momd/XMPPMessageArchiving.omo</key>
 		<data>
-		dkBTMq+YMsEoGJ05Du1DV5vYmsA=
+		whB0JSt1UjrSpIDBoeaIBZWHuBA=
 		</data>
 		<key>XMPPRoom.momd/XMPPRoom.mom</key>
 		<data>
@@ -74,7 +78,7 @@
 		</data>
 		<key>XMPPRoom.momd/XMPPRoom.omo</key>
 		<data>
-		OdQWHjxgPfl0PhA+e/NJsn/RSn0=
+		wfbHwfIJvzJQmd5/88cSuNoMHKo=
 		</data>
 		<key>XMPPRoomHybrid.momd/XMPPRoomHybrid.mom</key>
 		<data>
@@ -82,7 +86,7 @@
 		</data>
 		<key>XMPPRoomHybrid.momd/XMPPRoomHybrid.omo</key>
 		<data>
-		1AS84t4GQLoO9z1To1yFQM9KqSs=
+		6uPFAbX1ioIG3m9UXawovgRJWM0=
 		</data>
 		<key>XMPPRoster.mom</key>
 		<data>
@@ -94,7 +98,7 @@
 		</data>
 		<key>XMPPvCard.momd/XMPPvCard.omo</key>
 		<data>
-		xNfqvzGrnHMd2ROCfWZqmf6rnvE=
+		Xi3oq0ZWPsgz2z7SPfrolJHkJEY=
 		</data>
 		<key>build-libidn.sh</key>
 		<data>
@@ -113,39 +117,43 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		KJwkbjdU2+6+Yq2Zy650eU07+ns=
+		3ks0WA0Giu+1h7SwGA7p9mkIlr4=
 		</data>
 		<key>JPChatViewController.nib</key>
 		<data>
-		WlWzyKsZ7DwPD+EieA7cBq6MC64=
+		pfUbnCwIbklizI1vsiUZ44XMf5U=
 		</data>
 		<key>JPChattingRoomViewController.nib</key>
 		<data>
-		sGvgTT92vGxVkt8XGUASKR6LyFg=
+		WqBHcLhLNP2tV3ZfhXxqqwxihGI=
 		</data>
 		<key>JPLoginViewController.nib</key>
 		<data>
-		9TQ343fcIysld9fGxE+4elvnECM=
+		thOWDUno3Ks3WLljY8YvKUm8cwA=
 		</data>
 		<key>JPMakeChatRoomViewController.nib</key>
 		<data>
-		bYhJH34/vr6lcx5JlCHu4ByHDys=
+		9CFangwV/H3qGPeqyO+m7lX1vUs=
 		</data>
 		<key>JPMapCreationViewController.nib</key>
 		<data>
-		WatzmYYnaCSHbtRNJ1g+1662etg=
+		Jb2PdqyVgqfXWP32Qm4jSHS4Ctc=
+		</data>
+		<key>JPMapListViewController.nib</key>
+		<data>
+		T6KSrtgKEi9g2AIAr08SsosDDYA=
 		</data>
 		<key>JPMapViewController.nib</key>
 		<data>
-		UWyyXMCFSi1EcHJhLN+TFDGBY3I=
+		1q0tSapFdmFV0IzZeCo7UX43rZI=
 		</data>
 		<key>JPSettingViewController.nib</key>
 		<data>
-		f+8fH9oVu46SMk8q3uOKixk07wI=
+		58x2mCxteWUHUF3SJGQ/ST6K/QU=
 		</data>
 		<key>JPTabbarController.nib</key>
 		<data>
-		mUltdsQ/TWfsWrZyXAV1YV1oYgA=
+		aqAvW6idtcEtsmxq9xCNzYDZ/2Y=
 		</data>
 		<key>LaunchImage-700-568h@2x.png</key>
 		<data>
@@ -153,7 +161,7 @@
 		</data>
 		<key>Model.momd/Model.mom</key>
 		<data>
-		BD3KOftOdwlTzzcN6/idKk0YkWw=
+		2QEOx1r7TaIgUJfx0rkR1PKMfMk=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -173,7 +181,7 @@
 		</data>
 		<key>XMPPMessageArchiving.momd/XMPPMessageArchiving.omo</key>
 		<data>
-		dkBTMq+YMsEoGJ05Du1DV5vYmsA=
+		whB0JSt1UjrSpIDBoeaIBZWHuBA=
 		</data>
 		<key>XMPPRoom.momd/XMPPRoom.mom</key>
 		<data>
@@ -181,7 +189,7 @@
 		</data>
 		<key>XMPPRoom.momd/XMPPRoom.omo</key>
 		<data>
-		OdQWHjxgPfl0PhA+e/NJsn/RSn0=
+		wfbHwfIJvzJQmd5/88cSuNoMHKo=
 		</data>
 		<key>XMPPRoomHybrid.momd/XMPPRoomHybrid.mom</key>
 		<data>
@@ -189,7 +197,7 @@
 		</data>
 		<key>XMPPRoomHybrid.momd/XMPPRoomHybrid.omo</key>
 		<data>
-		1AS84t4GQLoO9z1To1yFQM9KqSs=
+		6uPFAbX1ioIG3m9UXawovgRJWM0=
 		</data>
 		<key>XMPPRoster.mom</key>
 		<data>
@@ -201,7 +209,7 @@
 		</data>
 		<key>XMPPvCard.momd/XMPPvCard.omo</key>
 		<data>
-		xNfqvzGrnHMd2ROCfWZqmf6rnvE=
+		Xi3oq0ZWPsgz2z7SPfrolJHkJEY=
 		</data>
 		<key>build-libidn.sh</key>
 		<data>

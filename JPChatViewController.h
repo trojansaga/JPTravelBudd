@@ -7,22 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JPConnectionDelegateObject.h"
+#import "JPChattingRoomViewController.h"
+
+#import "JPAppDelegate.h"
 
 @interface JPChatViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NSURLConnectionDataDelegate> {
     IBOutlet UITableView *chatRoomListTableView;
     int numOfChatRooms;
     NSArray *chatRoomListArray;
 
+    JPAppDelegate *appDelegate;
 
-    JPConnectionDelegateObject *jpConnectionDelegate;
     
+    UIActivityIndicatorView *indicator;
+    JPChattingRoomViewController *chattingRoomViewController;
     
 }
 //@property (nonatomic, strong) JPConnectionDelegateObject *jpConnectionDelegate;
 
 
--(void)sendDataHttp:(NSArray *)objects keyForDic:(NSArray *)keys urlString:(NSString *)urlStr delegate:(id) delegate;
+//-(void)sendDataHttp:(NSArray *)objects keyForDic:(NSArray *)keys urlString:(NSString *)urlStr delegate:(id) delegate;
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 

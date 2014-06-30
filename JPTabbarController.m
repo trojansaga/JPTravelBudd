@@ -27,11 +27,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    mapViewController = [[JPMapViewController alloc] initWithNibName:@"JPMapViewController" bundle:nil];
+//    mapViewController = [[JPMapViewController alloc] initWithNibName:@"JPMapViewController" bundle:nil];
+    mapListViewController = [[JPMapListViewController alloc] initWithNibName:@"JPMapListViewController" bundle:nil];
     chatViewController = [[JPChatViewController alloc] initWithNibName:@"JPChatViewController" bundle:nil];
     settingViewController = [[JPSettingViewController alloc] initWithNibName:@"JPSettingViewController" bundle:nil];
     
-    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:mapViewController];
+//    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:mapViewController];
+    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:mapListViewController];
     UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:chatViewController];
     UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:settingViewController];
     

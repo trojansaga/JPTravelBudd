@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "XMPPFramework.h"
-
+#import "JPDefs.h"
 
 
 @interface JPAppDelegate : UIResponder <UIApplicationDelegate,XMPPStreamDelegate> {
@@ -43,5 +43,7 @@
 
 - (BOOL)connect;
 - (void)disconnect;
+
+-(void)sendDataHttp:(NSArray *)objects keyForDic:(NSArray *)keys urlString:(NSString *)urlStr setDelegate:(id)delegate;
 
 @end

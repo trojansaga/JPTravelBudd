@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "JPConnectionDelegateObject.h"
 
-@interface JPLoginViewController : UIViewController <NSURLConnectionDataDelegate,NSURLConnectionDelegate, JPConnectionDelegate> {
+@interface JPLoginViewController : UIViewController <NSURLConnectionDataDelegate,NSURLConnectionDelegate> {
     IBOutlet UITextField *textFieldForID;
     IBOutlet UITextField *textFieldForPW;
     IBOutlet UIView *joinUsView;
@@ -17,7 +17,7 @@
     IBOutlet UITextField *textFieldForJoinUsPW;
     IBOutlet UITextField *textFieldForJoinUsName;
     
-    JPConnectionDelegateObject *jpConnectionDelegate;
+//    JPConnectionDelegateObject *jpConnectionDelegate;
 
 }
 

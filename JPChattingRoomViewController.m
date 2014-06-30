@@ -7,7 +7,7 @@
 //
 
 #import "JPChattingRoomViewController.h"
-#import "JPConnectionDelegateObject.h"
+
 #import "JPAppDelegate.h"
 
 
@@ -31,13 +31,30 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    NSXMLElement *presence = [NSXMLElement elementWithName:@"presence"];
-    [presence addAttributeWithName:@"from" stringValue:@"testios@54.199.143.8"];
-    //    [presence addAttributeWithName:@"id" stringValue:@"78"];
-    [presence addAttributeWithName:@"to" stringValue:@"78@conference.54.199.143.8/nick"];
-    JPAppDelegate *del = (JPAppDelegate *)[[UIApplication sharedApplication] delegate];
-    [[del xmppStream] sendElement:presence];
+    nickName = [[NSUserDefaults standardUserDefaults] objectForKey:@"ID"];
+    appDelegate = (JPAppDelegate *)[[UIApplication sharedApplication] delegate];
+    domain = @"@54.199.143.8";
+    conferenceDomain = @"@conference.54.199.143.8/";
+    conferenceDomain = [conferenceDomain stringByAppendingString:nickName];
+    
 
+    //tap시 키보드 내리기
+    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resignKeyboard)];
+    recognizer.numberOfTapsRequired = 1;
+    recognizer.numberOfTouchesRequired = 1;
+    [self.view addGestureRecognizer:recognizer];
+    
+
+    //키보드 올림 노티 등록
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillAnimate:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillAnimate:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
     
 }
 
@@ -46,6 +63,68 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    [self enterRoom];
+
+    
+    _mob = [appDelegate managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ChatRecord" inManagedObjectContext:_mob];
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"timeStamp" ascending:NO];
+    
+    [request setSortDescriptors:@[sort]];
+    [request setEntity:entity];
+    chattingContents = [[_mob executeFetchRequest:request error:nil] mutableCopy];
+
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:YES];
+    [self exitRoom];
+    [self _removeKeyboardNotification];
+    
+}
+
+#pragma mark - UI
+
+- (void) resignKeyboard {
+    [textFieldForMessage resignFirstResponder];
+}
+
+- (void)keyboardWillAnimate:(NSNotification *)notification
+{
+    CGRect keyboardBounds;
+    [[notification.userInfo valueForKey:UIKeyboardFrameEndUserInfoKey] getValue:&keyboardBounds];
+    NSNumber *duration = [notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey];
+    NSNumber *curve = [notification.userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey];
+    
+    keyboardBounds = [self.view convertRect:keyboardBounds toView:nil];
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:[duration doubleValue]];
+    [UIView setAnimationCurve:[curve intValue]];
+    if([notification name] == UIKeyboardWillShowNotification)
+    {
+        [self.view setFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y - keyboardBounds.size.height, self.view.frame.size.width, self.view.frame.size.height)];
+    }
+    else if([notification name] == UIKeyboardWillHideNotification)
+    {
+        [self.view setFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + keyboardBounds.size.height, self.view.frame.size.width, self.view.frame.size.height)];
+    }
+    [UIView commitAnimations];
+}
+
+- (void)_removeKeyboardNotification
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+}
+
+
+
+#pragma mark - Room
+
 
 - (IBAction)showJoinedMember:(id)sender {
 
@@ -56,28 +135,49 @@
     }
 }
 
-- (IBAction)sendMessage:(id)sender {
-    //아직 jid, email, server id 통합이 안됨
-//    NSArray *dataArr = @[
-//                         @"Message",
-//                         textFieldForMessage.text,
-//                         [[NSUserDefaults standardUserDefaults] objectForKey:@"xmppPASSWORD"],
-//                         @"testcom@54.199.143.8",
-//                         @"testcom",
-//                         [[NSUserDefaults standardUserDefaults] objectForKey:@"userName"],
-//                         ];
-//    NSArray *keyArr = @[
-//                        @"data_type",
-//                        @"message",
-//                        @"password",
-//                        @"receiverJID",
-//                        @"receiverName",
-//                        @"userName"
-//                        ];
-//    JPConnectionDelegateObject *object = [[JPConnectionDelegateObject alloc] init];
-//    [object sendDataHttp:dataArr keyForDic:keyArr urlString:URL_FOR_MESSAGE setDelegate:self];
+- (IBAction)deleteRoom:(id)sender {
+    
+    NSArray *data = @[_cr_id_room];
+    NSArray *key = @[@"cr_id"];
+    [appDelegate sendDataHttp:data keyForDic:key urlString:URL_FOR_ROOM_DELETE setDelegate:self];
+    
+}
 
-    [self sendGMessage];
+- (IBAction)leaveRoom:(id)sender {
+    NSArray *data = @[_cr_id_room];
+    NSArray *key = @[@"cr_id"];
+    [appDelegate sendDataHttp:data keyForDic:key urlString:URL_FOR_ROOM_EXIT setDelegate:self];
+}
+
+- (IBAction)showRoomInfo:(id)sender {
+    NSString* url = [NSString stringWithFormat:@"%@%@",URL_FOR_ROOM_DESC_WITHOUT_CRID,_cr_id_room];
+    [appDelegate sendDataHttp:nil keyForDic:nil urlString:url setDelegate:self];
+}
+
+- (IBAction)showMemberInfo:(id)sender {
+    NSString* url = [NSString stringWithFormat:@"%@%@",URL_FOR_ROOM_JOINEDMEMBER_LIST_WITHOUT_CRID,_cr_id_room];
+    [appDelegate sendDataHttp:nil keyForDic:nil urlString:url setDelegate:self];
+}
+
+#pragma mark - Send
+
+- (IBAction)sendMessage:(id)sender {
+    NSArray *dataArr = @[
+                         textFieldForMessage.text,
+                         [[NSUserDefaults standardUserDefaults] objectForKey:@"PASSWORD"],
+                         nickName,
+                         _cr_id_room
+                         
+                         ];
+    NSArray *keyArr = @[
+                        @"message",
+                        @"userPwd",
+                        @"userName",
+                        @"cr_id"
+                        ];
+    appDelegate = (JPAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate sendDataHttp:dataArr keyForDic:keyArr urlString:URL_FOR_GROUP_MESSAGE setDelegate:self];
+
 }
 
 - (void) sendGMxmpp {
@@ -107,36 +207,38 @@
 }
 
 
-- (void) sendGMessage {
+#pragma mark - Presence
+
+
+- (void) enterRoom {
+    //join the room with presence
+    NSXMLElement *presence = [NSXMLElement elementWithName:@"presence"];
+    NSLog(@"%@",_cr_id_room);
     
-    NSArray *dataArr = @[
-                         textFieldForMessage.text,
-                         [[NSUserDefaults standardUserDefaults] objectForKey:@"xmppPASSWORD"],
-                         @"testios",
-                         @"78"
-                         
-                         ];
-    NSArray *keyArr = @[
-                        @"message",
-                        @"userPwd",
-                        @"userName",
-                        @"cr_id"
-                        ];
-    JPConnectionDelegateObject *object = [[JPConnectionDelegateObject alloc] init];
-    [object sendDataHttp:dataArr keyForDic:keyArr urlString:URL_FOR_GROUP_MESSAGE setDelegate:self];
-
-
+    NSString *from = [nickName stringByAppendingString:domain];
+    NSString *to = [_cr_id_room stringByAppendingString:conferenceDomain];
+    
+    
+    [presence addAttributeWithName:@"from" stringValue:from];
+    [presence addAttributeWithName:@"to" stringValue:to];
+    [[appDelegate xmppStream] sendElement:presence];
 }
 
-#pragma mark - 
-
-- (IBAction)clickRefreshButton:(id)sender {
-    NSLog(@"button");
-    JPAppDelegate *delegate = (JPAppDelegate *)[[UIApplication sharedApplication] delegate];
+- (void) exitRoom {
     
+    NSXMLElement *presence = [NSXMLElement elementWithName:@"presence"];
+
+    NSLog(@"%@",_cr_id_room);
+    NSString *from = [nickName stringByAppendingString:domain];
+    NSString *to = [_cr_id_room stringByAppendingString:conferenceDomain];
+    
+    
+    [presence addAttributeWithName:@"from" stringValue:from];
+    [presence addAttributeWithName:@"to" stringValue:to];
+    [presence addAttributeWithName:@"type" stringValue:@"unavailable"];
+    [[appDelegate xmppStream] sendElement:presence];
     
 }
-
 
 #pragma mark - TableView delegate
 
@@ -147,13 +249,15 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    cell.textLabel.text = @"kk";
-    
+    cell.textLabel.text = [[chattingContents objectAtIndex:indexPath.row] body];
+
+
     return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return [chattingContents count];
+
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -164,25 +268,61 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     
-    //얘는 리턴이 그냥 스트링
-    NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    NSString *responseType = [dic objectForKey:@"data_type"];
+    
+    //채팅방 리스트
+    if ([responseType isEqualToString:@"Delete ChatRoom"]) {
+        NSLog(@"//채팅방 지우기//");
+        
+        NSLog(@"%@", [dic objectForKey:@"message"]);
+    }
+    else if([responseType isEqualToString:@"Deactivate ChatRoom Member"]) {
+        NSLog(@"//채팅방 탈퇴하기//");
+        
+        NSLog(@"%@", [dic objectForKey:@"message"]);
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else if ([responseType isEqualToString:@"ChatRoom info"]) {
+        NSLog(@"//채팅방 정보//");
+        NSLog(@"%@", [dic objectForKey:@"chat_room_name"]);
+        
+        
+    }
+    else if ([responseType isEqualToString:@"Member List"]) {
+        NSLog(@"//채팅방 멤버 리스트//");
+        NSArray *nameArr = [dic objectForKey:@"data"];
+        for (NSDictionary* memberData in nameArr) {
+            NSLog(@"%@", [memberData objectForKey:@"member_name"]);
+        }
+
+    }
+    
+    else {
+
+        //얘는 리턴이 그냥 스트링
+        NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        
+        
+        if ([str isEqualToString:@"Sending Success"]) {
+            NSLog(@"send success");
+            
+            
+        }
+        else {
+            NSLog(@"send fail");
+            UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle:@"Fail to create"
+                                  message:@"i said fail"
+                                  delegate:nil
+                                  cancelButtonTitle:@"ok"
+                                  otherButtonTitles:nil, nil];
+            [alert show];
+        }
+    }
 
     
-    if ([str isEqualToString:@"Sending Success"]) {
-        NSLog(@"send success");
-        
-        
-    }
-    else {
-        NSLog(@"send fail");
-        UIAlertView *alert = [[UIAlertView alloc]
-                              initWithTitle:@"Fail to create"
-                              message:@"i said fail"
-                              delegate:nil
-                              cancelButtonTitle:@"ok"
-                              otherButtonTitles:nil, nil];
-        [alert show];
-    }
+    
 }
 
 @end
