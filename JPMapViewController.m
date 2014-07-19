@@ -44,17 +44,17 @@
     [clmgr setDelegate:self];
     [clmgr startUpdatingLocation];
     
+    
+    
 
-    //
-    JPAppDelegate *appDelegate = (JPAppDelegate *)[[UIApplication sharedApplication] delegate];
-    _managedObjectContext = [appDelegate managedObjectContext];
+    //이거 어차피 불러올때 세팅해줌
+//    JPAppDelegate *appDelegate = (JPAppDelegate *)[[UIApplication sharedApplication] delegate];
+//    _managedObjectContext = [appDelegate managedObjectContext];
     
     
     
     //nav bar customization
     self.navigationItem.title = @"Map";
-
-    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
                                               initWithTitle:@"Save"
                                               style:UIBarButtonItemStylePlain
@@ -68,19 +68,26 @@
 //    [self.view insertSubview:navBar atIndex:0];
     
 
+    //싸이즈 맞게 다 알아서 조절합니다 허허허
+    titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, (self.view.bounds.size.width - self.navigationItem.leftBarButtonItem.width - self.navigationItem.rightBarButtonItem.width), self.navigationController.navigationBar.bounds.size.height)];
+
+    //이거 안해서 자꾸 제스쳐레코그나이저 안됫엇음 짜증남. 이게 기본 세팅이 노우로 되어있어요.
+    [titleLabel setUserInteractionEnabled:YES];
+    
+    titleLabel.backgroundColor = [UIColor brownColor];
+
+
     //TapGestureRecongnizer
     UITapGestureRecognizer *tg = [[UITapGestureRecognizer alloc]
                                   initWithTarget:self
                                   action:@selector(changeTitle)];
     tg.numberOfTapsRequired = 1;
     tg.numberOfTouchesRequired = 1;
-    [self.navigationItem.titleView addGestureRecognizer:tg];
-    /////////////////////// 제목 변경하는거 왜안되는거지 시바ㅏㅏㅏㅏㅏㅏㅏㅏㅏ
-    //titleview = nil임... 뭐가문젤까용
+    [titleLabel addGestureRecognizer:tg];
     
-    
-    
-    
+    self.navigationItem.titleView = titleLabel;
+//    [self.navigationItem.titleView addGestureRecognizer:tg];
+
     
 
     UILongPressGestureRecognizer *longPressGestureRecongnizer = [[UILongPressGestureRecognizer alloc]
@@ -103,7 +110,7 @@
 //    [fetchReqest setPredicate:predicate];
 //    NSArray *arr = [_managedObjectContext executeFetchRequest:fetchReqest error:nil];
 
-    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -112,13 +119,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:YES];
+    [_managedObjectContext rollback];
+    
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     self.title = @"noname";
     
-    
-    
-    
+
     // 처음 만들었을때
     if (_mapRecord == nil) {
         UIAlertView *titleSetAV = [[UIAlertView alloc]
@@ -130,6 +141,9 @@
         titleSetAV.alertViewStyle = UIAlertViewStylePlainTextInput;
         [titleSetAV show];
         
+        JPAppDelegate *appDelegate = (JPAppDelegate *)[[UIApplication sharedApplication] delegate];
+        _managedObjectContext = [appDelegate managedObjectContext];
+
         _mapRecord = [NSEntityDescription insertNewObjectForEntityForName:@"MapRecord" inManagedObjectContext:_managedObjectContext];
         
     }
@@ -138,10 +152,8 @@
     
     // 존재하는 시키
     else {
-        self.title = [_mapRecord m_MapTitle];
+        titleLabel.text = [_mapRecord m_MapTitle];
 //        NSLog(@"how many pins? %lu", [_mapRecord.pins count]);
-
-
 
         for (PinRecord *pin in _mapRecord.pins) {
             double longitude = [pin.p_Longitude doubleValue];
@@ -149,10 +161,8 @@
             MKPlacemark *anno = [[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake(latitude, longitude) addressDictionary:nil];
             
             [_mapView addAnnotation:anno];
-
             [_pins addObject:anno];
         
-
         }
         
         NSArray *arr = _pins;
@@ -240,9 +250,11 @@
                               cancelButtonTitle:nil
                               otherButtonTitles:@"ok", nil];
     [alertView show];
+
+    [_mapRecord setM_MapTitle:titleLabel.text];
     [_managedObjectContext save:nil];
     
-    
+
 }
 
 - (IBAction)clickPinSaveButton:(id)sender {
@@ -445,10 +457,14 @@
         [self.navigationController popViewControllerAnimated:YES];
     }
     else if ([alertView.title isEqualToString:@"insert Title"]) {
-        UITextField *textFieldForTitle = [alertView textFieldAtIndex:0];
-        self.navigationItem.title = textFieldForTitle.text;
-//        self.title = textFieldForTitle.text;
-        [_mapRecord setM_MapTitle:textFieldForTitle.text];
+        if (buttonIndex == 1) { // only when ok clicked
+            UITextField *textFieldForTitle = [alertView textFieldAtIndex:0];
+            
+            //        self.navigationItem.title = textFieldForTitle.text;
+            titleLabel.text = textFieldForTitle.text;
+            //        self.title = textFieldForTitle.text;
+
+        }
     }
 
 }

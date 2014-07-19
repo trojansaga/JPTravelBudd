@@ -29,6 +29,8 @@
     MKPlacemark *dest;
     MKRoute *data;
     
+    UILabel *titleLabel;
+    
     
     IBOutlet UIView         *pinSaveView;
     IBOutlet UITextField    *pinTextFieldForTitle;

@@ -45,8 +45,7 @@
                                   action:@selector(addMap)];
     
     self.navigationItem.rightBarButtonItem = addButton;
-    
-    
+
     
   }
 
@@ -61,8 +60,8 @@
     
 //    NSArray *arr =
 //    [_fetchedResultsController fetchedObjects];
-    NSFetchRequest *req = [[NSFetchRequest alloc] initWithEntityName:@"MapRecord"];
-    NSArray *arr = [_managedObjectContext executeFetchRequest:req error:nil];
+//    NSFetchRequest *req = [[NSFetchRequest alloc] initWithEntityName:@"MapRecord"];
+//    NSArray *arr = [_managedObjectContext executeFetchRequest:req error:nil];
     
     
 }
@@ -102,7 +101,10 @@
 //    MapRecord *mapRecord = [_fetchedResultsController objectAtIndexPath:indexPath];
 //    cell.textLabel.text = mapRecord.m_MapTitle;
 //    cell.detailTextLabel.text = mapRecord.m_Owner;
-    
+    MapRecord *mapRecord = [_fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = mapRecord.m_MapTitle;
+    cell.detailTextLabel.text = mapRecord.m_Owner;
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -115,16 +117,14 @@
     }
     
     // Configure the cell...
-//    [self configureCell:cell atIndexPath:indexPath];
+    [self configureCell:cell atIndexPath:indexPath];
     
-    MapRecord *mapRecord = [_fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = mapRecord.m_MapTitle;
-    cell.detailTextLabel.text = mapRecord.m_Owner;
-    
-    NSLog(@"text = %@ , indexPath.row = %lu", mapRecord.m_MapTitle, indexPath.row);
-    
-//    cell.textLabel.text = @"la";
-    
+//    MapRecord *mapRecord = [_fetchedResultsController objectAtIndexPath:indexPath];
+//    cell.textLabel.text = mapRecord.m_MapTitle;
+//    cell.detailTextLabel.text = mapRecord.m_Owner;
+//    
+//    NSLog(@"text = %@ , indexPath.row = %lu", mapRecord.m_MapTitle, indexPath.row);
+
     
     return cell;
 }
@@ -195,10 +195,7 @@
     self.fetchedResultsController = theFetchedResultsController;
     _fetchedResultsController.delegate = self;
     
-    
-    
     [_fetchedResultsController performFetch:nil];
-    
     
     return _fetchedResultsController;
     
