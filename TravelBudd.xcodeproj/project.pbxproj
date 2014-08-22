@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1500A77619861B8E000AAC47 /* PinRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 1500A77519861B8E000AAC47 /* PinRecord.m */; };
+		1500A779198C91A8000AAC47 /* JPMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1500A778198C91A8000AAC47 /* JPMapAnnotation.m */; };
 		153464971919208F00D271A5 /* JPConnectionDelegateObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153464961919208F00D271A5 /* JPConnectionDelegateObject.m */; };
 		153A728518F244C100C7ABB7 /* JPTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153A728318F244C100C7ABB7 /* JPTabbarController.m */; };
 		153A728618F244C100C7ABB7 /* JPTabbarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153A728418F244C100C7ABB7 /* JPTabbarController.xib */; };
@@ -22,7 +24,6 @@
 		1540BADF191E544100B1DBE0 /* JPChattingRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1540BADD191E544100B1DBE0 /* JPChattingRoomViewController.xib */; };
 		155DCBC219435D320040C6A0 /* JPMapListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 155DCBC019435D320040C6A0 /* JPMapListViewController.m */; };
 		155DCBC319435D320040C6A0 /* JPMapListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155DCBC119435D320040C6A0 /* JPMapListViewController.xib */; };
-		155DCBE1194821E30040C6A0 /* PinRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 155DCBE0194821E30040C6A0 /* PinRecord.m */; };
 		155DCBE7194822410040C6A0 /* MapRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 155DCBE6194822410040C6A0 /* MapRecord.m */; };
 		15951C7E18ECF053008A8868 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15951C7D18ECF053008A8868 /* Foundation.framework */; };
 		15951C8018ECF053008A8868 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15951C7F18ECF053008A8868 /* CoreGraphics.framework */; };
@@ -190,6 +191,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1500A77419861B8E000AAC47 /* PinRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinRecord.h; sourceTree = "<group>"; };
+		1500A77519861B8E000AAC47 /* PinRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinRecord.m; sourceTree = "<group>"; };
+		1500A777198C91A8000AAC47 /* JPMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPMapAnnotation.h; sourceTree = "<group>"; };
+		1500A778198C91A8000AAC47 /* JPMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPMapAnnotation.m; sourceTree = "<group>"; };
 		153464951919208F00D271A5 /* JPConnectionDelegateObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPConnectionDelegateObject.h; sourceTree = "<group>"; };
 		153464961919208F00D271A5 /* JPConnectionDelegateObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPConnectionDelegateObject.m; sourceTree = "<group>"; };
 		153A728218F244C100C7ABB7 /* JPTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPTabbarController.h; sourceTree = "<group>"; };
@@ -214,8 +219,6 @@
 		155DCBBF19435D320040C6A0 /* JPMapListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPMapListViewController.h; sourceTree = "<group>"; };
 		155DCBC019435D320040C6A0 /* JPMapListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPMapListViewController.m; sourceTree = "<group>"; };
 		155DCBC119435D320040C6A0 /* JPMapListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JPMapListViewController.xib; sourceTree = "<group>"; };
-		155DCBDF194821E30040C6A0 /* PinRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinRecord.h; sourceTree = "<group>"; };
-		155DCBE0194821E30040C6A0 /* PinRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinRecord.m; sourceTree = "<group>"; };
 		155DCBE5194822410040C6A0 /* MapRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapRecord.h; sourceTree = "<group>"; };
 		155DCBE6194822410040C6A0 /* MapRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapRecord.m; sourceTree = "<group>"; };
 		15951C7A18ECF053008A8868 /* TravelBudd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelBudd.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1484,10 +1487,10 @@
 				159779F9192285D500C7A3DB /* Model.xcdatamodeld */,
 				159779FC1922866D00C7A3DB /* ChatRecord.h */,
 				159779FD1922866D00C7A3DB /* ChatRecord.m */,
-				155DCBDF194821E30040C6A0 /* PinRecord.h */,
-				155DCBE0194821E30040C6A0 /* PinRecord.m */,
 				155DCBE5194822410040C6A0 /* MapRecord.h */,
 				155DCBE6194822410040C6A0 /* MapRecord.m */,
+				1500A77419861B8E000AAC47 /* PinRecord.h */,
+				1500A77519861B8E000AAC47 /* PinRecord.m */,
 			);
 			name = ChattingDB;
 			sourceTree = "<group>";
@@ -1498,6 +1501,8 @@
 				153A728718F2455300C7ABB7 /* JPMapViewController.h */,
 				153A728818F2455300C7ABB7 /* JPMapViewController.m */,
 				153A728918F2455300C7ABB7 /* JPMapViewController.xib */,
+				1500A777198C91A8000AAC47 /* JPMapAnnotation.h */,
+				1500A778198C91A8000AAC47 /* JPMapAnnotation.m */,
 				155DCBBF19435D320040C6A0 /* JPMapListViewController.h */,
 				155DCBC019435D320040C6A0 /* JPMapListViewController.m */,
 				155DCBC119435D320040C6A0 /* JPMapListViewController.xib */,
@@ -1563,6 +1568,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "MinChul Song";
 				TargetAttributes = {
+					15951C7918ECF053008A8868 = {
+						DevelopmentTeam = ECS4AL7A73;
+					};
 					15951C9418ECF053008A8868 = {
 						TestTargetID = 15951C7918ECF053008A8868;
 					};
@@ -1685,13 +1693,14 @@
 				15951E6B18EEE283008A8868 /* XMPPIQ+XEP_0066.m in Sources */,
 				15951E8818EEE283008A8868 /* XEP_0223.m in Sources */,
 				15951E7F18EEE283008A8868 /* XMPPPresence+XEP_0172.m in Sources */,
-				155DCBE1194821E30040C6A0 /* PinRecord.m in Sources */,
+				1500A77619861B8E000AAC47 /* PinRecord.m in Sources */,
 				15951E3F18EEE283008A8868 /* XMPPUserCoreDataStorageObject.m in Sources */,
 				153A729718F2459700C7ABB7 /* JPSettingViewController.m in Sources */,
 				15951D4318EE40B5008A8868 /* DDList.m in Sources */,
 				15951E5E18EEE283008A8868 /* XMPPvCardTemp.m in Sources */,
 				15951E8018EEE283008A8868 /* XMPPMessage+XEP_0184.m in Sources */,
 				15951D3F18EE40B5008A8868 /* XMPPModule.m in Sources */,
+				1500A779198C91A8000AAC47 /* JPMapAnnotation.m in Sources */,
 				15951D3D18EE40B5008A8868 /* XMPPJID.m in Sources */,
 				15951E3B18EEE283008A8868 /* XMPPGroupCoreDataStorageObject.m in Sources */,
 				15951D3E18EE40B5008A8868 /* XMPPMessage.m in Sources */,
@@ -1819,6 +1828,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: minchul song (HL4D9RB457)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "";
@@ -1844,6 +1854,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-lxml2";
+				PROVISIONING_PROFILE = "5f496e80-6db3-4751-a497-c0bae15dca3f";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1864,6 +1875,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: minchul song (HL4D9RB457)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1882,6 +1894,7 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_LDFLAGS = "-lxml2";
+				PROVISIONING_PROFILE = "5f496e80-6db3-4751-a497-c0bae15dca3f";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1892,6 +1905,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TravelBudd/TravelBudd-Prefix.pch";
 				INFOPLIST_FILE = "TravelBudd/TravelBudd-Info.plist";
@@ -1900,6 +1915,7 @@
 					"$(PROJECT_DIR)/Vendor/libidn",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1909,6 +1925,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TravelBudd/TravelBudd-Prefix.pch";
 				INFOPLIST_FILE = "TravelBudd/TravelBudd-Info.plist";
@@ -1917,6 +1935,7 @@
 					"$(PROJECT_DIR)/Vendor/libidn",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

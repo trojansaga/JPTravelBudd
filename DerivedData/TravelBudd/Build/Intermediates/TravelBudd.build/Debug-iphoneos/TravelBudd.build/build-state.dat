@@ -78,6 +78,7 @@ cCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-ipho
 cCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPvCardTemp.o /Users/trojansaga/Documents/ios/TravelBudd/Extensions/XEP-0054/XMPPvCardTemp.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPMessage+XEP_0184.o /Users/trojansaga/Documents/ios/TravelBudd/Extensions/XEP-0184/XMPPMessage+XEP_0184.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPModule.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPModule.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapAnnotation.o /Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPJID.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPJID.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPGroupCoreDataStorageObject.o /Users/trojansaga/Documents/ios/TravelBudd/Extensions/Roster/CoreDataStorage/XMPPGroupCoreDataStorageObject.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPMessage.o /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPPMessage.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
@@ -160,7 +161,7 @@ cCompileXIB /Users/trojansaga/Documents/ios/TravelBudd/JPLoginViewController.xib
 cCompileAssetCatalog /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app /Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/Images.xcassets
 cProcessInfoPlistFile /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/Info.plist /Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/TravelBudd-Info.plist
 cGenerateDSYMFile /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app.dSYM /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd
-cProcessProductPackaging /Users/trojansaga/Library/MobileDevice/Provisioning\ Profiles/A9B7AF60-368E-4B90-8798-ECFF79513A38.mobileprovision /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/embedded.mobileprovision
+cProcessProductPackaging /Users/trojansaga/Library/MobileDevice/Provisioning\ Profiles/5f496e80-6db3-4751-a497-c0bae15dca3f.mobileprovision /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/embedded.mobileprovision
 cTouch /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app
 cProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/Entitlements.plist /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd.xcent
 cCodeSign /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app
@@ -887,18 +888,22 @@ N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Interme
 t1404636419
 s83200
 
+N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapAnnotation.o
+t1408088522
+s23556
+
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapCreationViewController.o
 c0000000053955F780000000000009EF8
 t1402298232
 s40696
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapListViewController.o
-t1405750011
-s117876
+t1408698138
+s119196
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapViewController.o
-t1405331279
-s166884
+t1408698516
+s192732
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPSettingViewController.o
 t1404636422
@@ -909,7 +914,7 @@ t1404660225
 s68484
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/MapRecord.o
-t1404636424
+t1408088522
 s9560
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/NSData+XMPP.o
@@ -953,8 +958,8 @@ t1404636420
 s79252
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/PinRecord.o
-t1404636422
-s10564
+t1408088522
+s10088
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/RFImageToDataTransformer.o
 t1404636418
@@ -965,9 +970,9 @@ t1404636423
 s121072
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/TravelBudd.LinkFileList
-c0000000053956F9E0000000000005DE1
-t1402302366
-s24033
+c0000000053DC9B440000000000005E8F
+t1406966596
+s24207
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XEP_0223.o
 t1404636421
@@ -1354,8 +1359,8 @@ t1404636424
 s6452
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd.xcent
-t1405750012
-s523
+t1408696498
+s705
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/assetcatalog_dependencies.txt
 t1402298242
@@ -1366,11 +1371,11 @@ t1402298242
 s525
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app
-t1405750011
+t1408698516
 s986
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app.dSYM
-t1405331888
+t1408698140
 s102
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/Info.plist
@@ -1402,8 +1407,8 @@ t1404660227
 s2753
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/JPMapViewController.nib
-t1402465095
-s6789
+t1408698140
+s9940
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/JPSettingViewController.nib
 t1402298241
@@ -1414,7 +1419,7 @@ t1402298241
 s1522
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/Model.momd
-t1402465091
+t1406526531
 s136
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/PkgInfo
@@ -1430,8 +1435,8 @@ t1402298228
 s150
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd
-t1405750011
-s3011820
+t1408698516
+s3035060
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/XMPPCapabilities.mom
 t1402298228
@@ -1462,8 +1467,8 @@ t1402298241
 s5452
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/embedded.mobileprovision
-t1402298242
-s9683
+t1408674714
+s10029
 
 N/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/en.lproj/InfoPlist.strings
 t1402298241
@@ -2454,6 +2459,16 @@ c00000000536E61510000000000002547
 t1399742801
 s9543
 
+N/Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.h
+c0000000053EDB0F3000000000000033E
+t1408086259
+s830
+
+N/Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.m
+c0000000053E49737000000000000027B
+t1407489847
+s635
+
 N/Users/trojansaga/Documents/ios/TravelBudd/JPMapCreationViewController.h
 c00000000000000000000000000000000
 t2
@@ -2485,19 +2500,19 @@ t1404660225
 s4009
 
 N/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.h
-c0000000053B9E07E0000000000000607
-t1404690558
-s1543
+c0000000053F7071A0000000000000743
+t1408698138
+s1859
 
 N/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m
-c0000000053BA9A5D00000000000043F9
-t1404738141
-s17401
+c0000000053F70892000000000000599A
+t1408698514
+s22938
 
 N/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.xib
-c000000005397EA2F00000000000032E5
-t1402464815
-s13029
+c0000000053F7071A0000000000005743
+t1408698138
+s22339
 
 N/Users/trojansaga/Documents/ios/TravelBudd/JPSettingViewController.h
 c0000000053420E1700000000000000EB
@@ -2540,18 +2555,18 @@ t1402464961
 s339
 
 N/Users/trojansaga/Documents/ios/TravelBudd/Model.xcdatamodeld
-c000000005397EB420000000000000066
-t1402465090
+c0000000053D5E3F80000000000000066
+t1406526456
 s102
 
 N/Users/trojansaga/Documents/ios/TravelBudd/PinRecord.h
-c000000005397EA6200000000000002E3
-t1402464866
-s739
+c0000000053ED999900000000000002E1
+t1408080281
+s737
 
 N/Users/trojansaga/Documents/ios/TravelBudd/PinRecord.m
-c000000005397EA62000000000000018D
-t1402464866
+c0000000053D5E40D000000000000018D
+t1406526477
 s397
 
 N/Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/Images.xcassets
@@ -2808,6 +2823,11 @@ N/Users/trojansaga/Documents/ios/TravelBudd/XMPPFramework.h
 c00000000537D62BD000000000000090A
 t1400726205
 s2314
+
+N/Users/trojansaga/Library/MobileDevice/Provisioning Profiles/5f496e80-6db3-4751-a497-c0bae15dca3f.mobileprovision
+c0000000053F6A6B9000000000000272D
+t1408673465
+s10029
 
 N/Users/trojansaga/Library/MobileDevice/Provisioning Profiles/A9B7AF60-368E-4B90-8798-ECFF79513A38.mobileprovision
 c0000000052C3AF8A00000000000025D3
@@ -3141,6 +3161,9 @@ r0
 CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/JPMakeChatRoomViewController.m
 r0
 
+CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.m
+r0
+
 CBuild AST from /Users/trojansaga/Documents/ios/TravelBudd/JPMapCreationViewController.m
 r0
 
@@ -3224,16 +3247,16 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesf8df467a427ab941^f08bd37a427ab941^---0#1#1#--18"Check dependencies36"621FD6B9-3C56-4F28-A04E-276072C69D1E-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies54e4f01340a7b941^7041f21340a7b941^---0#1#1#--18"Check dependencies36"08EAF0FA-BE1C-4D65-B0FF-F6263A35CAFD-
 
 CCodeSign /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app
-s427442812.131180
-e427442812.423509
+s430391316.664554
+e430391316.997095
 r1
 xCodeSign
 x/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"CodeSign DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app76"CodeSign DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.appdecb217c427ab941^9e7e6c7c427ab941^---0#0#1#-19%DVTDocumentLocation2@118"file:///Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/0000000000000000^1130"CodeSign DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app    cd /Users/trojansaga/Documents/ios/TravelBudd    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    Using code signing identity "iPhone Developer: minchul song (HL4D9RB457)" and provisioning profile "iOS Team Provisioning Profile: *" (A9B7AF60-368E-4B90-8798-ECFF79513A38)    /usr/bin/codesign --force --sign 42F9F6F5BCDC0C5FAC4A13EC3EBDAC5F57E9AA48 --resource-rules=/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/ResourceRules.plist --entitlements /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd.xcent /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app36"F94CB037-C8BA-4470-AC92-0C1771114738-
-b187111FC-2BC1-42F5-8960-64FCD865F49A
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"CodeSign DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app76"CodeSign DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.appf033aa1440a7b941^18cf001540a7b941^---0#0#1#-19%DVTDocumentLocation2@118"file:///Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/0000000000000000^1130"CodeSign DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app    cd /Users/trojansaga/Documents/ios/TravelBudd    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    Using code signing identity "iPhone Developer: minchul song (HL4D9RB457)" and provisioning profile "iOS Team Provisioning Profile: *" (5f496e80-6db3-4751-a497-c0bae15dca3f)    /usr/bin/codesign --force --sign 42F9F6F5BCDC0C5FAC4A13EC3EBDAC5F57E9AA48 --resource-rules=/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/ResourceRules.plist --entitlements /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd.xcent /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app36"556E0465-DEB8-43F6-84C4-6EED919F0BA9-
+b20F3EB84-77C8-458A-AD82-7C66D19F8939
 
 CCompileAssetCatalog /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app /Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/Images.xcassets
 s423991041.541600
@@ -4046,6 +4069,32 @@ d/Users/trojansaga/Documents/ios/TravelBudd/JPDefs.h
 lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/trojansaga/Documents/ios/TravelBudd/JPMakeChatRoomViewController.m252"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMakeChatRoomViewController.o JPMakeChatRoomViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compilerfc8afd824469b941^eeb065834469b941^---0#0#1#-19%DVTDocumentLocation2@80"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMakeChatRoomViewController.m0000000000000000^4127"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMakeChatRoomViewController.o JPMakeChatRoomViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/trojansaga/Documents/ios/TravelBudd    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.1 -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-generated-files.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-own-target-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-all-target-headers.hmap -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-project-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/include/libxml2 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources/arm64 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources -F/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos -include /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-aukofavyttermofafktjkuhucnqp/TravelBudd-Prefix.pch -MMD -MT dependencies -MF /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMakeChatRoomViewController.d --serialize-diagnostics /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMakeChatRoomViewController.dia -c /Users/trojansaga/Documents/ios/TravelBudd/JPMakeChatRoomViewController.m -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMakeChatRoomViewController.o36"41399CE5-FC2D-4B9F-8880-29D4AF3F56AC-
 bF66BF624-7854-4108-A9A8-FFB37800188D
 
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapAnnotation.o /Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s429781322.004347
+e429781322.392002
+r1
+xCompileC
+xDerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapAnnotation.o
+x/Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.m
+xnormal
+xarm64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.m
+d/Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.h
+o/Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.m:21:49: warning: local declaration of 'coordinate' hides instance variable [-Wshadow-ivar]
+o    self.longitude = [NSNumber numberWithDouble:coordinate.longitude];
+o                                                ^
+o/Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.m:22:48: warning: local declaration of 'coordinate' hides instance variable [-Wshadow-ivar]
+o    self.latitude = [NSNumber numberWithDouble:coordinate.latitude];
+o                                               ^
+o/Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.m:23:26: warning: local declaration of 'coordinate' hides instance variable [-Wshadow-ivar]
+o    [super setCoordinate:coordinate];
+o                         ^
+o3 warnings generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection68"Compile /Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.m226"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapAnnotation.o JPMapAnnotation.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler6748014af19db941^da59644af19db941^-779"/Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.m:21:49: warning: local declaration of 'coordinate' hides instance variable [-Wshadow-ivar]    self.longitude = [NSNumber numberWithDouble:coordinate.longitude];                                                ^/Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.m:22:48: warning: local declaration of 'coordinate' hides instance variable [-Wshadow-ivar]    self.latitude = [NSNumber numberWithDouble:coordinate.latitude];                                               ^/Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.m:23:26: warning: local declaration of 'coordinate' hides instance variable [-Wshadow-ivar]    [super setCoordinate:coordinate];                         ^3 warnings generated.3(36%IDEClangDiagnosticActivityLogMessage2@57"Local declaration of 'coordinate' hides instance variable-429781322#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@67"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.m0000000000000000^20#48#20#48#489#0#14"Semantic Issue--2@57"Local declaration of 'coordinate' hides instance variable-429781322#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@67"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.m0000000000000000^21#47#21#47#559#0#14"Semantic Issue--2@57"Local declaration of 'coordinate' hides instance variable-429781322#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@67"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.m0000000000000000^22#25#22#25#606#0#14"Semantic Issue--0#0#1#-19%DVTDocumentLocation4@67"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.m0000000000000000^4049"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapAnnotation.o JPMapAnnotation.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/trojansaga/Documents/ios/TravelBudd    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.1 -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-generated-files.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-own-target-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-all-target-headers.hmap -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-project-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/include/libxml2 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources/arm64 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources -F/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos -include /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-aukofavyttermofafktjkuhucnqp/TravelBudd-Prefix.pch -MMD -MT dependencies -MF /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapAnnotation.d --serialize-diagnostics /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapAnnotation.dia -c /Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.m -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapAnnotation.o36"57C1FF57-E496-413C-96A3-75B972410F68-
+b895FF61A-F9C1-4FE3-A17C-C7DB2760E8F1
+
 CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapCreationViewController.o /Users/trojansaga/Documents/ios/TravelBudd/JPMapCreationViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s423991032.492491
 e423991032.612428
@@ -4063,8 +4112,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile
 b5F198B03-C726-4EF0-AF5E-7CA2085DD476
 
 CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapListViewController.o /Users/trojansaga/Documents/ios/TravelBudd/JPMapListViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427442810.881329
-e427442811.588654
+s430390938.298559
+e430390938.505854
 r1
 xCompileC
 xDerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapListViewController.o
@@ -4143,12 +4192,13 @@ d/Users/trojansaga/Documents/ios/TravelBudd/Extensions/XEP-0115/CoreDataStorage/
 d/Users/trojansaga/Documents/ios/TravelBudd/JPDefs.h
 d/Users/trojansaga/Documents/ios/TravelBudd/MapRecord.h
 d/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Users/trojansaga/Documents/ios/TravelBudd/JPMapListViewController.m242"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapListViewController.o JPMapListViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compilerdecae27a427ab941^0fb4967b427ab941^---0#0#1#-19%DVTDocumentLocation2@75"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapListViewController.m0000000000000000^4097"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapListViewController.o JPMapListViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/trojansaga/Documents/ios/TravelBudd    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.1 -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-generated-files.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-own-target-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-all-target-headers.hmap -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-project-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/include/libxml2 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources/arm64 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources -F/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos -include /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-aukofavyttermofafktjkuhucnqp/TravelBudd-Prefix.pch -MMD -MT dependencies -MF /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapListViewController.d --serialize-diagnostics /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapListViewController.dia -c /Users/trojansaga/Documents/ios/TravelBudd/JPMapListViewController.m -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapListViewController.o36"BFD7FCB5-1CBA-44C8-9F29-1DACC24C3BEA-
-b187111FC-2BC1-42F5-8960-64FCD865F49A
+d/Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Users/trojansaga/Documents/ios/TravelBudd/JPMapListViewController.m242"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapListViewController.o JPMapListViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler7d914c9a3ea7b941^8080819a3ea7b941^---0#0#1#-19%DVTDocumentLocation2@75"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapListViewController.m0000000000000000^4097"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapListViewController.o JPMapListViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/trojansaga/Documents/ios/TravelBudd    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.1 -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-generated-files.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-own-target-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-all-target-headers.hmap -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-project-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/include/libxml2 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources/arm64 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources -F/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos -include /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-aukofavyttermofafktjkuhucnqp/TravelBudd-Prefix.pch -MMD -MT dependencies -MF /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapListViewController.d --serialize-diagnostics /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapListViewController.dia -c /Users/trojansaga/Documents/ios/TravelBudd/JPMapListViewController.m -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapListViewController.o36"BF3E27FC-FA44-4FB7-9296-41CA8D4C0F8A-
+b2FF813EB-4417-4696-8FD3-EB3A73416329
 
 CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapViewController.o /Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427024078.451019
-e427024079.194714
+s430391315.949448
+e430391316.211418
 r1
 xCompileC
 xDerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapViewController.o
@@ -4160,6 +4210,7 @@ xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m
 d/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.h
 d/Users/trojansaga/Documents/ios/TravelBudd/MapRecord.h
+d/Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.h
 d/Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/JPAppDelegate.h
 d/Users/trojansaga/Documents/ios/TravelBudd/XMPPFramework.h
 d/Users/trojansaga/Documents/ios/TravelBudd/Core/XMPP.h
@@ -4227,25 +4278,36 @@ d/Users/trojansaga/Documents/ios/TravelBudd/Extensions/XEP-0115/XMPPCapabilities
 d/Users/trojansaga/Documents/ios/TravelBudd/Extensions/XEP-0115/CoreDataStorage/XMPPCapabilitiesCoreDataStorage.h
 d/Users/trojansaga/Documents/ios/TravelBudd/JPDefs.h
 d/Users/trojansaga/Documents/ios/TravelBudd/PinRecord.h
-o/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m:19:1: warning: autosynthesized property 'managedObjectContext' will use synthesized instance variable '_managedObjectContext', not existing instance variable 'managedObjectContext' [-Wobjc-autosynthesis-property-ivar-name-match]
+o/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m:20:1: warning: autosynthesized property 'managedObjectContext' will use synthesized instance variable '_managedObjectContext', not existing instance variable 'managedObjectContext' [-Wobjc-autosynthesis-property-ivar-name-match]
 o@implementation JPMapViewController
 o^
 oIn file included from /Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m:9:
-o/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.h:46:55: note: property declared here
+o/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.h:55:55: note: property declared here
 o@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 o                                                      ^
 o/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.h:23:29: note: instance variable is declared here
 o    NSManagedObjectContext *managedObjectContext;
 o                            ^
-o/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m:441:36: warning: local declaration of 'searchBar' hides instance variable [-Wshadow-ivar]
+o/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m:159:24: warning: implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+o        numberOfPins = [_mapRecord.pins count];
+o                     ~ ^~~~~~~~~~~~~~~~~~~~~~~
+o/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m:202:22: warning: values of type 'NSUInteger' should not be used as format arguments; add an explicit cast to 'unsigned long' instead [-Wformat]
+o    NSLog(@"%i, %i", [[_mapView annotations] count], (unsigned long)[_pins count]);
+o            ~~       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+o            %lu      (unsigned long)
+o/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m:202:54: warning: format specifies type 'int' but the argument has type 'unsigned long' [-Wformat]
+o    NSLog(@"%i, %i", [[_mapView annotations] count], (unsigned long)[_pins count]);
+o                ~~                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+o                %lu
+o/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m:546:36: warning: local declaration of 'searchBar' hides instance variable [-Wshadow-ivar]
 o    [geocoder geocodeAddressString:searchBar.text completionHandler:^(NSArray *placemarks, NSError *error) {
 o                                   ^
-o/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m:450:6: warning: local declaration of 'searchBar' hides instance variable [-Wshadow-ivar]
+o/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m:555:6: warning: local declaration of 'searchBar' hides instance variable [-Wshadow-ivar]
 o    [searchBar resignFirstResponder];
 o     ^
-o3 warnings generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m234"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapViewController.o JPMapViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler29eb73cede73b941^9dd631cfde73b941^-1370"/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m:19:1: warning: autosynthesized property 'managedObjectContext' will use synthesized instance variable '_managedObjectContext', not existing instance variable 'managedObjectContext' [-Wobjc-autosynthesis-property-ivar-name-match]@implementation JPMapViewController^In file included from /Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m:9:/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.h:46:55: note: property declared here@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;                                                      ^/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.h:23:29: note: instance variable is declared here    NSManagedObjectContext *managedObjectContext;                            ^/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m:441:36: warning: local declaration of 'searchBar' hides instance variable [-Wshadow-ivar]    [geocoder geocodeAddressString:searchBar.text completionHandler:^(NSArray *placemarks, NSError *error) {                                   ^/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m:450:6: warning: local declaration of 'searchBar' hides instance variable [-Wshadow-ivar]    [searchBar resignFirstResponder];     ^3 warnings generated.3(36%IDEClangDiagnosticActivityLogMessage2@165"Autosynthesized property 'managedObjectContext' will use synthesized instance variable '_managedObjectContext', not existing instance variable 'managedObjectContext'-427024079#18446744073709551615#0#2(2@22"Property declared here-427024079#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.h0000000000000000^45#54#45#54#1304#0#14"Semantic Issue--2@34"Instance variable is declared here-427024079#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.h0000000000000000^22#28#22#28#658#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m0000000000000000^18#0#18#0#291#0#14"Semantic Issue--2@56"Local declaration of 'searchBar' hides instance variable-427024079#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m0000000000000000^440#35#440#35#15792#0#14"Semantic Issue--2@56"Local declaration of 'searchBar' hides instance variable-427024079#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m0000000000000000^449#5#449#5#16133#0#14"Semantic Issue--0#0#1#-19%DVTDocumentLocation4@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m0000000000000000^4073"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapViewController.o JPMapViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/trojansaga/Documents/ios/TravelBudd    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.1 -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-generated-files.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-own-target-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-all-target-headers.hmap -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-project-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/include/libxml2 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources/arm64 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources -F/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos -include /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-aukofavyttermofafktjkuhucnqp/TravelBudd-Prefix.pch -MMD -MT dependencies -MF /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapViewController.d --serialize-diagnostics /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapViewController.dia -c /Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapViewController.o36"A7B762E1-5054-4343-8123-6D3F5F6E51F6-
-b74B5A430-7A8D-40A7-9AFE-493BE65F8656
+o6 warnings generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m234"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapViewController.o JPMapViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler122ff31340a7b941^9967391440a7b941^-2388"/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m:20:1: warning: autosynthesized property 'managedObjectContext' will use synthesized instance variable '_managedObjectContext', not existing instance variable 'managedObjectContext' [-Wobjc-autosynthesis-property-ivar-name-match]@implementation JPMapViewController^In file included from /Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m:9:/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.h:55:55: note: property declared here@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;                                                      ^/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.h:23:29: note: instance variable is declared here    NSManagedObjectContext *managedObjectContext;                            ^/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m:159:24: warning: implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]        numberOfPins = [_mapRecord.pins count];                     ~ ^~~~~~~~~~~~~~~~~~~~~~~/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m:202:22: warning: values of type 'NSUInteger' should not be used as format arguments; add an explicit cast to 'unsigned long' instead [-Wformat]    NSLog(@"%i, %i", [[_mapView annotations] count], (unsigned long)[_pins count]);            ~~       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~            %lu      (unsigned long)/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m:202:54: warning: format specifies type 'int' but the argument has type 'unsigned long' [-Wformat]    NSLog(@"%i, %i", [[_mapView annotations] count], (unsigned long)[_pins count]);                ~~                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~                %lu/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m:546:36: warning: local declaration of 'searchBar' hides instance variable [-Wshadow-ivar]    [geocoder geocodeAddressString:searchBar.text completionHandler:^(NSArray *placemarks, NSError *error) {                                   ^/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m:555:6: warning: local declaration of 'searchBar' hides instance variable [-Wshadow-ivar]    [searchBar resignFirstResponder];     ^6 warnings generated.6(36%IDEClangDiagnosticActivityLogMessage2@165"Autosynthesized property 'managedObjectContext' will use synthesized instance variable '_managedObjectContext', not existing instance variable 'managedObjectContext'-430391316#18446744073709551615#0#2(2@22"Property declared here-430391316#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.h0000000000000000^54#54#54#54#1620#0#14"Semantic Issue--2@34"Instance variable is declared here-430391316#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.h0000000000000000^22#28#22#28#634#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m0000000000000000^19#0#19#0#319#0#14"Semantic Issue--2@88"Implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'int'-430391316#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m0000000000000000^158#23#158#23#5355#0#22"Value Conversion Issue2(3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m0000000000000000^158#23#158#46#5355#22#3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m0000000000000000^158#21#158#22#5353#0#-2@115"Values of type 'NSUInteger' should not be used as format arguments; add an explicit cast to 'unsigned long' instead-430391316#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m0000000000000000^201#21#201#21#6753#0#19"Format String Issue4(3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m0000000000000000^201#21#201#51#6753#29#3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m0000000000000000^201#12#201#14#6744#2#3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m0000000000000000^201#12#201#14#6744#2#3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m0000000000000000^201#21#201#21#6753#0#-2@69"Format specifies type 'int' but the argument has type 'unsigned long'-430391316#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m0000000000000000^201#53#201#53#6785#0#19"Format String Issue3(3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m0000000000000000^201#53#201#81#6785#27#3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m0000000000000000^201#16#201#18#6748#2#3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m0000000000000000^201#16#201#18#6748#2#-2@56"Local declaration of 'searchBar' hides instance variable-430391316#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m0000000000000000^545#35#545#35#20183#0#14"Semantic Issue--2@56"Local declaration of 'searchBar' hides instance variable-430391316#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m0000000000000000^554#5#554#5#20524#0#14"Semantic Issue--0#0#1#-19%DVTDocumentLocation4@71"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m0000000000000000^4073"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapViewController.o JPMapViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/trojansaga/Documents/ios/TravelBudd    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.1 -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-generated-files.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-own-target-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-all-target-headers.hmap -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-project-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/include/libxml2 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources/arm64 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources -F/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos -include /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-aukofavyttermofafktjkuhucnqp/TravelBudd-Prefix.pch -MMD -MT dependencies -MF /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapViewController.d --serialize-diagnostics /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapViewController.dia -c /Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapViewController.o36"1DE1EA4D-0656-4938-8CD7-0C1535F76B42-
+b20F3EB84-77C8-458A-AD82-7C66D19F8939
 
 CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPSettingViewController.o /Users/trojansaga/Documents/ios/TravelBudd/JPSettingViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s426329222.038972
@@ -4350,8 +4412,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Compile
 b27D430C7-B245-4E1A-ADA5-0A4D29A11405
 
 CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/MapRecord.o /Users/trojansaga/Documents/ios/TravelBudd/MapRecord.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s426329224.861546
-e426329224.942886
+s429781322.023827
+e429781322.318723
 r1
 xCompileC
 xDerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/MapRecord.o
@@ -4363,8 +4425,8 @@ xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/trojansaga/Documents/ios/TravelBudd/MapRecord.m
 d/Users/trojansaga/Documents/ios/TravelBudd/MapRecord.h
 d/Users/trojansaga/Documents/ios/TravelBudd/PinRecord.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Compile /Users/trojansaga/Documents/ios/TravelBudd/MapRecord.m214"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/MapRecord.o MapRecord.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compilerdcb9dc884469b941^7384f8884469b941^---0#0#1#-19%DVTDocumentLocation2@61"file:///Users/trojansaga/Documents/ios/TravelBudd/MapRecord.m0000000000000000^4013"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/MapRecord.o MapRecord.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/trojansaga/Documents/ios/TravelBudd    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.1 -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-generated-files.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-own-target-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-all-target-headers.hmap -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-project-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/include/libxml2 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources/arm64 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources -F/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos -include /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-aukofavyttermofafktjkuhucnqp/TravelBudd-Prefix.pch -MMD -MT dependencies -MF /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/MapRecord.d --serialize-diagnostics /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/MapRecord.dia -c /Users/trojansaga/Documents/ios/TravelBudd/MapRecord.m -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/MapRecord.o36"9CFACEB7-6D8C-4FFD-9387-FECE6C065A74-
-bF66BF624-7854-4108-A9A8-FFB37800188D
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Compile /Users/trojansaga/Documents/ios/TravelBudd/MapRecord.m214"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/MapRecord.o MapRecord.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler2140064af19db941^9e98514af19db941^---0#0#1#-19%DVTDocumentLocation2@61"file:///Users/trojansaga/Documents/ios/TravelBudd/MapRecord.m0000000000000000^4013"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/MapRecord.o MapRecord.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/trojansaga/Documents/ios/TravelBudd    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.1 -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-generated-files.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-own-target-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-all-target-headers.hmap -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-project-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/include/libxml2 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources/arm64 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources -F/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos -include /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-aukofavyttermofafktjkuhucnqp/TravelBudd-Prefix.pch -MMD -MT dependencies -MF /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/MapRecord.d --serialize-diagnostics /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/MapRecord.dia -c /Users/trojansaga/Documents/ios/TravelBudd/MapRecord.m -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/MapRecord.o36"4E51FA82-5F82-450E-9CE1-AC27B7D318EC-
+b895FF61A-F9C1-4FE3-A17C-C7DB2760E8F1
 
 CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/NSData+XMPP.o /Users/trojansaga/Documents/ios/TravelBudd/Categories/NSData+XMPP.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s426329223.767239
@@ -4688,8 +4750,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile
 bF66BF624-7854-4108-A9A8-FFB37800188D
 
 CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/PinRecord.o /Users/trojansaga/Documents/ios/TravelBudd/PinRecord.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s426329221.927386
-e426329222.038621
+s429781322.001818
+e429781322.319997
 r1
 xCompileC
 xDerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/PinRecord.o
@@ -4701,8 +4763,8 @@ xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/trojansaga/Documents/ios/TravelBudd/PinRecord.m
 d/Users/trojansaga/Documents/ios/TravelBudd/PinRecord.h
 d/Users/trojansaga/Documents/ios/TravelBudd/MapRecord.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Compile /Users/trojansaga/Documents/ios/TravelBudd/PinRecord.m214"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/PinRecord.o PinRecord.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compilerc98eed854469b941^271412864469b941^---0#0#1#-19%DVTDocumentLocation2@61"file:///Users/trojansaga/Documents/ios/TravelBudd/PinRecord.m0000000000000000^4013"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/PinRecord.o PinRecord.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/trojansaga/Documents/ios/TravelBudd    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.1 -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-generated-files.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-own-target-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-all-target-headers.hmap -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-project-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/include/libxml2 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources/arm64 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources -F/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos -include /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-aukofavyttermofafktjkuhucnqp/TravelBudd-Prefix.pch -MMD -MT dependencies -MF /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/PinRecord.d --serialize-diagnostics /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/PinRecord.dia -c /Users/trojansaga/Documents/ios/TravelBudd/PinRecord.m -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/PinRecord.o36"82352320-D125-4BF6-80DA-A6FB2E5C5FD9-
-bF66BF624-7854-4108-A9A8-FFB37800188D
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Compile /Users/trojansaga/Documents/ios/TravelBudd/PinRecord.m214"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/PinRecord.o PinRecord.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler2fa7004af19db941^1cec514af19db941^---0#0#1#-19%DVTDocumentLocation2@61"file:///Users/trojansaga/Documents/ios/TravelBudd/PinRecord.m0000000000000000^4013"CompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/PinRecord.o PinRecord.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/trojansaga/Documents/ios/TravelBudd    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.1 -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-generated-files.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-own-target-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-all-target-headers.hmap -iquote /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd-project-headers.hmap -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/include/libxml2 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources/arm64 -I/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/DerivedSources -F/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos -include /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/PrecompiledHeaders/TravelBudd-Prefix-aukofavyttermofafktjkuhucnqp/TravelBudd-Prefix.pch -MMD -MT dependencies -MF /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/PinRecord.d --serialize-diagnostics /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/PinRecord.dia -c /Users/trojansaga/Documents/ios/TravelBudd/PinRecord.m -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/PinRecord.o36"9168F565-51CB-4E13-AC07-817F33EF3916-
+b895FF61A-F9C1-4FE3-A17C-C7DB2760E8F1
 
 CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/RFImageToDataTransformer.o /Users/trojansaga/Documents/ios/TravelBudd/Utilities/RFImageToDataTransformer.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s426329218.066838
@@ -10434,6 +10496,9 @@ r0
 CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/JPMakeChatRoomViewController.o /Users/trojansaga/Documents/ios/TravelBudd/JPMakeChatRoomViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 r0
 
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/JPMapAnnotation.o /Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
 CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7/JPMapCreationViewController.o /Users/trojansaga/Documents/ios/TravelBudd/JPMapCreationViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 r0
 
@@ -10842,6 +10907,9 @@ r0
 CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/JPMakeChatRoomViewController.o /Users/trojansaga/Documents/ios/TravelBudd/JPMakeChatRoomViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
 r0
 
+CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/JPMapAnnotation.o /Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
 CCompileC DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/armv7s/JPMapCreationViewController.o /Users/trojansaga/Documents/ios/TravelBudd/JPMapCreationViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
 r0
 
@@ -11242,8 +11310,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compili
 b27D430C7-B245-4E1A-ADA5-0A4D29A11405
 
 CCompileXIB /Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.xib
-s424157892.184661
-e424157895.026305
+s430390938.787604
+e430390940.177412
 r1
 xCompileXIB
 x/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.xib
@@ -11251,8 +11319,8 @@ onwi_state: registration failed (1000000)
 o/* com.apple.ibtool.document.warnings */
 o/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.xib:eSC-Ov-4tB: warning: Plain Style unsupported in a Navigation Item [9]
 o/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.xib:Unk-Y3-ncL: warning: Plain Style unsupported in a Navigation Item [9]
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compiling /Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.xib34"CompileXIB JPMapViewController.xibc45f2fc42248b941^94bc06c72248b941^-348"nwi_state: registration failed (1000000)/* com.apple.ibtool.document.warnings *//Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.xib:eSC-Ov-4tB: warning: Plain Style unsupported in a Navigation Item/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.xib:Unk-Y3-ncL: warning: Plain Style unsupported in a Navigation Item2(21%IDEActivityLogMessage2@44"Plain Style unsupported in a Navigation Item-424157895#18446744073709551615#0#-1#-23%DVTTextDocumentLocation3@73"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.xib0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#25"Unsupported Configuration--2@44"Plain Style unsupported in a Navigation Item-424157895#18446744073709551615#0#-1#-3@73"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.xib0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#25"Unsupported Configuration--0#0#1#-19%DVTDocumentLocation4@73"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.xib0000000000000000^735"CompileXIB JPMapViewController.xib    cd /Users/trojansaga/Documents/ios/TravelBudd    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.1 --output-format human-readable-text --compile /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/JPMapViewController.nib /Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.xib36"EB059F1C-CE98-4E25-A7F2-FCE41E1E2514-
-b8C510238-5653-4EF5-9782-A24D2F2FC635
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compiling /Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.xib34"CompileXIB JPMapViewController.xiba2b2c99a3ea7b941^a96b2d9c3ea7b941^-348"nwi_state: registration failed (1000000)/* com.apple.ibtool.document.warnings *//Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.xib:eSC-Ov-4tB: warning: Plain Style unsupported in a Navigation Item/Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.xib:Unk-Y3-ncL: warning: Plain Style unsupported in a Navigation Item2(21%IDEActivityLogMessage2@44"Plain Style unsupported in a Navigation Item-430390940#18446744073709551615#0#-1#-23%DVTTextDocumentLocation3@73"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.xib0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#25"Unsupported Configuration--2@44"Plain Style unsupported in a Navigation Item-430390940#18446744073709551615#0#-1#-3@73"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.xib0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#25"Unsupported Configuration--0#0#1#-19%DVTDocumentLocation4@73"file:///Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.xib0000000000000000^735"CompileXIB JPMapViewController.xib    cd /Users/trojansaga/Documents/ios/TravelBudd    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.1 --output-format human-readable-text --compile /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/JPMapViewController.nib /Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.xib36"B890DA0F-26D0-4B1A-BCE5-58739C73B3CE-
+b2FF813EB-4417-4696-8FD3-EB3A73416329
 
 CCompileXIB /Users/trojansaga/Documents/ios/TravelBudd/JPSettingViewController.xib
 s423991039.143417
@@ -11336,14 +11404,14 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Compil
 b5F198B03-C726-4EF0-AF5E-7CA2085DD476
 
 CDataModelVersionCompile /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/Model.momd /Users/trojansaga/Documents/ios/TravelBudd/Model.xcdatamodeld
-s424157891.059657
-e424157891.371090
+s428219330.792627
+e428219331.295756
 r1
 xDataModelVersionCompile
 x/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/Model.momd
 x/Users/trojansaga/Documents/ios/TravelBudd/Model.xcdatamodeld
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"DataModelVersionCompile DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/Model.momd Model.xcdatamodeld121"DataModelVersionCompile DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/Model.momd Model.xcdatamodelda75a0fc32248b941^26005fc32248b941^---0#0#1#-19%DVTDocumentLocation2@69"file:///Users/trojansaga/Documents/ios/TravelBudd/Model.xcdatamodeld/0000000000000000^780"DataModelVersionCompile DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/Model.momd Model.xcdatamodeld    cd /Users/trojansaga/Documents/ios/TravelBudd    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/usr/bin/momc -XD_MOMC_SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -MOMC_PLATFORMS iphonesimulator -MOMC_PLATFORMS iphoneos /Users/trojansaga/Documents/ios/TravelBudd/Model.xcdatamodeld /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/Model.momd36"A4D35C6F-DB1E-4D61-B426-9364E5139464-
-b8C510238-5653-4EF5-9782-A24D2F2FC635
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"DataModelVersionCompile DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/Model.momd Model.xcdatamodeld121"DataModelVersionCompile DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/Model.momd Model.xcdatamodeld00fdcac21b86b941^08c84bc31b86b941^---0#0#1#-19%DVTDocumentLocation2@69"file:///Users/trojansaga/Documents/ios/TravelBudd/Model.xcdatamodeld/0000000000000000^780"DataModelVersionCompile DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/Model.momd Model.xcdatamodeld    cd /Users/trojansaga/Documents/ios/TravelBudd    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/usr/bin/momc -XD_MOMC_SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -MOMC_PLATFORMS iphonesimulator -MOMC_PLATFORMS iphoneos /Users/trojansaga/Documents/ios/TravelBudd/Model.xcdatamodeld /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/Model.momd36"28FB5B13-D668-407B-AE48-2D782607AA63-
+b3F843713-68A2-48AD-B44E-5BD09C8FB338
 
 CDataModelVersionCompile /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/XMPPMessageArchiving.momd /Users/trojansaga/Documents/ios/TravelBudd/Extensions/XEP-0136/CoreDataStorage/XMPPMessageArchiving.xcdatamodeld
 s423991028.901909
@@ -11386,14 +11454,14 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection165"DataMo
 b5F198B03-C726-4EF0-AF5E-7CA2085DD476
 
 CGenerateDSYMFile /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app.dSYM /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd
-s427442811.935671
-e427442812.124747
+s430391316.419392
+e430391316.662373
 r1
 xGenerateDSYMFile
 x/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app.dSYM
 x/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection124"Generate /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app.dSYM168"GenerateDSYMFile DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app.dSYM DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd0f98ef7b427ab941^86e51f7c427ab941^---0#0#1#-19%DVTDocumentLocation2@123"file:///Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app.dSYM/0000000000000000^748"GenerateDSYMFile DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app.dSYM DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd    cd /Users/trojansaga/Documents/ios/TravelBudd    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app.dSYM36"920A2B06-8AFC-4A1F-93A9-26C75DB43819-
-b187111FC-2BC1-42F5-8960-64FCD865F49A
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection124"Generate /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app.dSYM168"GenerateDSYMFile DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app.dSYM DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudda9696b1440a7b941^3e93a91440a7b941^---0#0#1#-19%DVTDocumentLocation2@123"file:///Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app.dSYM/0000000000000000^748"GenerateDSYMFile DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app.dSYM DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd    cd /Users/trojansaga/Documents/ios/TravelBudd    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app.dSYM36"FC680ECF-DFC8-453E-9E4A-353C6A4EBF52-
+b20F3EB84-77C8-458A-AD82-7C66D19F8939
 
 CLd /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/TravelBudd normal arm64
 r0
@@ -11405,8 +11473,8 @@ CLd /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Inte
 r0
 
 CLd /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd normal arm64
-s427442811.602367
-e427442811.923840
+s430391316.218384
+e430391316.415499
 r1
 xLd
 x/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd
@@ -11480,6 +11548,7 @@ d/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Interme
 d/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPvCardTemp.o
 d/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPMessage+XEP_0184.o
 d/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPModule.o
+d/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapAnnotation.o
 d/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPJID.o
 d/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPGroupCoreDataStorageObject.o
 d/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPMessage.o
@@ -11569,7 +11638,6 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Develope
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreImage.framework/CoreImage
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/system/libcache.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/system/libcommonCrypto.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/system/libcompiler_rt.dylib
@@ -11597,8 +11665,9 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Develope
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/system/libsystem_stats.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/system/libunwind.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/system/libxpc.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection126"Link /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd94"Ld DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd normal arm641b499a7b427ab941^4982ec7b427ab941^---0#0#1#--1662"Ld DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd normal arm64    cd /Users/trojansaga/Documents/ios/TravelBudd    export IPHONEOS_DEPLOYMENT_TARGET=7.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -L/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos -L/Users/trojansaga/Documents/ios/TravelBudd/Vendor/libidn -F/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos -filelist /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/TravelBudd.LinkFileList -dead_strip -lxml2 -fobjc-arc -fobjc-link-runtime -miphoneos-version-min=7.1 -framework CoreData -framework CoreLocation -framework MapKit -lxml2.2 -lxml2 -lresolv -framework Security -framework CFNetwork -framework CoreGraphics -lidn -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/TravelBudd_dependency_info.dat -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd36"697C1CA2-527A-4050-B89C-17C93B716543-
-b187111FC-2BC1-42F5-8960-64FCD865F49A
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection126"Link /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd94"Ld DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd normal arm643a02381440a7b941^e95f6a1440a7b941^---0#0#1#--1662"Ld DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd normal arm64    cd /Users/trojansaga/Documents/ios/TravelBudd    export IPHONEOS_DEPLOYMENT_TARGET=7.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -L/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos -L/Users/trojansaga/Documents/ios/TravelBudd/Vendor/libidn -F/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos -filelist /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/TravelBudd.LinkFileList -dead_strip -lxml2 -fobjc-arc -fobjc-link-runtime -miphoneos-version-min=7.1 -framework CoreData -framework CoreLocation -framework MapKit -lxml2.2 -lxml2 -lresolv -framework Security -framework CFNetwork -framework CoreGraphics -lidn -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/TravelBudd_dependency_info.dat -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/TravelBudd36"D30A6A74-7A75-44A3-AAF3-32AD21FA333F-
+b20F3EB84-77C8-458A-AD82-7C66D19F8939
 
 CProcessInfoPlistFile /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/Info.plist /Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/TravelBudd-Info.plist
 s426329226.130007
@@ -11701,14 +11770,24 @@ CProcessPCH /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/In
 r0
 
 CProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/Entitlements.plist /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd.xcent
-s427442812.126259
-e427442812.130705
+s430389298.772488
+e430389298.773737
 r1
 xProcessProductPackaging
 x/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/Entitlements.plist
 x/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd.xcent
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection253"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/Entitlements.plist DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd.xcent253"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/Entitlements.plist DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd.xcent8062207c427ab941^2d78217c427ab941^---0#0#1#-19%DVTDocumentLocation2@158"file:///Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd.xcent0000000000000000^830"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/Entitlements.plist DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd.xcent    cd /Users/trojansaga/Documents/ios/TravelBudd    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-productPackagingUtility /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/Entitlements.plist -entitlements -format xml -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd.xcent36"A5C7F1F3-45F3-4696-9D78-A8C159A245B0-
-b187111FC-2BC1-42F5-8960-64FCD865F49A
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection253"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/Entitlements.plist DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd.xcent253"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/Entitlements.plist DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd.xcent42d0c53238a7b941^3814c63238a7b941^---0#0#1#-19%DVTDocumentLocation2@158"file:///Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd.xcent0000000000000000^830"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/Entitlements.plist DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd.xcent    cd /Users/trojansaga/Documents/ios/TravelBudd    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-productPackagingUtility /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/Entitlements.plist -entitlements -format xml -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/TravelBudd.xcent36"1B7151F1-B9AE-482A-9217-63A1270BB170-
+bC972C427-0781-447B-B362-25DD4289D729
+
+CProcessProductPackaging /Users/trojansaga/Library/MobileDevice/Provisioning\ Profiles/5f496e80-6db3-4751-a497-c0bae15dca3f.mobileprovision /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/embedded.mobileprovision
+s430367514.926973
+e430367514.929166
+r1
+xProcessProductPackaging
+x/Users/trojansaga/Library/MobileDevice/Provisioning Profiles/5f496e80-6db3-4751-a497-c0bae15dca3f.mobileprovision
+x/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/embedded.mobileprovision
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection231"ProcessProductPackaging /Users/trojansaga/Library/MobileDevice/Provisioning\ Profiles/5f496e80-6db3-4751-a497-c0bae15dca3f.mobileprovision DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/embedded.mobileprovision231"ProcessProductPackaging /Users/trojansaga/Library/MobileDevice/Provisioning\ Profiles/5f496e80-6db3-4751-a497-c0bae15dca3f.mobileprovision DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/embedded.mobileprovisionc860ed1ae3a6b941^53b1f11ae3a6b941^---0#0#1#-19%DVTDocumentLocation2@142"file:///Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/embedded.mobileprovision0000000000000000^760"ProcessProductPackaging /Users/trojansaga/Library/MobileDevice/Provisioning\ Profiles/5f496e80-6db3-4751-a497-c0bae15dca3f.mobileprovision DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/embedded.mobileprovision    cd /Users/trojansaga/Documents/ios/TravelBudd    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-productPackagingUtility /Users/trojansaga/Library/MobileDevice/Provisioning\ Profiles/5f496e80-6db3-4751-a497-c0bae15dca3f.mobileprovision -o /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/embedded.mobileprovision36"D7076E30-057E-4E6F-AB4C-3B7970B2C939-
+bDEFB00F4-F191-4F1E-A0FA-9A02F6654109
 
 CProcessProductPackaging /Users/trojansaga/Library/MobileDevice/Provisioning\ Profiles/A9B7AF60-368E-4B90-8798-ECFF79513A38.mobileprovision /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Products/Debug-iphoneos/TravelBudd.app/embedded.mobileprovision
 s423991042.423179

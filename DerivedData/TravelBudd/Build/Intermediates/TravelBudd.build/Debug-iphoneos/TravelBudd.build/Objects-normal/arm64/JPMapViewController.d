@@ -2,6 +2,7 @@ dependencies: \
   /Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.m \
   /Users/trojansaga/Documents/ios/TravelBudd/JPMapViewController.h \
   /Users/trojansaga/Documents/ios/TravelBudd/MapRecord.h \
+  /Users/trojansaga/Documents/ios/TravelBudd/JPMapAnnotation.h \
   /Users/trojansaga/Documents/ios/TravelBudd/TravelBudd/JPAppDelegate.h \
   /Users/trojansaga/Documents/ios/TravelBudd/XMPPFramework.h \
   /Users/trojansaga/Documents/ios/TravelBudd/Core/XMPP.h \
