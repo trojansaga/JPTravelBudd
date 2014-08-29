@@ -13,8 +13,13 @@
     </entity>
     <entity name="MapRecord" representedClassName="MapRecord" syncable="YES">
         <attribute name="m_FinishDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="m_Image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="m_MapTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="m_Owner" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="m_SavedLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="m_SavedLatitudeDelta" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="m_SavedLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="m_SavedLongitudeDelta" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="m_StartDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="m_TotalBudget" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="pins" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PinRecord" inverseName="map" inverseEntity="PinRecord" syncable="YES"/>
@@ -33,7 +38,7 @@
     <elements>
         <element name="BudgetRecord" positionX="-272" positionY="-72" width="128" height="88"/>
         <element name="ChatRecord" positionX="-56" positionY="167" width="128" height="103"/>
-        <element name="MapRecord" positionX="-279" positionY="53" width="137" height="133"/>
+        <element name="MapRecord" positionX="-279" positionY="53" width="137" height="208"/>
         <element name="PinRecord" positionX="-56" positionY="-81" width="128" height="178"/>
     </elements>
 </model>

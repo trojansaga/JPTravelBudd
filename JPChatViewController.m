@@ -59,6 +59,19 @@
     
     self.navigationItem.title = @"Chatting";
 
+    //translucent로 해야 사이즈가 맞어....왠지 몰라 썅
+    self.navigationController.navigationBar.translucent = NO;
+//    chatRoomListTableView.backgroundColor = [UIColor purpleColor];
+    
+    UIBarButtonItem *makeRoomButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(makeRoom:)];
+//    [self.navigationController.navigationItem setRightBarButtonItem:makeRoomButton];
+    UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reloadTableView:)];
+//    [self.navigationController.navigationItem setLeftBarButtonItem:refreshButton];
+    self.navigationItem.leftBarButtonItem = refreshButton;
+    self.navigationItem.rightBarButtonItem = makeRoomButton;
+    
+    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -156,7 +169,7 @@
     }
 
     cell.textLabel.text = [[chatRoomListArray objectAtIndex:indexPath.row] objectForKey:@"chat_room_name"];
-    
+//    cell.backgroundColor = [UIColor yellowColor];
     return cell;
 }
 

@@ -4,17 +4,33 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>AppIcon40x40@2x.png</key>
+		<data>
+		T6ukn3ecotdktClArH381/4skZo=
+		</data>
+		<key>AppIcon60x60@2x.png</key>
+		<data>
+		obsEA1vyNFGhe443H+DsI54+dwc=
+		</data>
 		<key>Assets.car</key>
 		<data>
-		3ks0WA0Giu+1h7SwGA7p9mkIlr4=
+		mofbIpV6w9CCnEEuYxKUM2eDU2w=
+		</data>
+		<key>ClCell.nib</key>
+		<data>
+		RwrQPOSzAnKArxB6eCKVJ5YuOKc=
+		</data>
+		<key>CollectionNib.nib</key>
+		<data>
+		OL0ZJy99r9doDrpDhnBM8g+TuJ0=
 		</data>
 		<key>JPChatViewController.nib</key>
 		<data>
-		pfUbnCwIbklizI1vsiUZ44XMf5U=
+		s4D2S6+t3Ckd/mKu/efZKNg0zIc=
 		</data>
 		<key>JPChattingRoomViewController.nib</key>
 		<data>
-		WqBHcLhLNP2tV3ZfhXxqqwxihGI=
+		W163gkMsicbVgkTUBoMi1Nfadco=
 		</data>
 		<key>JPLoginViewController.nib</key>
 		<data>
@@ -28,17 +44,21 @@
 		<data>
 		Jb2PdqyVgqfXWP32Qm4jSHS4Ctc=
 		</data>
+		<key>JPMapListCell.nib</key>
+		<data>
+		V8SEwgBHz10CfoQ1WO1HiQB5E8o=
+		</data>
 		<key>JPMapListViewController.nib</key>
 		<data>
-		Md8MLJR6bFbQy9gMZDWKH1ZCUlY=
+		S0qxZxmbUoPtuhlaWEuo+HycS0U=
 		</data>
 		<key>JPMapViewController.nib</key>
 		<data>
-		dCUvt5W/We2bwK81CtqGCMIPfck=
+		NQISGX5QjEhr7068dZPS9IW/3PM=
 		</data>
 		<key>JPSettingViewController.nib</key>
 		<data>
-		58x2mCxteWUHUF3SJGQ/ST6K/QU=
+		AHO2DDKIzrfxrUWWkgfdOGRpBRQ=
 		</data>
 		<key>JPTabbarController.nib</key>
 		<data>
@@ -46,11 +66,19 @@
 		</data>
 		<key>LaunchImage-700-568h@2x.png</key>
 		<data>
-		V1VdV48TyrImURVWCaose9yz87E=
+		c6iIYnKPuGhFrqzzRKjRPs3YJGo=
+		</data>
+		<key>LaunchImage-700@2x.png</key>
+		<data>
+		aGH1mY6rL+tG5ZNtFKEe5wGVEyQ=
+		</data>
+		<key>MapTableViewCell.nib</key>
+		<data>
+		InkDf385zrdP8iXlm8tNN/B2GZw=
 		</data>
 		<key>Model.momd/Model.mom</key>
 		<data>
-		bgvxCjxkIR6zD5t4+Sil1bYRePA=
+		aQ1jKjx7ZQ9qHyPvz/McOlu/YVA=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -111,21 +139,49 @@
 		<key>en.lproj/InfoPlist.strings</key>
 		<data>
 		zmV6UqBSo6r1NOz798vd5O4zTBA=
+		</data>
+		<key>geo_fence-50.png</key>
+		<data>
+		2de9nU6ZM9900wVv9Ve6KKgq1eg=
+		</data>
+		<key>img.jpg</key>
+		<data>
+		RhV980AjXfhjwx5SboVpqRezhOU=
+		</data>
+		<key>titleView.nib</key>
+		<data>
+		2gNUYdwd9Ehs1ycZo1sdqU625Qo=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>AppIcon40x40@2x.png</key>
+		<data>
+		T6ukn3ecotdktClArH381/4skZo=
+		</data>
+		<key>AppIcon60x60@2x.png</key>
+		<data>
+		obsEA1vyNFGhe443H+DsI54+dwc=
+		</data>
 		<key>Assets.car</key>
 		<data>
-		3ks0WA0Giu+1h7SwGA7p9mkIlr4=
+		mofbIpV6w9CCnEEuYxKUM2eDU2w=
+		</data>
+		<key>ClCell.nib</key>
+		<data>
+		RwrQPOSzAnKArxB6eCKVJ5YuOKc=
+		</data>
+		<key>CollectionNib.nib</key>
+		<data>
+		OL0ZJy99r9doDrpDhnBM8g+TuJ0=
 		</data>
 		<key>JPChatViewController.nib</key>
 		<data>
-		pfUbnCwIbklizI1vsiUZ44XMf5U=
+		s4D2S6+t3Ckd/mKu/efZKNg0zIc=
 		</data>
 		<key>JPChattingRoomViewController.nib</key>
 		<data>
-		WqBHcLhLNP2tV3ZfhXxqqwxihGI=
+		W163gkMsicbVgkTUBoMi1Nfadco=
 		</data>
 		<key>JPLoginViewController.nib</key>
 		<data>
@@ -139,17 +195,21 @@
 		<data>
 		Jb2PdqyVgqfXWP32Qm4jSHS4Ctc=
 		</data>
+		<key>JPMapListCell.nib</key>
+		<data>
+		V8SEwgBHz10CfoQ1WO1HiQB5E8o=
+		</data>
 		<key>JPMapListViewController.nib</key>
 		<data>
-		Md8MLJR6bFbQy9gMZDWKH1ZCUlY=
+		S0qxZxmbUoPtuhlaWEuo+HycS0U=
 		</data>
 		<key>JPMapViewController.nib</key>
 		<data>
-		dCUvt5W/We2bwK81CtqGCMIPfck=
+		NQISGX5QjEhr7068dZPS9IW/3PM=
 		</data>
 		<key>JPSettingViewController.nib</key>
 		<data>
-		58x2mCxteWUHUF3SJGQ/ST6K/QU=
+		AHO2DDKIzrfxrUWWkgfdOGRpBRQ=
 		</data>
 		<key>JPTabbarController.nib</key>
 		<data>
@@ -157,11 +217,19 @@
 		</data>
 		<key>LaunchImage-700-568h@2x.png</key>
 		<data>
-		V1VdV48TyrImURVWCaose9yz87E=
+		c6iIYnKPuGhFrqzzRKjRPs3YJGo=
+		</data>
+		<key>LaunchImage-700@2x.png</key>
+		<data>
+		aGH1mY6rL+tG5ZNtFKEe5wGVEyQ=
+		</data>
+		<key>MapTableViewCell.nib</key>
+		<data>
+		InkDf385zrdP8iXlm8tNN/B2GZw=
 		</data>
 		<key>Model.momd/Model.mom</key>
 		<data>
-		bgvxCjxkIR6zD5t4+Sil1bYRePA=
+		aQ1jKjx7ZQ9qHyPvz/McOlu/YVA=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -222,6 +290,18 @@
 		<key>en.lproj/InfoPlist.strings</key>
 		<data>
 		zmV6UqBSo6r1NOz798vd5O4zTBA=
+		</data>
+		<key>geo_fence-50.png</key>
+		<data>
+		2de9nU6ZM9900wVv9Ve6KKgq1eg=
+		</data>
+		<key>img.jpg</key>
+		<data>
+		RhV980AjXfhjwx5SboVpqRezhOU=
+		</data>
+		<key>titleView.nib</key>
+		<data>
+		2gNUYdwd9Ehs1ycZo1sdqU625Qo=
 		</data>
 	</dict>
 	<key>rules</key>

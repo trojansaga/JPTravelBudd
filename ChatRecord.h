@@ -12,9 +12,9 @@
 
 @interface ChatRecord : NSManagedObject
 
-@property (nonatomic, retain) NSString * body;
-@property (nonatomic, retain) NSDate * timeStamp;
-@property (nonatomic, retain) NSString * fromWho;
-@property (nonatomic, retain) NSString * fromWhere;
+@property (nonatomic, retain) NSString * body; // text
+@property (nonatomic, retain) NSDate * timeStamp; // sorting factor
+@property (nonatomic, retain) NSString * fromWho; // sender Name
+@property (nonatomic, retain) NSString * fromWhere; // group Name
 
 @end

@@ -2,7 +2,7 @@
 //  MapRecord.h
 //  TravelBudd
 //
-//  Created by MC on 2014. 6. 11..
+//  Created by MC on 2014. 8. 28..
 //  Copyright (c) 2014년 MinChul Song. All rights reserved.
 //
 
@@ -17,7 +17,12 @@
 @property (nonatomic, retain) NSString * m_MapTitle;
 @property (nonatomic, retain) NSString * m_Owner;
 @property (nonatomic, retain) NSDate * m_StartDate;
+@property (nonatomic, retain) NSData * m_Image;
+@property (nonatomic, retain) NSNumber * m_SavedLongitude;
+@property (nonatomic, retain) NSNumber * m_SavedLatitude;
 @property (nonatomic, retain) NSNumber * m_TotalBudget;
+@property (nonatomic, retain) NSNumber * m_SavedLatitudeDelta;
+@property (nonatomic, retain) NSNumber * m_SavedLongitudeDelta;
 @property (nonatomic, retain) NSSet *pins;
 @end
 

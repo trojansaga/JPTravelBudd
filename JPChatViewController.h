@@ -21,6 +21,7 @@
     
     UIActivityIndicatorView *indicator;
     JPChattingRoomViewController *chattingRoomViewController;
+    IBOutlet UINavigationBar *navBar;
     
 }
 //@property (nonatomic, strong) JPConnectionDelegateObject *jpConnectionDelegate;

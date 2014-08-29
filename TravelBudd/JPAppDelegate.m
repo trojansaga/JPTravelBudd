@@ -301,6 +301,8 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 
 -(void)sendDataHttp:(NSArray *)objects keyForDic:(NSArray *)keys urlString:(NSString *)urlStr setDelegate:(id)instance {
     
+//    NSLog(@"urlStr = %@", urlStr);
+    
     NSURL *url = [NSURL URLWithString:urlStr];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     NSDictionary *dic = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
@@ -396,8 +398,8 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 {
 	DDLogVerbose(@"%@: %@", THIS_FILE, THIS_METHOD);
     
-	// A simple example of inbound message handling.
 
+    // standard msg = group msg
 	if ([message isGroupChatMessage]) {
         
         NSString *displayName = [message fromStr];
@@ -405,21 +407,29 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
         
         NSLog(@"name : %@ , body : %@", displayName, body);
         
-//
 //        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:displayName
 //                                                            message:body
 //                                                           delegate:nil
 //                                                  cancelButtonTitle:@"Ok"
 //                                                  otherButtonTitles:nil];
 //        [alertView show];
+
+        
+        
+        
         
         ChatRecord *record = [NSEntityDescription insertNewObjectForEntityForName:@"ChatRecord" inManagedObjectContext:_managedObjectContext];
         [record setBody:body];
         [record setFromWho:displayName];
+        
         [_managedObjectContext save:nil];
         
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"newMsgArrival" object:nil];
         
     }
+    
+    
+    // not ordinary
     
 	if ([message isChatMessageWithBody])
 	{

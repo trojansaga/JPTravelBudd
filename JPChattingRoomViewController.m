@@ -17,6 +17,8 @@
 
 @implementation JPChattingRoomViewController
 
+#pragma mark - Life Cycle
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -55,7 +57,9 @@
                                              selector:@selector(keyboardWillAnimate:)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
-    
+
+//    [self addObserver:self forKeyPath:@"countOfChattingContents" options:0 context:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(msgReceived) name:@"newMsgArrival" object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,14 +82,64 @@
     [request setEntity:entity];
     chattingContents = [[_mob executeFetchRequest:request error:nil] mutableCopy];
 
+//    self.countOfChattingContents = [chattingContents count];
+    
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(action) name:@"count" object:nil];
+    
+    self.tabBarController.tabBar.hidden = YES;
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:YES];
     [self exitRoom];
-    [self _removeKeyboardNotification];
+    [self removeKeyboardNotification];
+
+    [chattingContents removeAllObjects];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"newMsgArrival" object:nil];
+//    [self removeObserver:self forKeyPath:@"countOfChattingContents"];
+
+//    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"count" object:chattingContents];
+    
+    self.tabBarController.tabBar.hidden = NO;
     
 }
+
+#pragma mark - Action
+
+- (IBAction)btnClick:(id)sender {
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"count" object:@"stir"];
+//    self.countOfChattingContents += 1;
+    
+//    NSLog(@"count : %i", _countOfChattingContents);
+
+}
+
+-(void)msgReceived {
+    NSLog(@"action");
+
+    [chattingContents removeAllObjects];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ChatRecord" inManagedObjectContext:_mob];
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"timeStamp" ascending:NO];
+    
+    [request setSortDescriptors:@[sort]];
+    [request setEntity:entity];
+    chattingContents = [[_mob executeFetchRequest:request error:nil] mutableCopy];
+
+
+    
+    [chattingTableView reloadData];
+    
+}
+
+//- (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+//    NSLog(@"observed");
+//    if ([keyPath isEqual:@"countOfChattingContents"]) {
+//        [chattingTableView reloadData];
+//    }
+//}
 
 #pragma mark - UI
 
@@ -115,7 +169,7 @@
     [UIView commitAnimations];
 }
 
-- (void)_removeKeyboardNotification
+- (void)removeKeyboardNotification
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
@@ -161,6 +215,10 @@
 
 #pragma mark - Send
 
+- (void)sendMapData {
+    
+}
+
 - (IBAction)sendMessage:(id)sender {
     NSArray *dataArr = @[
                          textFieldForMessage.text,
@@ -201,9 +259,6 @@
     [presence addAttributeWithName:@"to" stringValue:@"78@conference.54.199.143.8/nick"];
     JPAppDelegate *del = (JPAppDelegate *)[[UIApplication sharedApplication] delegate];
     [[del xmppStream] sendElement:presence];
-
-    
-    
 }
 
 
@@ -271,6 +326,9 @@
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     NSString *responseType = [dic objectForKey:@"data_type"];
     
+//    NSLog(@"response : %@", responseType);
+    
+    
     //채팅방 리스트
     if ([responseType isEqualToString:@"Delete ChatRoom"]) {
         NSLog(@"//채팅방 지우기//");
@@ -283,7 +341,7 @@
         NSLog(@"%@", [dic objectForKey:@"message"]);
         [self.navigationController popViewControllerAnimated:YES];
     }
-    else if ([responseType isEqualToString:@"ChatRoom info"]) {
+    else if ([responseType isEqualToString:@"ChatRoom Info"]) {
         NSLog(@"//채팅방 정보//");
         NSLog(@"%@", [dic objectForKey:@"chat_room_name"]);
         

@@ -45,9 +45,12 @@
     UITabBarItem *mapViewTabbarItem = [tabbarItems objectAtIndex:0];
     UITabBarItem *chatViewTabbarItem = [tabbarItems objectAtIndex:1];
     UITabBarItem *settingViewTabbarItem = [tabbarItems objectAtIndex:2];
-    [mapViewTabbarItem setTitle:@"mapView"];
-    [chatViewTabbarItem setTitle:@"chatView"];
-    [settingViewTabbarItem setTitle:@"settings"];
+    [mapViewTabbarItem setTitle:@"Maps"];
+    mapViewTabbarItem.image = [UIImage imageNamed:@"map_marker-25"];
+    [chatViewTabbarItem setTitle:@"Chatting"];
+    chatViewTabbarItem.image = [UIImage imageNamed:@"collaboration-25"];
+    [settingViewTabbarItem setTitle:@"Settings"];
+    settingViewTabbarItem.image = [UIImage imageNamed:@"settings-25"];
     
 
     
