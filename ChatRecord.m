@@ -2,7 +2,7 @@
 //  ChatRecord.m
 //  TravelBudd
 //
-//  Created by MC on 2014. 5. 14..
+//  Created by MC on 2014. 8. 29..
 //  Copyright (c) 2014년 MinChul Song. All rights reserved.
 //
 
@@ -12,8 +12,8 @@
 @implementation ChatRecord
 
 @dynamic body;
-@dynamic timeStamp;
-@dynamic fromWho;
 @dynamic fromWhere;
+@dynamic fromWho;
+@dynamic timeStamp;
 
 @end

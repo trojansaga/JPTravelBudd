@@ -8,6 +8,8 @@
 
 #import "JPChattingRoomViewController.h"
 
+#import "ChatRecord.h"
+
 #import "JPAppDelegate.h"
 
 
@@ -38,6 +40,8 @@
     domain = @"@54.199.143.8";
     conferenceDomain = @"@conference.54.199.143.8/";
     conferenceDomain = [conferenceDomain stringByAppendingString:nickName];
+    
+    _mob = [appDelegate managedObjectContext];
     
 
     //tap시 키보드 내리기
@@ -71,16 +75,16 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     [self enterRoom];
-
     
-    _mob = [appDelegate managedObjectContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ChatRecord" inManagedObjectContext:_mob];
-    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"timeStamp" ascending:NO];
+    [self refreshChattingContents];
     
-    [request setSortDescriptors:@[sort]];
-    [request setEntity:entity];
-    chattingContents = [[_mob executeFetchRequest:request error:nil] mutableCopy];
+//    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+//    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ChatRecord" inManagedObjectContext:_mob];
+//    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"timeStamp" ascending:NO];
+//    
+//    [request setSortDescriptors:@[sort]];
+//    [request setEntity:entity];
+//    chattingContents = [[_mob executeFetchRequest:request error:nil] mutableCopy];
 
 //    self.countOfChattingContents = [chattingContents count];
     
@@ -88,6 +92,12 @@
     
     self.tabBarController.tabBar.hidden = YES;
 
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:YES];
+//    [self refreshChattingContents];
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -106,6 +116,7 @@
     
 }
 
+
 #pragma mark - Action
 
 - (IBAction)btnClick:(id)sender {
@@ -113,24 +124,69 @@
 //    self.countOfChattingContents += 1;
     
 //    NSLog(@"count : %i", _countOfChattingContents);
+    
+//    [self enterRoom];
+
+    NSLog(@"contentOffset : (%f, %f)", chattingTableView.contentOffset.x, chattingTableView.contentOffset.y);
+    NSLog(@"height %f, offset %f", chattingTableView.contentSize.height, chattingTableView.contentOffset.y        );
+    
+    
+    // First figure out how many sections there are
+    NSInteger lastSectionIndex = [chattingTableView numberOfSections] - 1;
+    
+    // Then grab the number of rows in the last section
+    NSInteger lastRowIndex = [chattingTableView numberOfRowsInSection:lastSectionIndex] - 1;
+    
+    // Now just construct the index path
+    NSIndexPath *pathToLastRow = [NSIndexPath indexPathForRow:lastRowIndex inSection:lastSectionIndex];
+    
+    
+    
+    [chattingTableView scrollToRowAtIndexPath:pathToLastRow atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 
 }
 
--(void)msgReceived {
-    NSLog(@"action");
-
+-(void)refreshChattingContents {
     [chattingContents removeAllObjects];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"ChatRecord" inManagedObjectContext:_mob];
-    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"timeStamp" ascending:NO];
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"timeStamp" ascending:YES];
     
     [request setSortDescriptors:@[sort]];
     [request setEntity:entity];
+    NSString *titleOfRoom = _cr_id_room;
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"fromWhere == %@", titleOfRoom];
+    
+    [request setPredicate:predicate];
     chattingContents = [[_mob executeFetchRequest:request error:nil] mutableCopy];
 
-
+//    NSLog(@"contentOffset : (%f, %f)", chattingTableView.contentOffset.x, chattingTableView.contentOffset.y);
+    NSLog(@"contentOffset : (%f, %f)", chattingTableView.contentOffset.x, chattingTableView.contentOffset.y);
+    NSLog(@"height %f, offset %f", chattingTableView.contentSize.height, chattingTableView.contentOffset.y        );
     
+    
+    
+    // First figure out how many sections there are
+    NSInteger lastSectionIndex = [chattingTableView numberOfSections] - 1;
+    
+    // Then grab the number of rows in the last section
+    NSInteger lastRowIndex = [chattingTableView numberOfRowsInSection:lastSectionIndex] - 1;
+    
+    // Now just construct the index path
+    NSIndexPath *pathToLastRow = [NSIndexPath indexPathForRow:lastRowIndex inSection:lastSectionIndex];
+    
+    
+    
+    [chattingTableView scrollToRowAtIndexPath:pathToLastRow atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+//    chattingTableView.contentOffset = CGPointMake(0, chattingTableView.contentSize.height);
     [chattingTableView reloadData];
+}
+
+-(void)msgReceived {
+//    NSLog(@"action");
+    [self refreshChattingContents];
+    
     
 }
 
@@ -224,6 +280,7 @@
                          textFieldForMessage.text,
                          [[NSUserDefaults standardUserDefaults] objectForKey:@"PASSWORD"],
                          nickName,
+//                         @"wh",
                          _cr_id_room
                          
                          ];
@@ -305,7 +362,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     cell.textLabel.text = [[chattingContents objectAtIndex:indexPath.row] body];
-
+    
 
     return cell;
 }
@@ -319,6 +376,12 @@
 
     
 }
+
+//- (void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath {
+//    NSLog(@"------------------------------------------------------------------------------");
+//    NSLog(@"endedit");
+//}
+
 #pragma mark - connection Delegate
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
@@ -364,7 +427,40 @@
         
         if ([str isEqualToString:@"Sending Success"]) {
             NSLog(@"send success");
+            NSLog(@"------------------------------------------------------------------------------");
             
+            NSString *body = textFieldForMessage.text;
+            NSString *fromWho = nickName;
+//            NSString *fromWho = @"mem";
+            NSString *fromWhere = _cr_id_room;
+            
+            ChatRecord *record = [NSEntityDescription insertNewObjectForEntityForName:@"ChatRecord" inManagedObjectContext:_mob];
+            [record setBody:body];
+            [record setFromWho:fromWho];
+            [record setFromWhere:fromWhere];
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            formatter.dateFormat = @"yyyy.MM.dd.HH.mm.ss";
+            NSString *date = [formatter stringFromDate:[NSDate date]];
+            
+            [record setTimeStamp:date];
+            
+            
+            NSLog(@"body = %@", body);
+            NSLog(@"where = %@", fromWhere);
+            NSLog(@"who = %@", fromWho);
+            NSLog(@"date = %@", date);
+            
+            
+            [_mob save:nil];
+            
+            //ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ 몰라젠장 일단 실행부터, 아마도 presence - unavailable나는게 문제같은데, 일딴 땜빵 ㄱ
+            [self exitRoom];
+            [self enterRoom];
+            
+            [self refreshChattingContents];
+
+            
+            NSLog(@"------------------------------------------------------------------------------");
             
         }
         else {

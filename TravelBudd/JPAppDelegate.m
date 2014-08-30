@@ -401,11 +401,30 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 
     // standard msg = group msg
 	if ([message isGroupChatMessage]) {
-        
+        NSLog(@"------------------------------------------------------------------------------");
+        // eg. 85@conference.54.199.143.8
+        // eg. 85@conference.54.199.143.8/id
         NSString *displayName = [message fromStr];
+        NSArray *strArr = [displayName componentsSeparatedByString:@"@"];
+        NSString *fromWhere = [strArr objectAtIndex:0];
+        NSRange range = [displayName rangeOfString:@"/"];
+
+        NSString *fromWho;
+        if (range.length != 0) {
+            strArr = [displayName componentsSeparatedByString:@"/"];
+            fromWho = [strArr lastObject];
+        }
+        else {
+            fromWho = @"room";
+            NSLog(@"------------------------------------------------------------------------------");            
+            NSLog(@"room msg received!");
+            //temp - 자꾸 방이주는 정보는 중첩됨, 무시 ㄱ
+            return ;
+        }
+        
         NSString *body = [message body];
         
-        NSLog(@"name : %@ , body : %@", displayName, body);
+//        NSLog(@"name : %@ , body : %@", displayName, body);
         
 //        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:displayName
 //                                                            message:body
@@ -416,16 +435,27 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 
         
         
-        
-        
         ChatRecord *record = [NSEntityDescription insertNewObjectForEntityForName:@"ChatRecord" inManagedObjectContext:_managedObjectContext];
         [record setBody:body];
-        [record setFromWho:displayName];
+        [record setFromWho:fromWho];
+        [record setFromWhere:fromWhere];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = @"yyyy.MM.dd.HH.mm.ss";
+        NSString *date = [formatter stringFromDate:[NSDate date]];
+        
+        [record setTimeStamp:date];
+
+        
+        NSLog(@"body = %@", body);
+        NSLog(@"where = %@", fromWhere);
+        NSLog(@"who = %@", fromWho);
+        NSLog(@"date = %@", date);
         
         [_managedObjectContext save:nil];
         
         [[NSNotificationCenter defaultCenter] postNotificationName:@"newMsgArrival" object:nil];
-        
+        NSLog(@"------------------------------------------------------------------------------");
+
     }
     
     

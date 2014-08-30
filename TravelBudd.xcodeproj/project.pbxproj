@@ -15,6 +15,7 @@
 		1522A55A19AB353200B1C54F /* JPMapListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1522A55819AB353200B1C54F /* JPMapListCell.xib */; };
 		1522A56919AE314400B1C54F /* MapRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 1522A56819AE314400B1C54F /* MapRecord.m */; };
 		1522A57019B03BA800B1C54F /* geo_fence-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1522A56F19B03BA800B1C54F /* geo_fence-50.png */; };
+		1522A57319B0B46E00B1C54F /* ChatRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 1522A57219B0B46E00B1C54F /* ChatRecord.m */; };
 		153464971919208F00D271A5 /* JPConnectionDelegateObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153464961919208F00D271A5 /* JPConnectionDelegateObject.m */; };
 		153A728518F244C100C7ABB7 /* JPTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153A728318F244C100C7ABB7 /* JPTabbarController.m */; };
 		153A728618F244C100C7ABB7 /* JPTabbarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153A728418F244C100C7ABB7 /* JPTabbarController.xib */; };
@@ -182,7 +183,6 @@
 		159779F61922796500C7A3DB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159779F51922796500C7A3DB /* CoreLocation.framework */; };
 		159779F81922798400C7A3DB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159779F71922798400C7A3DB /* CoreData.framework */; };
 		159779FB192285D500C7A3DB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 159779F9192285D500C7A3DB /* Model.xcdatamodeld */; };
-		159779FE1922866D00C7A3DB /* ChatRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 159779FD1922866D00C7A3DB /* ChatRecord.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,6 +208,8 @@
 		1522A56719AE314400B1C54F /* MapRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapRecord.h; sourceTree = "<group>"; };
 		1522A56819AE314400B1C54F /* MapRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapRecord.m; sourceTree = "<group>"; };
 		1522A56F19B03BA800B1C54F /* geo_fence-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "geo_fence-50.png"; path = "../../../Downloads/geo_fence-50.png"; sourceTree = "<group>"; };
+		1522A57119B0B46E00B1C54F /* ChatRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRecord.h; sourceTree = "<group>"; };
+		1522A57219B0B46E00B1C54F /* ChatRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRecord.m; sourceTree = "<group>"; };
 		153464951919208F00D271A5 /* JPConnectionDelegateObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPConnectionDelegateObject.h; sourceTree = "<group>"; };
 		153464961919208F00D271A5 /* JPConnectionDelegateObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPConnectionDelegateObject.m; sourceTree = "<group>"; };
 		153A728218F244C100C7ABB7 /* JPTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPTabbarController.h; sourceTree = "<group>"; };
@@ -528,8 +530,6 @@
 		159779F51922796500C7A3DB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		159779F71922798400C7A3DB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		159779FA192285D500C7A3DB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		159779FC1922866D00C7A3DB /* ChatRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRecord.h; sourceTree = "<group>"; };
-		159779FD1922866D00C7A3DB /* ChatRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRecord.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1495,9 +1495,9 @@
 		1597799C1921C1B800C7A3DB /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				1522A57119B0B46E00B1C54F /* ChatRecord.h */,
+				1522A57219B0B46E00B1C54F /* ChatRecord.m */,
 				159779F9192285D500C7A3DB /* Model.xcdatamodeld */,
-				159779FC1922866D00C7A3DB /* ChatRecord.h */,
-				159779FD1922866D00C7A3DB /* ChatRecord.m */,
 				1500A77419861B8E000AAC47 /* PinRecord.h */,
 				1500A77519861B8E000AAC47 /* PinRecord.m */,
 				1522A56719AE314400B1C54F /* MapRecord.h */,
@@ -1702,6 +1702,7 @@
 				15951D3B18EE40B5008A8868 /* XMPPElement.m in Sources */,
 				15951E5818EEE283008A8868 /* XMPPRoom.m in Sources */,
 				15951E6018EEE283008A8868 /* XMPPvCardTempAdrTypes.m in Sources */,
+				1522A57319B0B46E00B1C54F /* ChatRecord.m in Sources */,
 				15951E8E18EEE283008A8868 /* NSXMLElement+XEP_0335.m in Sources */,
 				15951D4418EE40B5008A8868 /* GCDMulticastDelegate.m in Sources */,
 				15951D3C18EE40B5008A8868 /* XMPPIQ.m in Sources */,
@@ -1779,7 +1780,6 @@
 				15951D4618EE40B5008A8868 /* XMPPIDTracker.m in Sources */,
 				155DCBC219435D320040C6A0 /* JPMapListViewController.m in Sources */,
 				15951E8B18EEE283008A8868 /* NSXMLElement+XEP_0297.m in Sources */,
-				159779FE1922866D00C7A3DB /* ChatRecord.m in Sources */,
 				15951E7918EEE283008A8868 /* XMPPMessageArchiving_Contact_CoreDataObject.m in Sources */,
 				15951D3518EE40B5008A8868 /* XMPPSCRAMSHA1Authentication.m in Sources */,
 				15951D3618EE40B5008A8868 /* XMPPXFacebookPlatformAuthentication.m in Sources */,

@@ -9,7 +9,7 @@
         <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fromWhere" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fromWho" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="timeStamp" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="MapRecord" representedClassName="MapRecord" syncable="YES">
         <attribute name="m_FinishDate" optional="YES" attributeType="Date" syncable="YES"/>
