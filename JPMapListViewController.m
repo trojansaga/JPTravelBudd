@@ -60,7 +60,7 @@
     [self.view addSubview:indicator];
 //    [indicator startAnimating];
 
-    self.view.backgroundColor = [UIColor brownColor];
+//    self.view.backgroundColor = [UIColor brownColor];
 //    self.navigationController.navigationBar.alpha = 1;
     [self.navigationController.navigationBar setTranslucent:NO];
     self.navigationController.navigationBar.backgroundColor = [UIColor purpleColor];
@@ -73,6 +73,14 @@
 
 //    [self.collectionView registerNib:[UINib nibWithNibName:@"CollectionNib" bundle:nil] forCellWithReuseIdentifier:@"reuse"];
 //    [self.collectionView registerClass:clViewCell forCellWithReuseIdentifier:@"reuseClCell"];
+    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:49.f/255.f green:68.f/255.f blue:94.f/255.f alpha:0.2f];
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
+
+
     
   }
 
@@ -89,7 +97,8 @@
 //    [_fetchedResultsController fetchedObjects];
 //    NSFetchRequest *req = [[NSFetchRequest alloc] initWithEntityName:@"MapRecord"];
 //    NSArray *arr = [_managedObjectContext executeFetchRequest:req error:nil];    
-    
+
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
 #pragma mark - Action

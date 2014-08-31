@@ -38,7 +38,7 @@
     UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:settingViewController];
     
 //    self.viewControllers = @[mapViewController,chatViewController,settingViewController];
-    self.viewControllers = @[nav2,nav1,nav3];
+    self.viewControllers = @[nav1,nav2,nav3];
     self.navigationItem.title = @"fu";
     
     NSArray *tabbarItems = [[self tabBar] items];
@@ -52,7 +52,8 @@
     [settingViewTabbarItem setTitle:@"Settings"];
     settingViewTabbarItem.image = [UIImage imageNamed:@"settings-25"];
     
-
+//    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:135.f/255.f green:206.f/255.f blue:255.f/255.f alpha:1.f];
+//    self.tabBar.barTintColor = [UIColor colorWithRed:159.f/255.f green:208.f/255.f blue:219.f/255.f alpha:1.f];
     
 }
 

@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "JPAppDelegate.h"
 
-@interface JPChattingRoomViewController : UIViewController<UITableViewDataSource, UITableViewDelegate,  NSURLConnectionDataDelegate > {
+@interface JPChattingRoomViewController : UIViewController<UITableViewDataSource, UITableViewDelegate,  NSURLConnectionDataDelegate> {
     IBOutlet UITextField *textFieldForMessage;
     IBOutlet UITableView *chattingTableView;
 
@@ -25,12 +26,14 @@
     
     
 }
-
+@property (nonatomic, strong) NSString *chatRoomTitle;
 @property (nonatomic, strong) NSArray *joinedMemberListArray;
 @property (nonatomic, strong) NSString *cr_id_room;
 @property (nonatomic, strong) NSString *crm_id;
 @property (nonatomic, strong) NSString *m_id;
 @property (nonatomic, strong) NSManagedObjectContext *mob;
+
+@property (nonatomic, strong) IBOutlet UIView *viewForMoreButtons;
 //@property (nonatomic, assign) NSInteger countOfChattingContents;
 
 

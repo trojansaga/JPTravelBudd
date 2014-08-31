@@ -10,6 +10,7 @@
 #import "JPChatViewController.h"
 
 
+@class CLLocation;
 
 @interface JPMakeChatRoomViewController ()
 
@@ -30,6 +31,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.title = @"Make Room";
+    
+    UIBarButtonItem *btnCreate = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(createRoom:)];
+    self.navigationItem.rightBarButtonItem = btnCreate;
+    
+//    textViewForRoomDesc.backgroundColor = [UIColor colorWithRed:49.f/255.f green:68.f/255.f blue:94.f/255.f alpha:0.9f];
+    textViewForRoomDesc.backgroundColor = [UIColor colorWithRed:135.f/255.f green:206.f/255.f blue:255.f/255.f alpha:1.f];
+//    textViewForRoomDesc.textColor = [UIColor whiteColor];
+//    textFieldForRoomDesc.backgroundColor = [UIColor colorWithRed:49.f/255.f green:68.f/255.f blue:94.f/255.f alpha:1.f];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,6 +57,9 @@
     else {
         isSectetRoom = @"false";
     }
+    
+    CLLocation *location = [[NSUserDefaults standardUserDefaults] objectForKey:@"currentLocation"];
+    
     NSArray *keyArr = @[
                         @"chat_room_maker",
                         @"userName",
@@ -63,8 +77,8 @@
                          [[NSUserDefaults standardUserDefaults] objectForKey:@"PASSWORD"],
                          textFieldForRoomName.text,
                          textFieldForRoomDesc.text,
-                         @"0.0",
-                         @"0.0",
+                         [NSString stringWithFormat:@"%f", location.coordinate.longitude],
+                         [NSString stringWithFormat:@"%f", location.coordinate.latitude],
                          isSectetRoom,
                          textFieldForRoomMaxNum.text
                          ];

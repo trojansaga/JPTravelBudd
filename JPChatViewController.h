@@ -10,8 +10,9 @@
 #import "JPChattingRoomViewController.h"
 
 #import "JPAppDelegate.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface JPChatViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NSURLConnectionDataDelegate> {
+@interface JPChatViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NSURLConnectionDataDelegate, CLLocationManagerDelegate> {
     IBOutlet UITableView *chatRoomListTableView;
     int numOfChatRooms;
     NSArray *chatRoomListArray;

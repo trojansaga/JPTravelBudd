@@ -62,7 +62,7 @@
                                               target:self
                                               action:@selector(saveCurrentMap)];
     
-    [self.navigationController.navigationBar setTintColor:[UIColor redColor]];
+//    [self.navigationController.navigationBar setTintColor:[UIColor redColor]];
 
     
 //    navBar = self.navigationController.navigationBar;
@@ -585,9 +585,9 @@
     }
 
     pinTextFieldForOrder.text = [NSString stringWithFormat:@"%i", numberOfOrder];
-    pinTextFieldForTitle.text = @"title";
+    pinTextFieldForTitle.text = @"";
     pinTextFieldForDescription.text = @"";
-    pinTextFieldForBudget.text = @"0";
+    pinTextFieldForBudget.text = @"";
     
     pinStartDateLabel.text = @"touch here";
     pinFinishDateLabel.text = @"touch here";

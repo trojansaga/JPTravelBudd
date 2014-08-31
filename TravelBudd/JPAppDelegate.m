@@ -45,6 +45,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     self.window.rootViewController = loginViewController;
     [self.window makeKeyAndVisible];
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
         
     return YES;
 }
@@ -432,8 +433,6 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 //                                                  cancelButtonTitle:@"Ok"
 //                                                  otherButtonTitles:nil];
 //        [alertView show];
-
-        
         
         ChatRecord *record = [NSEntityDescription insertNewObjectForEntityForName:@"ChatRecord" inManagedObjectContext:_managedObjectContext];
         [record setBody:body];
@@ -446,10 +445,10 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
         [record setTimeStamp:date];
 
         
-//        NSLog(@"body = %@", body);
-//        NSLog(@"where = %@", fromWhere);
-//        NSLog(@"who = %@", fromWho);
-//        NSLog(@"date = %@", date);
+        NSLog(@"body = %@", body);
+        NSLog(@"where = %@", fromWhere);
+        NSLog(@"who = %@", fromWho);
+        NSLog(@"date = %@", date);
         
         [_managedObjectContext save:nil];
         

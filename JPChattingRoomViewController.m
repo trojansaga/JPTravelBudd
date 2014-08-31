@@ -8,6 +8,7 @@
 
 #import "JPChattingRoomViewController.h"
 
+
 #import "ChatRecord.h"
 #import "JPChatContentCellTableViewCell.h"
 #import "JPAppDelegate.h"
@@ -46,7 +47,27 @@
     
     _mob = [appDelegate managedObjectContext];
     
+    
+    //chattingTableView UI
+    chattingTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    chattingTableView.backgroundColor = [UIColor colorWithRed:135.f/255.f green:206.f/255.f blue:255.f/255.f alpha:1.f];
 
+    //textfield
+    
+    [textFieldForMessage addTarget:self action:@selector(sendMessage:) forControlEvents:UIControlEventEditingDidEndOnExit];
+    
+    //navigationBar setting
+    self.navigationItem.title = _chatRoomTitle;
+    
+
+    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(showMoreButtons)];
+    self.navigationItem.rightBarButtonItem = button;
+    [self.view addSubview:_viewForMoreButtons];
+    _viewForMoreButtons.alpha = 0;
+
+
+
+    
     //tap시 키보드 내리기
     UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resignKeyboard)];
     recognizer.numberOfTapsRequired = 1;
@@ -65,8 +86,10 @@
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
 
-//    [self addObserver:self forKeyPath:@"countOfChattingContents" options:0 context:nil];
+
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(msgReceived) name:@"newMsgArrival" object:nil];
+    
+   
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,21 +101,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     [self enterRoom];
-    
     [self refreshChattingContents];
-    
-//    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-//    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ChatRecord" inManagedObjectContext:_mob];
-//    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"timeStamp" ascending:NO];
-//    
-//    [request setSortDescriptors:@[sort]];
-//    [request setEntity:entity];
-//    chattingContents = [[_mob executeFetchRequest:request error:nil] mutableCopy];
-
-//    self.countOfChattingContents = [chattingContents count];
-    
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(action) name:@"count" object:nil];
-    
     self.tabBarController.tabBar.hidden = YES;
     
 }
@@ -111,8 +120,21 @@
         // Now just construct the index path
         NSIndexPath *pathToLastRow = [NSIndexPath indexPathForRow:lastRowIndex inSection:lastSectionIndex];
         
-        [chattingTableView scrollToRowAtIndexPath:pathToLastRow atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+        [chattingTableView scrollToRowAtIndexPath:pathToLastRow atScrollPosition:UITableViewScrollPositionNone animated:YES];
     }
+    
+//    chattingTableView.frame = CGRectMake(chattingTableView.frame.origin.x, chattingTableView.frame.origin.y, 320, 568 - 20 - 44);
+//    chattingTableView.backgroundColor = [UIColor redColor];
+    
+//    NSLog(@"tabbar %f", self.tabBarController.tabBar.frame.size.height);
+//    NSLog(@"navbar %f", self.navigationController.navigationBar.frame.size.height);
+//    NSLog(@"self.view %f", self.view.frame.size.height);
+//    NSLog(@"status view %f", [UIApplication sharedApplication].statusBarFrame.size.height);
+//    NSLog(@"window view %f", [[UIScreen mainScreen] bounds].size.height);
+//    NSLog(@"chatTableview %f", chattingTableView.frame.size.height);
+//    NSLog(@"chatTableview(cont) %f", chattingTableView.contentSize.height);
+
+    
 //    dispatch_async(dispatch_get_main_queue(), ^{
 //        [chattingTableView reloadData];
 //        chattingTableView.contentOffset = CGPointMake(0, chattingTableView.contentSize.height);
@@ -131,9 +153,7 @@
     [chattingContents removeAllObjects];
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"newMsgArrival" object:nil];
-//    [self removeObserver:self forKeyPath:@"countOfChattingContents"];
 
-//    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"count" object:chattingContents];
     
     self.tabBarController.tabBar.hidden = NO;
     
@@ -188,8 +208,6 @@
 //    NSLog(@"contentOffset : (%f, %f)", chattingTableView.contentOffset.x, chattingTableView.contentOffset.y);
 //    NSLog(@"height %f, offset %f", chattingTableView.contentSize.height, chattingTableView.contentOffset.y        );
     
-    
-    
 //    // First figure out how many sections there are
 //    NSInteger lastSectionIndex = [chattingTableView numberOfSections] - 1;
 //    
@@ -206,23 +224,30 @@
 }
 
 -(void)msgReceived {
-//    NSLog(@"action");
-    [self refreshChattingContents];
-    
-    
+
+    ChatRecord *record = [chattingContents lastObject];
+    if ([record.fromWhere isEqualToString:_cr_id_room]) {
+        [self refreshChattingContents];
+    }
 }
 
-//- (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-//    NSLog(@"observed");
-//    if ([keyPath isEqual:@"countOfChattingContents"]) {
-//        [chattingTableView reloadData];
-//    }
-//}
 
 #pragma mark - UI
 
+- (void)showMoreButtons {
+    if (_viewForMoreButtons.alpha == 1) {
+        _viewForMoreButtons.alpha = 0;
+    }
+    else {
+        [UIView animateWithDuration:0.1 animations:^{
+            _viewForMoreButtons.alpha = 1;
+        }];
+    }
+}
+
 - (void) resignKeyboard {
     [textFieldForMessage resignFirstResponder];
+    _viewForMoreButtons.alpha = 0;
 }
 
 - (void)keyboardWillAnimate:(NSNotification *)notification
@@ -255,11 +280,14 @@
 
 
 
-#pragma mark - Room
+#pragma mark - More Buttons
 
+- (IBAction)selectMap:(id)sender {
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
+
+}
 
 - (IBAction)showJoinedMember:(id)sender {
-
     NSLog(@"members =");
     NSDictionary *dic;
     for (dic in self.joinedMemberListArray) {
@@ -322,7 +350,6 @@
     [appDelegate sendDataHttp:dataArr keyForDic:keyArr urlString:URL_FOR_GROUP_MESSAGE setDelegate:self];
 
     textFieldForMessage.text = @"";
-    [self resignKeyboard];
 
 }
 
@@ -368,7 +395,7 @@
 }
 
 - (void) exitRoom {
-    
+    //presence.. unavailable -> not msg receivable
     NSXMLElement *presence = [NSXMLElement elementWithName:@"presence"];
     NSLog(@"%@",_cr_id_room);
     NSString *from = [nickName stringByAppendingString:domain];
@@ -425,8 +452,12 @@
 //        NSLog(@"row: %ld, sieze %f, %f, %li", (long)indexPath.row, cell.frame.size.width, cell.frame.size.height, heightOfCell);
 //        NSLog(@"cc/ %ld, size %f, %f", indexPath.row, cell.chatContents.frame.size.width, cell.chatContents.frame.size.height);
     
+        
+//        cell.backgroundColor = [UIColor colorWithRed:135 green:206 blue:235 alpha:0.8];
+        cell.backgroundColor = [UIColor colorWithRed:135.f/255.f green:206.f/255.f blue:255.f/255.f alpha:0.f];
     }
 }
+
 
 #pragma mark - TableView delegate
 
@@ -445,7 +476,6 @@
         cell = [tableView dequeueReusableCellWithIdentifier:kChatContentsCellIDMe];
         if (cell == nil) {
             [chattingTableView registerNib:[UINib nibWithNibName:@"JPChatContentCellTableViewCellForMe" bundle:nil] forCellReuseIdentifier:kChatContentsCellIDMe];
-            //        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
             cell = [chattingTableView dequeueReusableCellWithIdentifier:kChatContentsCellIDMe];
         }
         
@@ -455,14 +485,9 @@
         cell = [tableView dequeueReusableCellWithIdentifier:kChatContentsCellID];
         if (cell == nil) {
             [chattingTableView registerNib:[UINib nibWithNibName:@"JPChatContentCellTableViewCell" bundle:nil] forCellReuseIdentifier:kChatContentsCellID];
-            //        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
             cell = [chattingTableView dequeueReusableCellWithIdentifier:kChatContentsCellID];
         }
-        
     }
-    
-    
-//    cell.textLabel.text = [[chattingContents objectAtIndex:indexPath.row] body];
 
     [self configureCell:cell forRowAtIndexPath:indexPath];
     
@@ -506,11 +531,6 @@
 
     
 }
-
-//- (void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSLog(@"------------------------------------------------------------------------------");
-//    NSLog(@"endedit");
-//}
 
 #pragma mark - connection Delegate
 
@@ -561,7 +581,6 @@
             
             NSString *body = sendedString;
             NSString *fromWho = nickName;
-//            NSString *fromWho = @"mem";
             NSString *fromWhere = _cr_id_room;
             
             ChatRecord *record = [NSEntityDescription insertNewObjectForEntityForName:@"ChatRecord" inManagedObjectContext:_mob];

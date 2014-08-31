@@ -10,6 +10,8 @@
 #import "JPMakeChatRoomViewController.h"
 #import "JPChattingRoomViewController.h"
 
+#import <CoreLocation/CoreLocation.h>
+
 
 @interface JPChatViewController ()
 
@@ -49,6 +51,8 @@
     [indicator startAnimating];
     
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
 }
 
 - (void)viewDidLoad
@@ -64,13 +68,42 @@
 //    chatRoomListTableView.backgroundColor = [UIColor purpleColor];
     
     UIBarButtonItem *makeRoomButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(makeRoom:)];
-//    [self.navigationController.navigationItem setRightBarButtonItem:makeRoomButton];
     UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reloadTableView:)];
-//    [self.navigationController.navigationItem setLeftBarButtonItem:refreshButton];
+
     self.navigationItem.leftBarButtonItem = refreshButton;
     self.navigationItem.rightBarButtonItem = makeRoomButton;
+
     
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:49.f/255.f green:68.f/255.f blue:94.f/255.f alpha:0.2f];
     
+//    self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:135.f/255.f green:206.f/255.f blue:255.f/255.f alpha:1.f];
+//    self.tabBarController.tabBar.backgroundColor = [UIColor colorWithRed:135.f/255.f green:206.f/255.f blue:255.f/255.f alpha:1.f];
+//    self.navigationController.navigationBar.backgroundColor = [UIColor purpleColor];
+//    self.navigationItem.titleView.backgroundColor = [UIColor purpleColor];
+//    self.navigationController.navigationItem.titleView.backgroundColor = [UIColor purpleColor];
+//
+//    [[UINavigationBar appearance] setBackgroundColor:[UIColor purpleColor]];
+//    self.navigationController.navigationBar.barTintColor = [UIColor greenColor];
+//    self.navigationController.navigationBar.tintColor = [UIColor brownColor];
+
+    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:49.f/255.f green:68.f/255.f blue:94.f/255.f alpha:0.2f];
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
+
+    
+    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
+
+//    [locationManager startMonitoringSignificantLocationChanges];
+    [locationManager startUpdatingLocation];
+
 
 }
 
@@ -90,6 +123,16 @@
     [self.navigationController pushViewController:makeChatRoomViewController animated:YES];
 
 }
+
+#pragma mark - Location Delegate
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    CLLocation *location = [locations lastObject];
+    NSLog(@"------------------------------------------------------------------------------");
+    NSLog(@"cur pos : %f, %f", location.coordinate.latitude, location.coordinate.longitude);
+    [[NSUserDefaults standardUserDefaults] setObject:location forKey:@"currentLocation"];
+}
+
 
 #pragma mark - Conn delegate
 
@@ -206,6 +249,9 @@
     chattingRoomViewController = [[JPChattingRoomViewController alloc] initWithNibName:@"JPChattingRoomViewController" bundle:nil];
     chattingRoomViewController.m_id = [[NSUserDefaults standardUserDefaults] objectForKey:@"M_ID"];
     chattingRoomViewController.cr_id_room = str;
+    chattingRoomViewController.chatRoomTitle = [tableView cellForRowAtIndexPath:indexPath].textLabel.text;
+//    [[chatRoomListArray objectAtIndex:indexPath.row] objectForKey:@"chat_room_name"]; //this? or not?
+    
     NSLog(@"mid = %@, crid = %@", [chattingRoomViewController.m_id class], [chattingRoomViewController.cr_id_room class]);
     
 
