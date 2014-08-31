@@ -9,8 +9,11 @@
 #import "JPChattingRoomViewController.h"
 
 #import "ChatRecord.h"
-
+#import "JPChatContentCellTableViewCell.h"
 #import "JPAppDelegate.h"
+
+#define kChatContentsCellID     @"chatCellIdentifier"
+#define kChatContentsCellIDMe   @"chatCellIdentifierForMe"
 
 
 @interface JPChattingRoomViewController ()
@@ -91,18 +94,38 @@
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(action) name:@"count" object:nil];
     
     self.tabBarController.tabBar.hidden = YES;
-
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:YES];
 //    [self refreshChattingContents];
     
+    if ([chattingContents count] != 0) {
+        // First figure out how many sections there are
+        NSInteger lastSectionIndex = [chattingTableView numberOfSections] - 1;
+        
+        // Then grab the number of rows in the last section
+        NSInteger lastRowIndex = [chattingTableView numberOfRowsInSection:lastSectionIndex] - 1;
+        
+        // Now just construct the index path
+        NSIndexPath *pathToLastRow = [NSIndexPath indexPathForRow:lastRowIndex inSection:lastSectionIndex];
+        
+        [chattingTableView scrollToRowAtIndexPath:pathToLastRow atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    }
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [chattingTableView reloadData];
+//        chattingTableView.contentOffset = CGPointMake(0, chattingTableView.contentSize.height);
+//
+//    });
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:YES];
-    [self exitRoom];
+
+//    [self exitRoom];//????????? 이거 왜한거임 도데체
+    
     [self removeKeyboardNotification];
 
     [chattingContents removeAllObjects];
@@ -162,24 +185,23 @@
     chattingContents = [[_mob executeFetchRequest:request error:nil] mutableCopy];
 
 //    NSLog(@"contentOffset : (%f, %f)", chattingTableView.contentOffset.x, chattingTableView.contentOffset.y);
-    NSLog(@"contentOffset : (%f, %f)", chattingTableView.contentOffset.x, chattingTableView.contentOffset.y);
-    NSLog(@"height %f, offset %f", chattingTableView.contentSize.height, chattingTableView.contentOffset.y        );
+//    NSLog(@"contentOffset : (%f, %f)", chattingTableView.contentOffset.x, chattingTableView.contentOffset.y);
+//    NSLog(@"height %f, offset %f", chattingTableView.contentSize.height, chattingTableView.contentOffset.y        );
     
     
     
-    // First figure out how many sections there are
-    NSInteger lastSectionIndex = [chattingTableView numberOfSections] - 1;
+//    // First figure out how many sections there are
+//    NSInteger lastSectionIndex = [chattingTableView numberOfSections] - 1;
+//    
+//    // Then grab the number of rows in the last section
+//    NSInteger lastRowIndex = [chattingTableView numberOfRowsInSection:lastSectionIndex] - 1;
+//    
+//    // Now just construct the index path
+//    NSIndexPath *pathToLastRow = [NSIndexPath indexPathForRow:lastRowIndex inSection:lastSectionIndex];
+
+//    [chattingTableView scrollToRowAtIndexPath:pathToLastRow atScrollPosition:UITableViewScrollPositionBottom animated:YES];
     
-    // Then grab the number of rows in the last section
-    NSInteger lastRowIndex = [chattingTableView numberOfRowsInSection:lastSectionIndex] - 1;
-    
-    // Now just construct the index path
-    NSIndexPath *pathToLastRow = [NSIndexPath indexPathForRow:lastRowIndex inSection:lastSectionIndex];
-    
-    
-    
-    [chattingTableView scrollToRowAtIndexPath:pathToLastRow atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-//    chattingTableView.contentOffset = CGPointMake(0, chattingTableView.contentSize.height);
+    chattingTableView.contentOffset = CGPointMake(0, chattingTableView.contentSize.height);
     [chattingTableView reloadData];
 }
 
@@ -276,11 +298,17 @@
 }
 
 - (IBAction)sendMessage:(id)sender {
+    NSString *str = [NSString stringWithString:textFieldForMessage.text];
+    sendedString = str;
+
+    if ([str isEqualToString:@""]) {
+        return ;
+    }
+    
     NSArray *dataArr = @[
-                         textFieldForMessage.text,
+                         str,
                          [[NSUserDefaults standardUserDefaults] objectForKey:@"PASSWORD"],
                          nickName,
-//                         @"wh",
                          _cr_id_room
                          
                          ];
@@ -292,6 +320,9 @@
                         ];
     appDelegate = (JPAppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate sendDataHttp:dataArr keyForDic:keyArr urlString:URL_FOR_GROUP_MESSAGE setDelegate:self];
+
+    textFieldForMessage.text = @"";
+    [self resignKeyboard];
 
 }
 
@@ -339,11 +370,9 @@
 - (void) exitRoom {
     
     NSXMLElement *presence = [NSXMLElement elementWithName:@"presence"];
-
     NSLog(@"%@",_cr_id_room);
     NSString *from = [nickName stringByAppendingString:domain];
     NSString *to = [_cr_id_room stringByAppendingString:conferenceDomain];
-    
     
     [presence addAttributeWithName:@"from" stringValue:from];
     [presence addAttributeWithName:@"to" stringValue:to];
@@ -352,20 +381,121 @@
     
 }
 
+#pragma mark - TableView UI
+
+- (void)configureCell:(JPChatContentCellTableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([cell isKindOfClass:[JPChatContentCellTableViewCell class]])
+    {
+        
+        
+        
+        ChatRecord *record = [chattingContents objectAtIndex:indexPath.row];
+        cell.nameLabel.text = record.fromWho;
+        cell.chatContents.text = record.body;
+        
+        NSString *time = [record.timeStamp substringFromIndex:14];
+        cell.timeLabel.text = time;
+        
+        
+        NSInteger heightOfCell = [record.body length] / 12;
+        heightOfCell++;
+        //    CGFloat heightOfRow = cell.frame.size.height*heightOfCell;
+        //    [chattingTableView setRowHeight:heightOfRow];
+
+        
+        //왜 메인 큐에서 돌리면 될까......... 모리겓다........ 칠무해........
+        //thread 상에서 ui가 메인큐라서 그른가??
+        dispatch_async(dispatch_get_main_queue(), ^{
+            cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, cell.frame.size.height*heightOfCell);
+            [cell.chatContents setFrame:CGRectMake(cell.chatContents.frame.origin.x, cell.chatContents.frame.origin.y, cell.chatContents.frame.size.width, cell.chatContents.frame.size.height * heightOfCell)];
+
+//            [cell.chatContents.layoutManager ensureLayoutForTextContainer:cell.chatContents.textContainer];
+//            CGRect rect = [cell.chatContents.layoutManager usedRectForTextContainer:cell.chatContents.textContainer];
+//            cell.chatContents.frame = CGRectMake(cell.chatContents.frame.origin.x, cell.chatContents.frame.origin.y, rect.size.width, rect.size.height);
+            
+//            cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y,cell.frame.size.width,  cell.chatContents.frame.size.height);
+            
+        });
+
+//        [cell.chatContents setFrame:CGRectMake(cell.chatContents.frame.origin.x, cell.chatContents.frame.origin.y, cell.chatContents.frame.size.width, cell.chatContents.frame.size.height * heightOfCell)];
+//        cell.chatContents.contentSize = CGSizeMake(cell.chatContents.contentSize.width, cell.chatContents.contentSize.height * heightOfCell);
+
+        
+//        NSLog(@"row: %ld, sieze %f, %f, %li", (long)indexPath.row, cell.frame.size.width, cell.frame.size.height, heightOfCell);
+//        NSLog(@"cc/ %ld, size %f, %f", indexPath.row, cell.chatContents.frame.size.width, cell.chatContents.frame.size.height);
+    
+    }
+}
+
 #pragma mark - TableView delegate
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *identifier = @"basic cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    if ([chattingContents count] == 0) {
+        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"id"];
+        return cell;
     }
-    cell.textLabel.text = [[chattingContents objectAtIndex:indexPath.row] body];
     
+    ChatRecord* record = [chattingContents objectAtIndex:indexPath.row];
+    JPChatContentCellTableViewCell *cell;
+    
+    //me
+    if ([record.fromWho isEqualToString:nickName]) {
+        cell = [tableView dequeueReusableCellWithIdentifier:kChatContentsCellIDMe];
+        if (cell == nil) {
+            [chattingTableView registerNib:[UINib nibWithNibName:@"JPChatContentCellTableViewCellForMe" bundle:nil] forCellReuseIdentifier:kChatContentsCellIDMe];
+            //        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+            cell = [chattingTableView dequeueReusableCellWithIdentifier:kChatContentsCellIDMe];
+        }
+        
+    }
+    //others
+    else {
+        cell = [tableView dequeueReusableCellWithIdentifier:kChatContentsCellID];
+        if (cell == nil) {
+            [chattingTableView registerNib:[UINib nibWithNibName:@"JPChatContentCellTableViewCell" bundle:nil] forCellReuseIdentifier:kChatContentsCellID];
+            //        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+            cell = [chattingTableView dequeueReusableCellWithIdentifier:kChatContentsCellID];
+        }
+        
+    }
+    
+    
+//    cell.textLabel.text = [[chattingContents objectAtIndex:indexPath.row] body];
 
+    [self configureCell:cell forRowAtIndexPath:indexPath];
+    
     return cell;
 }
+
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    if ([tableView isEqual:chattingTableView]) {
+//        ChatRecord *record = [chattingContents objectAtIndex:indexPath.row];
+//
+//        NSInteger heightOfCell = [record.body length] / 12;
+//        heightOfCell++;
+//        //    CGFloat heightOfRow = cell.frame.size.height*heightOfCell;
+//        //    [chattingTableView setRowHeight:heightOfRow];
+//        return 44 * heightOfCell;
+//    }
+//    return 44;
+//}
+
+//- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    if ([tableView isEqual:chattingTableView]) {
+//        JPChatContentCellTableViewCell *cell = (JPChatContentCellTableViewCell*)[chattingTableView cellForRowAtIndexPath:indexPath];
+//        if (indexPath.row == 0) {
+//            return 100;
+//        }
+//        if (cell.frame.size.height > 44) {
+//            return 100;
+//        }
+//
+//    }
+//    return UITableViewAutomaticDimension;
+//}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [chattingContents count];
@@ -429,7 +559,7 @@
             NSLog(@"send success");
             NSLog(@"------------------------------------------------------------------------------");
             
-            NSString *body = textFieldForMessage.text;
+            NSString *body = sendedString;
             NSString *fromWho = nickName;
 //            NSString *fromWho = @"mem";
             NSString *fromWhere = _cr_id_room;

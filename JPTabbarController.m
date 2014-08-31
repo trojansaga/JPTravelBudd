@@ -38,7 +38,7 @@
     UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:settingViewController];
     
 //    self.viewControllers = @[mapViewController,chatViewController,settingViewController];
-    self.viewControllers = @[nav1,nav2,nav3];
+    self.viewControllers = @[nav2,nav1,nav3];
     self.navigationItem.title = @"fu";
     
     NSArray *tabbarItems = [[self tabBar] items];

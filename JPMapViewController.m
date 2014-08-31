@@ -522,7 +522,7 @@
     
     // image capture
     UIImage *image;
-    UIGraphicsBeginImageContext(CGSizeMake(self.view.frame.size.width, 411));
+    UIGraphicsBeginImageContext(CGSizeMake(self.view.frame.size.width, self.view.frame.size.height - self.navigationController.navigationBar.frame.size.height - self.tabBarController.tabBar.frame.size.height - 44));
     CGContextRef context = UIGraphicsGetCurrentContext();
     [self.view.layer renderInContext:context];
     image = UIGraphicsGetImageFromCurrentImageContext();

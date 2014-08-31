@@ -19,6 +19,9 @@
     
     NSString *conferenceDomain;
     NSString *domain;
+
+    //temp
+    NSString *sendedString;
     
     
 }

@@ -401,7 +401,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 
     // standard msg = group msg
 	if ([message isGroupChatMessage]) {
-        NSLog(@"------------------------------------------------------------------------------");
+//        NSLog(@"------------------------------------------------------------------------------");
         // eg. 85@conference.54.199.143.8
         // eg. 85@conference.54.199.143.8/id
         NSString *displayName = [message fromStr];
@@ -446,15 +446,15 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
         [record setTimeStamp:date];
 
         
-        NSLog(@"body = %@", body);
-        NSLog(@"where = %@", fromWhere);
-        NSLog(@"who = %@", fromWho);
-        NSLog(@"date = %@", date);
+//        NSLog(@"body = %@", body);
+//        NSLog(@"where = %@", fromWhere);
+//        NSLog(@"who = %@", fromWho);
+//        NSLog(@"date = %@", date);
         
         [_managedObjectContext save:nil];
         
         [[NSNotificationCenter defaultCenter] postNotificationName:@"newMsgArrival" object:nil];
-        NSLog(@"------------------------------------------------------------------------------");
+//        NSLog(@"------------------------------------------------------------------------------");
 
     }
     

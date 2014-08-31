@@ -183,6 +183,10 @@
 		159779F61922796500C7A3DB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159779F51922796500C7A3DB /* CoreLocation.framework */; };
 		159779F81922798400C7A3DB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159779F71922798400C7A3DB /* CoreData.framework */; };
 		159779FB192285D500C7A3DB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 159779F9192285D500C7A3DB /* Model.xcdatamodeld */; };
+		15ABB3EB19B17E9A00D97549 /* JPChatContentCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15ABB3E919B17E9A00D97549 /* JPChatContentCellTableViewCell.m */; };
+		15ABB3EC19B17E9A00D97549 /* JPChatContentCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15ABB3EA19B17E9A00D97549 /* JPChatContentCellTableViewCell.xib */; };
+		15ABB3F019B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 15ABB3EE19B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.m */; };
+		15ABB3F119B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15ABB3EF19B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -530,6 +534,12 @@
 		159779F51922796500C7A3DB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		159779F71922798400C7A3DB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		159779FA192285D500C7A3DB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		15ABB3E819B17E9A00D97549 /* JPChatContentCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPChatContentCellTableViewCell.h; sourceTree = "<group>"; };
+		15ABB3E919B17E9A00D97549 /* JPChatContentCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPChatContentCellTableViewCell.m; sourceTree = "<group>"; };
+		15ABB3EA19B17E9A00D97549 /* JPChatContentCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JPChatContentCellTableViewCell.xib; sourceTree = "<group>"; };
+		15ABB3ED19B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPChatContentCellTableViewCellForMe.h; sourceTree = "<group>"; };
+		15ABB3EE19B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPChatContentCellTableViewCellForMe.m; sourceTree = "<group>"; };
+		15ABB3EF19B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JPChatContentCellTableViewCellForMe.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -587,6 +597,12 @@
 				1540BADB191E544100B1DBE0 /* JPChattingRoomViewController.h */,
 				1540BADC191E544100B1DBE0 /* JPChattingRoomViewController.m */,
 				1540BADD191E544100B1DBE0 /* JPChattingRoomViewController.xib */,
+				15ABB3E819B17E9A00D97549 /* JPChatContentCellTableViewCell.h */,
+				15ABB3E919B17E9A00D97549 /* JPChatContentCellTableViewCell.m */,
+				15ABB3EA19B17E9A00D97549 /* JPChatContentCellTableViewCell.xib */,
+				15ABB3ED19B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.h */,
+				15ABB3EE19B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.m */,
+				15ABB3EF19B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.xib */,
 			);
 			name = Chatting;
 			sourceTree = "<group>";
@@ -1623,6 +1639,7 @@
 				155DCBC319435D320040C6A0 /* JPMapListViewController.xib in Resources */,
 				1522A54919AAE32500B1C54F /* ClCell.xib in Resources */,
 				153A728B18F2455300C7ABB7 /* JPMapViewController.xib in Resources */,
+				15ABB3F119B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.xib in Resources */,
 				15951CE818ED0F09008A8868 /* build-libidn.sh in Resources */,
 				153A729318F2458500C7ABB7 /* JPChatViewController.xib in Resources */,
 				15951C8818ECF053008A8868 /* InfoPlist.strings in Resources */,
@@ -1631,6 +1648,7 @@
 				153A728618F244C100C7ABB7 /* JPTabbarController.xib in Resources */,
 				1522A54B19AAEB5E00B1C54F /* img.jpg in Resources */,
 				15951CE318ED0F09008A8868 /* README.txt in Resources */,
+				15ABB3EC19B17E9A00D97549 /* JPChatContentCellTableViewCell.xib in Resources */,
 				15951CB118ECF0B0008A8868 /* JPLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1685,6 +1703,7 @@
 				15951D3018EE40B5008A8868 /* XMPPAnonymousAuthentication.m in Sources */,
 				15951E7318EEE283008A8868 /* XMPPCapabilities.xcdatamodel in Sources */,
 				15951D3A18EE40B5008A8868 /* NSXMLElement+XMPP.m in Sources */,
+				15ABB3F019B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.m in Sources */,
 				15951E7518EEE283008A8868 /* XMPPCapsCoreDataStorageObject.m in Sources */,
 				15951E6318EEE283008A8868 /* XMPPvCardTempLabel.m in Sources */,
 				15951E8718EEE283008A8868 /* NSXMLElement+XEP_0203.m in Sources */,
@@ -1720,6 +1739,7 @@
 				15951E3F18EEE283008A8868 /* XMPPUserCoreDataStorageObject.m in Sources */,
 				153A729718F2459700C7ABB7 /* JPSettingViewController.m in Sources */,
 				15951D4318EE40B5008A8868 /* DDList.m in Sources */,
+				15ABB3EB19B17E9A00D97549 /* JPChatContentCellTableViewCell.m in Sources */,
 				15951E5E18EEE283008A8868 /* XMPPvCardTemp.m in Sources */,
 				15951E8018EEE283008A8868 /* XMPPMessage+XEP_0184.m in Sources */,
 				15951D3F18EE40B5008A8868 /* XMPPModule.m in Sources */,

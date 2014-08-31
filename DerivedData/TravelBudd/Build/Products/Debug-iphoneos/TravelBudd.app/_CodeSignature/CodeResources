@@ -24,13 +24,21 @@
 		<data>
 		OL0ZJy99r9doDrpDhnBM8g+TuJ0=
 		</data>
+		<key>JPChatContentCellTableViewCell.nib</key>
+		<data>
+		D0DPJb0WMKRTkANk3Oiu3mJb2wQ=
+		</data>
+		<key>JPChatContentCellTableViewCellForMe.nib</key>
+		<data>
+		8NyCWJuxmJXJtvKTy3N9C/wOClw=
+		</data>
 		<key>JPChatViewController.nib</key>
 		<data>
 		s4D2S6+t3Ckd/mKu/efZKNg0zIc=
 		</data>
 		<key>JPChattingRoomViewController.nib</key>
 		<data>
-		W163gkMsicbVgkTUBoMi1Nfadco=
+		S6wxX46lo5RaPNgXaOL8gQFtAVY=
 		</data>
 		<key>JPLoginViewController.nib</key>
 		<data>
@@ -175,13 +183,21 @@
 		<data>
 		OL0ZJy99r9doDrpDhnBM8g+TuJ0=
 		</data>
+		<key>JPChatContentCellTableViewCell.nib</key>
+		<data>
+		D0DPJb0WMKRTkANk3Oiu3mJb2wQ=
+		</data>
+		<key>JPChatContentCellTableViewCellForMe.nib</key>
+		<data>
+		8NyCWJuxmJXJtvKTy3N9C/wOClw=
+		</data>
 		<key>JPChatViewController.nib</key>
 		<data>
 		s4D2S6+t3Ckd/mKu/efZKNg0zIc=
 		</data>
 		<key>JPChattingRoomViewController.nib</key>
 		<data>
-		W163gkMsicbVgkTUBoMi1Nfadco=
+		S6wxX46lo5RaPNgXaOL8gQFtAVY=
 		</data>
 		<key>JPLoginViewController.nib</key>
 		<data>

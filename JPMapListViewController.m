@@ -88,9 +88,7 @@
 //    NSArray *arr =
 //    [_fetchedResultsController fetchedObjects];
 //    NSFetchRequest *req = [[NSFetchRequest alloc] initWithEntityName:@"MapRecord"];
-//    NSArray *arr = [_managedObjectContext executeFetchRequest:req error:nil];
-
-    
+//    NSArray *arr = [_managedObjectContext executeFetchRequest:req error:nil];    
     
 }
 
