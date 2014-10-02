@@ -73,6 +73,10 @@
     titleLabel = [[UILabel alloc] init];
     titleBudgetLabel = [[UILabel alloc] init];
     titleRangeLabel = [[UILabel alloc] init];
+    
+    titleBudgetLabel.textColor = [UIColor whiteColor];
+    titleLabel.textColor = [UIColor whiteColor];
+    titleRangeLabel.textColor = [UIColor whiteColor];
 
 //    //원래는 이설정
 //    [titleLabel setFrame:CGRectMake(0, 0, (self.view.bounds.size.width - self.navigationItem.leftBarButtonItem.width - self.navigationItem.rightBarButtonItem.width), self.navigationController.navigationBar.bounds.size.height)];
@@ -93,7 +97,6 @@
     tg.numberOfTapsRequired = 1;
     tg.numberOfTouchesRequired = 1;
 //    [titleLabel addGestureRecognizer:tg];
-    
 //    self.navigationItem.titleView = titleLabel;
 
     //이부분부터 임시설정
@@ -212,11 +215,16 @@
     
     [_managedObjectContext rollback];
     // 세이브 안하고 뒤로 가기를 눌렀을 때만, 롤백을 하게 할라고 함.
+    
+//    self.tabBarController.tabBar.hidden = NO;
 
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
+    
+//    self.tabBarController.tabBar.hidden = YES;
+    
     self.title = @"noname";
 
 
@@ -506,6 +514,9 @@
 
     //set title
     [_mapRecord setM_MapTitle:titleLabel.text];
+    
+    //set owner
+    [_mapRecord setM_Owner:[[NSUserDefaults standardUserDefaults] objectForKey:@"M_ID"]];
 
     //save region
     [_mapRecord setM_SavedLatitude:[NSNumber numberWithDouble:_mapView.centerCoordinate.latitude]];

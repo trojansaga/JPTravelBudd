@@ -40,8 +40,8 @@
 //    jpConnectionDelegate.delegate = self;
     
 
-    //auto login
-    [self login:nil];
+//    //auto login
+//    [self login:nil];
 
     
 
@@ -50,6 +50,14 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
+    
+    NSNumber *isAutoLogin = [[NSUserDefaults standardUserDefaults] objectForKey:@"isAutoLoginOn"];
+    if ([isAutoLogin isEqual:@(YES)]) {
+        textFieldForID.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"ID"];
+        textFieldForPW.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"PASSWORD"];
+        [self login:nil];
+    }
+    
 
 }
 
@@ -57,6 +65,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Action
+
+- (IBAction)cancelJoin:(id)sender {
+    joinUsView.hidden = YES;
+    
 }
 
 
@@ -144,6 +159,17 @@
             JPAppDelegate *appDelegate = (JPAppDelegate *)[[UIApplication sharedApplication] delegate];
             [appDelegate connect];
             //원래는 jid 체크를 한번 더 해야하지만 서버에서 success를 리턴할 경우 서버에서 체크한 것으로 간주
+            if (switchForAutoLogin.on == YES) {
+                //save Auto login
+                NSString *savedID = [[NSUserDefaults standardUserDefaults] objectForKey:@"ID"];
+                NSString *savedPASSWORD = [[NSUserDefaults standardUserDefaults] objectForKey:@"PASSWORD"];
+                
+                [[NSUserDefaults standardUserDefaults] setObject:savedID forKey:@"savedID"];
+                [[NSUserDefaults standardUserDefaults] setObject:savedPASSWORD forKey:@"savedPASSWORD"];
+                NSNumber *isAutoLogin = @(YES);
+                [[NSUserDefaults standardUserDefaults] setObject:isAutoLogin forKey:@"isAutoLoginOn"];
+                
+            }
             
             JPTabbarController *tabbarController = [[JPTabbarController alloc] initWithNibName:@"JPTabbarController" bundle:nil];
 

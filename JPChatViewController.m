@@ -9,6 +9,7 @@
 #import "JPChatViewController.h"
 #import "JPMakeChatRoomViewController.h"
 #import "JPChattingRoomViewController.h"
+#import "JPJoinViewController.h"
 
 #import <CoreLocation/CoreLocation.h>
 
@@ -31,12 +32,19 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     
+    //total list
     NSString *str = [[NSUserDefaults standardUserDefaults] objectForKey:@"XMPPJID"];
     NSArray *objects = @[str];
     NSArray *keys = @[@"member_email"];
     
     [appDelegate sendDataHttp:objects keyForDic:keys urlString:URL_FOR_ROOM_LIST setDelegate:self];
     
+    
+    /////////////////////////////조인드 리스트는 응답없고, 위에 토탈 리스트는 조인안된애들은 안불러와야하는게 맞당
+    
+    //joined list
+    
+    [appDelegate sendDataHttp:objects keyForDic:keys urlString:URL_FOR_ROOM_MYLIST setDelegate:self];
     
     //로딩 바 돌아감
 //    UIView *loadingBGView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
@@ -95,7 +103,7 @@
     
 
     
-    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+    locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     locationManager.distanceFilter = kCLDistanceFilterNone;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
@@ -104,6 +112,8 @@
 //    [locationManager startMonitoringSignificantLocationChanges];
     [locationManager startUpdatingLocation];
 
+    
+    chatRoomListArray = [[NSMutableArray alloc] init];
 
 }
 
@@ -128,9 +138,42 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     CLLocation *location = [locations lastObject];
-    NSLog(@"------------------------------------------------------------------------------");
-    NSLog(@"cur pos : %f, %f", location.coordinate.latitude, location.coordinate.longitude);
-    [[NSUserDefaults standardUserDefaults] setObject:location forKey:@"currentLocation"];
+//    NSLog(@"------------------------------------------------------------------------------");
+//    NSLog(@"cur pos : %f, %f", location.coordinate.latitude, location.coordinate.longitude);
+    
+//    NSNumber *lat = [NSNumber numberWithDouble:location.coordinate.latitude];
+//    NSNumber *lng = [NSNumber numberWithDouble:location.coordinate.longitude];
+    double lat = location.coordinate.latitude;
+    double lng = location.coordinate.longitude;
+    
+    
+    
+//    [[NSUserDefaults standardUserDefaults] setObject:location forKey:@"currentLocation"];
+//    [[NSUserDefaults standardUserDefaults] setObject:lat forKey:@"CL_Lat"];
+//    [[NSUserDefaults standardUserDefaults] setObject:lng forKey:@"CL_Lng"];
+
+    [[NSUserDefaults standardUserDefaults] setDouble:lat forKey:@"CL_lat"];
+    [[NSUserDefaults standardUserDefaults] setDouble:lng forKey:@"CL_lng"];
+    
+//    NSArray *arrLocation = [[NSArray alloc] initWithObjects:location, nil];
+//    [[NSUserDefaults standardUserDefaults] setObject:arrLocation forKey:@"currentLocation"];
+
+    NSNumber *mlLat = [NSNumber numberWithDouble:lat];
+    NSNumber *mlLng = [NSNumber numberWithDouble:lng];
+    NSArray *dataArr = @[
+                         mlLat,
+                         mlLng,
+                         [[NSUserDefaults standardUserDefaults] objectForKey:@"M_ID"],
+                         ];
+    NSArray *keyArr = @[
+                        @"ml_latitude",
+                        @"ml_longitude",
+                        @"ml_m_id"
+                        ];
+
+    [appDelegate sendDataHttp:dataArr keyForDic:keyArr urlString:URL_FOR_UPDATE_LOCATION setDelegate:self];
+    
+    tempLabel.text = [NSString stringWithFormat:@"cur pos : %f, %f", location.coordinate.latitude, location.coordinate.longitude];
 }
 
 
@@ -148,9 +191,20 @@
     if ([responseType  isEqual: @"ChatRoom List"]) {
         NSLog(@"채팅방리스트 성공");
         
+        
+        //temporary....
+        [chatRoomListArray removeAllObjects];
+        numOfChatRooms = 0;
+        
         NSArray *arr = [dic objectForKey:@"data"];
-        numOfChatRooms = (int)[arr count];
-        chatRoomListArray = arr;
+        
+        for (NSDictionary *item in arr) {
+            if ([[item objectForKey:@"has_joined"] intValue] == 0) {
+                [chatRoomListArray addObject:item];
+                numOfChatRooms++;
+            }
+        }
+
         [chatRoomListTableView reloadData];
         
     }
@@ -162,18 +216,26 @@
     else if ([responseType isEqualToString:@"Joining ChatRoom"]) {
         NSLog(@"채팅방 조인하기 성공");
         
-        NSString *crmID = [dic objectForKey:@"crm_id"];
-
-        chattingRoomViewController.crm_id = crmID;
+//        NSString *crmID = [dic objectForKey:@"crm_id"];
+//
+//        chattingRoomViewController.crm_id = crmID;
         
-        [self.navigationController pushViewController:chattingRoomViewController animated:YES];
+//        [self.navigationController pushViewController:chattingRoomViewController animated:YES];
 
-        
+//        joinViewController = [[JPJoinViewController alloc] initWithNibName:@"JPJoinViewController" bundle:nil];
+//        joinViewController.chattingRoomViewController = chattingRoomViewController;
+//        [self.navigationController pushViewController:joinViewController animated:YES];
         
     }
     
     else if ([responseType isEqualToString:@"My ChatRoom List"]) {
         NSLog(@"내가 조인한 채팅방 리스트 성공");
+        
+        NSArray *arr = [dic objectForKey:@"data"];
+        numOfJoinedRooms = (int)[arr count];
+        joinedChatRoomListArray = arr;
+        [chatRoomListTableView reloadData];
+
     }
     
     else if ([responseType isEqualToString:@"ChatRoom Info"]) {
@@ -196,12 +258,33 @@
     }
     
     
+    
+    else if ([responseType isEqualToString:@"Location Send"]) {
+//        NSLog(@"LOCATION UPDATED");
+    }
+    
     [indicator stopAnimating];
 
     
 }
 
 #pragma mark - TableView delegate
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return @"Joined Rooms";
+    }
+    if (section == 1) {
+        return @"Not Joined Rooms";
+    }
+    else
+        return @"Defaults";
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"basic cell";
@@ -211,56 +294,110 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
 
-    cell.textLabel.text = [[chatRoomListArray objectAtIndex:indexPath.row] objectForKey:@"chat_room_name"];
+    if (indexPath.section == 0) {
+        cell.textLabel.text = [[joinedChatRoomListArray objectAtIndex:indexPath.row] objectForKey:@"chat_room_name"];
+    }
+    else if (indexPath.section == 1) {
+        NSDictionary *data = [chatRoomListArray objectAtIndex:indexPath.row];
+        cell.textLabel.text = [data objectForKey:@"chat_room_name"];
+        
+//        NSLog(@"%@",[data objectForKey:@"has_joined"]);
+        NSNumber *isJoined = [data objectForKey:@"has_joined"];
+        
+        //join된애들 구분
+        if ([isJoined intValue] == 1) {
+
+//            cell.textLabel.backgroundColor = [UIColor redColor];
+            cell.backgroundColor = [UIColor redColor];
+        }
+    }
+
 //    cell.backgroundColor = [UIColor yellowColor];
     return cell;
 }
 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return numOfChatRooms;
+    if (section == 0) {
+        return numOfJoinedRooms;
+    }
+    if (section == 1) {
+        return numOfChatRooms;
+    
+    }
+    return 10;
 }
 
 
-// 선택한 열의 채팅방에 로그인 (= 조인)
+// 선택한 열의 채팅방에
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    NSString *crID = [[chatRoomListArray objectAtIndex:indexPath.row] objectForKey:@"cr_id"];
-    NSLog(@"crid = %@", crID);
-    NSString *str = [NSString stringWithFormat:@"%@",crID];
-    NSLog(@"class of crid = %@", [crID class]);
-    NSLog(@"class of str = %@", [str class]);
+    
+    if (indexPath.section == 1) {
+        NSLog(@"Total Room");
+        
+        //조인 안된 방 => 확인할 필요가 없음
+        
+        //클릭하면 조인뷰로
+        joinViewController = [[JPJoinViewController alloc] initWithNibName:@"JPJoinViewController" bundle:nil];
+        joinViewController.chattingRoomViewController = chattingRoomViewController;
+        joinViewController.crID = [[chatRoomListArray objectAtIndex:indexPath.row] objectForKey:@"cr_id"];
+        
+        
+        //맵 정보를 받아서 넘겨줌
+        
+        [self.navigationController pushViewController:joinViewController animated:YES];
+//        [self.navigationController presentViewController:joinViewController animated:YES completion:nil];
 
 
-    NSArray *dataArr = @[
-                         [[NSUserDefaults standardUserDefaults] objectForKey:@"M_ID"],
-                         crID,
-                         [[NSUserDefaults standardUserDefaults] objectForKey:@"ID"],
-                         [[NSUserDefaults standardUserDefaults] objectForKey:@"PASSWORD"],
-                         ];
-    NSArray *keyArr = @[
-                        @"m_id",
-                        @"cr_id",
-                        @"userName",
-                        @"userPwd",
-                        ];
-    
-    [appDelegate sendDataHttp:dataArr keyForDic:keyArr urlString:URL_FOR_ROOM_JOIN setDelegate:self];
-    
-    chattingRoomViewController = [[JPChattingRoomViewController alloc] initWithNibName:@"JPChattingRoomViewController" bundle:nil];
-    chattingRoomViewController.m_id = [[NSUserDefaults standardUserDefaults] objectForKey:@"M_ID"];
-    chattingRoomViewController.cr_id_room = str;
-    chattingRoomViewController.chatRoomTitle = [tableView cellForRowAtIndexPath:indexPath].textLabel.text;
-//    [[chatRoomListArray objectAtIndex:indexPath.row] objectForKey:@"chat_room_name"]; //this? or not?
-    
-    NSLog(@"mid = %@, crid = %@", [chattingRoomViewController.m_id class], [chattingRoomViewController.cr_id_room class]);
-    
+    }
+    else if (indexPath.section == 0) {
+        NSLog(@"joined Room");
+       
+//        // 클릭시 조인되던 소스코드
+        NSString *crID = [[joinedChatRoomListArray objectAtIndex:indexPath.row] objectForKey:@"cr_id"];
+//        NSLog(@"crid = %@", crID);
+        NSString *str = [NSString stringWithFormat:@"%@",crID];
+//        NSLog(@"class of crid = %@", [crID class]);
+//        NSLog(@"class of str = %@", [str class]);
+//        
+//        
+//        NSArray *dataArr = @[
+//                             [[NSUserDefaults standardUserDefaults] objectForKey:@"M_ID"],
+//                             crID,
+//                             [[NSUserDefaults standardUserDefaults] objectForKey:@"ID"],
+//                             [[NSUserDefaults standardUserDefaults] objectForKey:@"PASSWORD"],
+//                             ];
+//        NSArray *keyArr = @[
+//                            @"m_id",
+//                            @"cr_id",
+//                            @"userName",
+//                            @"userPwd",
+//                            ];
+        
+//        [appDelegate sendDataHttp:dataArr keyForDic:keyArr urlString:URL_FOR_ROOM_JOIN setDelegate:self];
+        
+        chattingRoomViewController = [[JPChattingRoomViewController alloc] initWithNibName:@"JPChattingRoomViewController" bundle:nil];
+        chattingRoomViewController.m_id = [[NSUserDefaults standardUserDefaults] objectForKey:@"M_ID"];
+        chattingRoomViewController.cr_id_room = str;
+        chattingRoomViewController.crm_id = [[joinedChatRoomListArray objectAtIndex:indexPath.row] objectForKey:@"crm_id"];
+        chattingRoomViewController.chatRoomTitle = [tableView cellForRowAtIndexPath:indexPath].textLabel.text;
 
-//    //조인멤버 확인,
-//    NSString *urlStr = URL_FOR_ROOM_JOINEDMEMBER_LIST_WITHOUT_CRID;
-//    urlStr = [urlStr stringByAppendingString:str];
-//    NSLog(@"%@",urlStr);
-//    [jpConnectionDelegate sendDataHttp:nil keyForDic:nil urlString:urlStr setDelegate:self];
 
+        NSString *myMid = [[NSUserDefaults standardUserDefaults] objectForKey:@"M_ID"];
+        NSString *joinMid = [NSString stringWithFormat:@"%@",[[joinedChatRoomListArray objectAtIndex:indexPath.row] objectForKey:@"chat_room_maker"]];
+//        NSLog(@"%@ = %@", myMid, joinMid);
+        
+        if ([myMid isEqual:joinMid]) {
+            chattingRoomViewController.isOwner = YES;
+        }
+        else {
+            chattingRoomViewController.isOwner = NO;
+        }
+        
+        [self.navigationController pushViewController:chattingRoomViewController animated:YES];
+//        NSLog(@"mid = %@, crid = %@", [chattingRoomViewController.m_id class], [chattingRoomViewController.cr_id_room class]);
+    }
 }
 
 

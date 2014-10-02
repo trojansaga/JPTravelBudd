@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="idTextField" destination="pM5-kU-Tnx" id="ZIh-h3-Xum"/>
                 <outlet property="pwTextField" destination="SjM-dz-Hy6" id="720-Pa-MPb"/>
+                <outlet property="switchForAutoLogin" destination="XOU-lY-vmF" id="oxi-xd-N4l"/>
                 <outlet property="textViewForIntroduction" destination="F9d-1U-RvK" id="xQz-VX-0w6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -17,19 +18,19 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SjM-dz-Hy6">
+                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SjM-dz-Hy6">
                     <rect key="frame" x="126" y="193" width="97" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pM5-kU-Tnx">
+                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pM5-kU-Tnx">
                     <rect key="frame" x="126" y="152" width="97" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="이 프로그램은 ' 송민철 / 박근배 '의 졸업작품, TravelBudd 입니다. " translatesAutoresizingMaskIntoConstraints="NO" id="F9d-1U-RvK">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="이 어플리케이션은 ' 송민철 / 박근배 '의 졸업작품, TravelBudd 입니다. " translatesAutoresizingMaskIntoConstraints="NO" id="F9d-1U-RvK">
                     <rect key="frame" x="40" y="336" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.55458011071966407" green="1" blue="0.97493385012757949" alpha="1" colorSpace="calibratedRGB"/>
@@ -54,6 +55,13 @@
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XOU-lY-vmF">
+                    <rect key="frame" x="251" y="152" width="51" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <action selector="switchAutoLogin:" destination="-1" eventType="valueChanged" id="WjQ-hy-SK8"/>
+                    </connections>
+                </switch>
             </subviews>
             <color key="backgroundColor" red="0.55209983833119969" green="0.81278275944500455" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

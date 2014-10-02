@@ -12,6 +12,9 @@
 #import "ChatRecord.h"
 #import "JPChatContentCellTableViewCell.h"
 #import "JPAppDelegate.h"
+#import "JPMapAnnotation.h"
+#import "JPMapViewController.h"
+#import "PinRecord.h"
 
 #define kChatContentsCellID     @"chatCellIdentifier"
 #define kChatContentsCellIDMe   @"chatCellIdentifierForMe"
@@ -61,7 +64,11 @@
     
 
     UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(showMoreButtons)];
-    self.navigationItem.rightBarButtonItem = button;
+    UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFastForward target:self action:@selector(action)];
+
+//    self.navigationItem.rightBarButtonItem = button;
+    self.navigationItem.rightBarButtonItems = @[button, mapButton];
+    
     [self.view addSubview:_viewForMoreButtons];
     _viewForMoreButtons.alpha = 0;
 
@@ -90,6 +97,31 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(msgReceived) name:@"newMsgArrival" object:nil];
     
    
+    
+    //map connection
+    
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@",URL_FOR_RETREIVE_MAPDATA_WITHOUT_ROOMID, _cr_id_room];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+//    NSDictionary *dic = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+//    NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:0 error:nil];
+    
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPMethod:@"GET"];
+//    [request setHTTPBody:data];
+    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    [conn start];
+    
+//    JPAppDelegate *appDelegate = (JPAppDelegate *)[[UIApplication sharedApplication] delegate];
+//    [appDelegate sendDataHttp:nil keyForDic:nil urlString:url setDelegate:self];
+    
+    //owner or member
+    if (_isOwner == YES) {
+        roomExitButton.titleLabel.text = @"Delete Room";
+    }
+    else {
+        roomExitButton.titleLabel.text = @"Unjoin Room";
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -103,6 +135,8 @@
     [self enterRoom];
     [self refreshChattingContents];
     self.tabBarController.tabBar.hidden = YES;
+    
+    
     
 }
 
@@ -146,7 +180,7 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:YES];
 
-//    [self exitRoom];//????????? 이거 왜한거임 도데체
+    [self exitRoom];//????????? 이거 왜한거임 도데체
     
     [self removeKeyboardNotification];
 
@@ -161,6 +195,22 @@
 
 
 #pragma mark - Action
+
+- (void)action {
+    NSLog(@"af");
+    JPMapViewController *mapViewController = [[JPMapViewController alloc] initWithNibName:@"JPMapViewController" bundle:nil];
+    mapViewController.managedObjectContext = _mob;
+    mapViewController.mapRecord = _mapData;
+    
+    [self.navigationController pushViewController:mapViewController animated:YES];
+    
+}
+
+- (IBAction)refreshPresence:(id)sender {
+//    [self enterRoom];
+    [self exitRoom];
+    [self enterRoom];
+}
 
 - (IBAction)btnClick:(id)sender {
 //    [[NSNotificationCenter defaultCenter] postNotificationName:@"count" object:@"stir"];
@@ -283,8 +333,17 @@
 #pragma mark - More Buttons
 
 - (IBAction)selectMap:(id)sender {
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
+//    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
 
+}
+
+- (IBAction)exitRoom:(id)sender {
+    if (_isOwner == YES) {
+        [self deleteRoom:nil];
+    }
+    else {
+        [self leaveRoom:nil];
+    }
 }
 
 - (IBAction)showJoinedMember:(id)sender {
@@ -297,15 +356,34 @@
 
 - (IBAction)deleteRoom:(id)sender {
     
-    NSArray *data = @[_cr_id_room];
-    NSArray *key = @[@"cr_id"];
+    NSArray *data = @[
+                      [[NSUserDefaults standardUserDefaults] objectForKey:@"ID"],
+                      [[NSUserDefaults standardUserDefaults] objectForKey:@"PASSWORD"],
+                      _cr_id_room
+                      ];
+    NSArray *key = @[
+                     @"userName",
+                     @"userPwd",
+                     @"cr_id"
+                     ];
+
     [appDelegate sendDataHttp:data keyForDic:key urlString:URL_FOR_ROOM_DELETE setDelegate:self];
     
 }
 
 - (IBAction)leaveRoom:(id)sender {
-    NSArray *data = @[_cr_id_room];
-    NSArray *key = @[@"cr_id"];
+    NSArray *data = @[
+                      [[NSUserDefaults standardUserDefaults] objectForKey:@"ID"],
+                      [[NSUserDefaults standardUserDefaults] objectForKey:@"PASSWORD"],
+                      _cr_id_room,
+                      _crm_id,
+                      ];
+    NSArray *key = @[
+                     @"userName",
+                     @"userPwd",
+                     @"cr_id",
+                     @"crm_id"
+                     ];
     [appDelegate sendDataHttp:data keyForDic:key urlString:URL_FOR_ROOM_EXIT setDelegate:self];
 }
 
@@ -383,11 +461,10 @@
 - (void) enterRoom {
     //join the room with presence
     NSXMLElement *presence = [NSXMLElement elementWithName:@"presence"];
-    NSLog(@"%@",_cr_id_room);
+//    NSLog(@"%@",_cr_id_room);
     
     NSString *from = [nickName stringByAppendingString:domain];
     NSString *to = [_cr_id_room stringByAppendingString:conferenceDomain];
-    
     
     [presence addAttributeWithName:@"from" stringValue:from];
     [presence addAttributeWithName:@"to" stringValue:to];
@@ -397,13 +474,14 @@
 - (void) exitRoom {
     //presence.. unavailable -> not msg receivable
     NSXMLElement *presence = [NSXMLElement elementWithName:@"presence"];
-    NSLog(@"%@",_cr_id_room);
+//    NSLog(@"%@",_cr_id_room);
     NSString *from = [nickName stringByAppendingString:domain];
     NSString *to = [_cr_id_room stringByAppendingString:conferenceDomain];
     
     [presence addAttributeWithName:@"from" stringValue:from];
     [presence addAttributeWithName:@"to" stringValue:to];
     [presence addAttributeWithName:@"type" stringValue:@"unavailable"];
+//    [presence addAttributeWithName:@"type" stringValue:@"offline"];
     [[appDelegate xmppStream] sendElement:presence];
     
 }
@@ -414,9 +492,6 @@
 {
     if ([cell isKindOfClass:[JPChatContentCellTableViewCell class]])
     {
-        
-        
-        
         ChatRecord *record = [chattingContents objectAtIndex:indexPath.row];
         cell.nameLabel.text = record.fromWho;
         cell.chatContents.text = record.body;
@@ -539,25 +614,23 @@
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     NSString *responseType = [dic objectForKey:@"data_type"];
     
-//    NSLog(@"response : %@", responseType);
+    NSLog(@"response : %@", responseType);
     
     
     //채팅방 리스트
     if ([responseType isEqualToString:@"Delete ChatRoom"]) {
-        NSLog(@"//채팅방 지우기//");
-        
-        NSLog(@"%@", [dic objectForKey:@"message"]);
+//        NSLog(@"//채팅방 지우기//");
+//        NSLog(@"%@", [dic objectForKey:@"message"]);
+        [self.navigationController popViewControllerAnimated:YES];
     }
     else if([responseType isEqualToString:@"Deactivate ChatRoom Member"]) {
         NSLog(@"//채팅방 탈퇴하기//");
-        
         NSLog(@"%@", [dic objectForKey:@"message"]);
         [self.navigationController popViewControllerAnimated:YES];
     }
     else if ([responseType isEqualToString:@"ChatRoom Info"]) {
         NSLog(@"//채팅방 정보//");
         NSLog(@"%@", [dic objectForKey:@"chat_room_name"]);
-        
         
     }
     else if ([responseType isEqualToString:@"Member List"]) {
@@ -569,9 +642,49 @@
 
     }
     
+    //map data received
+    else if ([responseType isEqualToString:@"GetMap"]) {
+        NSLog(@"//Map data received//");
+        
+        NSDictionary *mapDataDic = [dic objectForKey:@"data"];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.dateFormat = @"YYYY-MM-DD hh:mm:ss";
+        //add map data
+        //////////
+        _mapData = [NSEntityDescription insertNewObjectForEntityForName:@"MapRecord" inManagedObjectContext:_mob];
+        _mapData.m_FinishDate = [dateFormatter dateFromString:[mapDataDic objectForKey:@"m_FinishDateStr"]];
+        _mapData.m_StartDate = [dateFormatter dateFromString:[mapDataDic objectForKey:@"m_StartDateStr"]];
+        _mapData.m_MapTitle = [mapDataDic objectForKey:@"m_MapTitle"];
+        _mapData.m_SavedLatitude = [mapDataDic objectForKey:@"m_SavedLatitude"];
+        _mapData.m_SavedLatitudeDelta = [mapDataDic objectForKey:@"SavedLatitudeDelta"];
+        _mapData.m_SavedLongitude = [mapDataDic objectForKey:@"m_SavedLongitude"];
+        _mapData.m_SavedLongitudeDelta = [mapDataDic objectForKey:@"SavedLongitudeDelta"];
+        _mapData.m_TotalBudget = [mapDataDic objectForKey:@"m_TotalBudget"];
+        
+        
+        NSArray *pinsDataArr = [mapDataDic objectForKey:@"pins"];
+        for (NSDictionary *dic in pinsDataArr) {
+            //add pin annotation
+            /////////////////
+            //        _roomMapView addpin!!!!!
+            //        _roomMapView addAnnotation:
+            PinRecord *pin = [NSEntityDescription insertNewObjectForEntityForName:@"PinRecord" inManagedObjectContext:_mob];
+            pin.p_Budget = [dic objectForKey:@"p_Budget"];
+            pin.p_Description = [dic objectForKey:@"p_Description"];
+            pin.p_FinishDate = [dateFormatter dateFromString:[dic objectForKey:@"p_FinishDateStr"]];
+//            pin.p_StartDate = [dateFormatter dateFromString:[dic objectForKey:@""]]//no start date
+            pin.p_Latitude = [dic objectForKey:@"p_Latitude"];
+            pin.p_Longitude =[dic objectForKey:@"p_Longitude"];
+            pin.p_Order = [dic objectForKey:@"p_Order"];
+            [_mapData addPinsObject:pin];
+        }
+        [_mob rollback];
+    }
+
+    
     else {
 
-        //얘는 리턴이 그냥 스트링
+        //얘는 리턴이 그냥 스트링, about chatting messages
         NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         
         
@@ -602,11 +715,12 @@
             
             [_mob save:nil];
             
-            //ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ 몰라젠장 일단 실행부터, 아마도 presence - unavailable나는게 문제같은데, 일딴 땜빵 ㄱ
-            [self exitRoom];
-            [self enterRoom];
+            
             
             [self refreshChattingContents];
+
+            [self exitRoom];
+            [self enterRoom];
 
             
             NSLog(@"------------------------------------------------------------------------------");

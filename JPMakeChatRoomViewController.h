@@ -8,12 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JPMakeChatRoomViewController : UIViewController <NSURLConnectionDataDelegate> {
+@class MapRecord;
+
+@interface JPMakeChatRoomViewController : UIViewController <NSURLConnectionDataDelegate, UITableViewDataSource, UITableViewDelegate> {
     IBOutlet UITextField *textFieldForRoomName;
     IBOutlet UITextField *textFieldForRoomMaxNum;
     IBOutlet UITextField *textFieldForRoomDesc;
     IBOutlet UISwitch *switchForSecret;
     IBOutlet UITextView *textViewForRoomDesc;
+    IBOutlet UIView *mapSelectionView;
+    IBOutlet UITableView *mapListTableView;
+    IBOutlet UIImageView *mapImageView;
+    
+    IBOutlet UIView *grView;
+
+    NSArray *mapListArray;
+    MapRecord *selectedMapRecord;
 }
+
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 @end

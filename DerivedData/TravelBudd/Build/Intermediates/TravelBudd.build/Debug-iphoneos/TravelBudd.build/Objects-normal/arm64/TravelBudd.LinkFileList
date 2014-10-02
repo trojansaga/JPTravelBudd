@@ -24,6 +24,7 @@
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPChatViewController.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPResourceCoreDataStorageObject.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPStream.o
+/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/MapRecord.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/NSString+DDXML.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/ContextFilterLogFormatter.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPGoogleSharedStatus.o
@@ -51,6 +52,7 @@
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/NSXMLElement+XEP_0335.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/GCDMulticastDelegate.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPIQ.o
+/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/PinRecord.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPDigestMD5Authentication.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPCapabilities-2CB5A3CDE77E9D6B.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPMessageDeliveryReceipts.o
@@ -61,7 +63,6 @@
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XEP_0223.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapListCell.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPPresence+XEP_0172.o
-/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/PinRecord.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPUserCoreDataStorageObject.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPSettingViewController.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/DDList.o
@@ -79,6 +80,7 @@
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPSoftwareVersion.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPPlainAuthentication.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/DDXMLElement.o
+/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPChattingRoomMapViewController.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPBlocking.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPMessage+XEP_0085.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPPubSub.o
@@ -110,7 +112,6 @@
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPMessage+XEP_0308.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPMUC.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPIQ+JabberRPCResonse.o
-/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/MapRecord.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPTime.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPMessage+XEP_0066.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPRoomOccupantHybridMemoryStorageObject.o
@@ -124,6 +125,7 @@
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPIDTracker.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPMapListViewController.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/NSXMLElement+XEP_0297.o
+/Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/JPJoinViewController.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPMessageArchiving_Contact_CoreDataObject.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPSCRAMSHA1Authentication.o
 /Users/trojansaga/Documents/ios/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphoneos/TravelBudd.build/Objects-normal/arm64/XMPPXFacebookPlatformAuthentication.o

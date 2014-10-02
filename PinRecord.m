@@ -2,7 +2,7 @@
 //  PinRecord.m
 //  TravelBudd
 //
-//  Created by MC on 2014. 7. 28..
+//  Created by MC on 2014. 9. 30..
 //  Copyright (c) 2014년 MinChul Song. All rights reserved.
 //
 
@@ -20,6 +20,7 @@
 @dynamic p_Order;
 @dynamic p_StartDate;
 @dynamic p_Title;
+@dynamic p_Pid;
 @dynamic map;
 
 @end

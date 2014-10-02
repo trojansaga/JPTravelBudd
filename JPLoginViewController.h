@@ -16,7 +16,7 @@
     IBOutlet UITextField *textFieldForJoinUsID;
     IBOutlet UITextField *textFieldForJoinUsPW;
     IBOutlet UITextField *textFieldForJoinUsName;
-    
+    IBOutlet UISwitch *switchForAutoLogin;
 //    JPConnectionDelegateObject *jpConnectionDelegate;
 
 }

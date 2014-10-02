@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1500A77619861B8E000AAC47 /* PinRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 1500A77519861B8E000AAC47 /* PinRecord.m */; };
 		1500A779198C91A8000AAC47 /* JPMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1500A778198C91A8000AAC47 /* JPMapAnnotation.m */; };
+		1514CF4D19D4D52100033FBC /* JPJoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1514CF4B19D4D52100033FBC /* JPJoinViewController.m */; };
+		1514CF4E19D4D52100033FBC /* JPJoinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1514CF4C19D4D52100033FBC /* JPJoinViewController.xib */; };
 		1522A54919AAE32500B1C54F /* ClCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1522A54819AAE32500B1C54F /* ClCell.xib */; };
-		1522A54B19AAEB5E00B1C54F /* img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1522A54A19AAEB5E00B1C54F /* img.jpg */; };
 		1522A55919AB353200B1C54F /* JPMapListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1522A55719AB353200B1C54F /* JPMapListCell.m */; };
 		1522A55A19AB353200B1C54F /* JPMapListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1522A55819AB353200B1C54F /* JPMapListCell.xib */; };
-		1522A56919AE314400B1C54F /* MapRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 1522A56819AE314400B1C54F /* MapRecord.m */; };
-		1522A57019B03BA800B1C54F /* geo_fence-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1522A56F19B03BA800B1C54F /* geo_fence-50.png */; };
 		1522A57319B0B46E00B1C54F /* ChatRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 1522A57219B0B46E00B1C54F /* ChatRecord.m */; };
 		153464971919208F00D271A5 /* JPConnectionDelegateObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153464961919208F00D271A5 /* JPConnectionDelegateObject.m */; };
 		153A728518F244C100C7ABB7 /* JPTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153A728318F244C100C7ABB7 /* JPTabbarController.m */; };
@@ -183,6 +181,9 @@
 		159779F61922796500C7A3DB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159779F51922796500C7A3DB /* CoreLocation.framework */; };
 		159779F81922798400C7A3DB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159779F71922798400C7A3DB /* CoreData.framework */; };
 		159779FB192285D500C7A3DB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 159779F9192285D500C7A3DB /* Model.xcdatamodeld */; };
+		159A591919DA772B0038090A /* MapRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A591819DA772B0038090A /* MapRecord.m */; };
+		159A591C19DA772C0038090A /* PinRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A591B19DA772C0038090A /* PinRecord.m */; };
+		159A591F19DB11240038090A /* JPChattingRoomMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A591E19DB11240038090A /* JPChattingRoomMapViewController.m */; };
 		15ABB3EB19B17E9A00D97549 /* JPChatContentCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15ABB3E919B17E9A00D97549 /* JPChatContentCellTableViewCell.m */; };
 		15ABB3EC19B17E9A00D97549 /* JPChatContentCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15ABB3EA19B17E9A00D97549 /* JPChatContentCellTableViewCell.xib */; };
 		15ABB3F019B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 15ABB3EE19B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.m */; };
@@ -200,18 +201,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1500A77419861B8E000AAC47 /* PinRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinRecord.h; sourceTree = "<group>"; };
-		1500A77519861B8E000AAC47 /* PinRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinRecord.m; sourceTree = "<group>"; };
 		1500A777198C91A8000AAC47 /* JPMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPMapAnnotation.h; sourceTree = "<group>"; };
 		1500A778198C91A8000AAC47 /* JPMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPMapAnnotation.m; sourceTree = "<group>"; };
+		1514CF4A19D4D52100033FBC /* JPJoinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPJoinViewController.h; sourceTree = "<group>"; };
+		1514CF4B19D4D52100033FBC /* JPJoinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPJoinViewController.m; sourceTree = "<group>"; };
+		1514CF4C19D4D52100033FBC /* JPJoinViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JPJoinViewController.xib; sourceTree = "<group>"; };
 		1522A54819AAE32500B1C54F /* ClCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClCell.xib; sourceTree = "<group>"; };
-		1522A54A19AAEB5E00B1C54F /* img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = img.jpg; path = ../../../Downloads/img.jpg; sourceTree = "<group>"; };
 		1522A55619AB353200B1C54F /* JPMapListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPMapListCell.h; sourceTree = "<group>"; };
 		1522A55719AB353200B1C54F /* JPMapListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPMapListCell.m; sourceTree = "<group>"; };
 		1522A55819AB353200B1C54F /* JPMapListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JPMapListCell.xib; sourceTree = "<group>"; };
-		1522A56719AE314400B1C54F /* MapRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapRecord.h; sourceTree = "<group>"; };
-		1522A56819AE314400B1C54F /* MapRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapRecord.m; sourceTree = "<group>"; };
-		1522A56F19B03BA800B1C54F /* geo_fence-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "geo_fence-50.png"; path = "../../../Downloads/geo_fence-50.png"; sourceTree = "<group>"; };
 		1522A57119B0B46E00B1C54F /* ChatRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRecord.h; sourceTree = "<group>"; };
 		1522A57219B0B46E00B1C54F /* ChatRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRecord.m; sourceTree = "<group>"; };
 		153464951919208F00D271A5 /* JPConnectionDelegateObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPConnectionDelegateObject.h; sourceTree = "<group>"; };
@@ -534,6 +532,12 @@
 		159779F51922796500C7A3DB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		159779F71922798400C7A3DB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		159779FA192285D500C7A3DB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		159A591719DA772B0038090A /* MapRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapRecord.h; sourceTree = "<group>"; };
+		159A591819DA772B0038090A /* MapRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapRecord.m; sourceTree = "<group>"; };
+		159A591A19DA772C0038090A /* PinRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinRecord.h; sourceTree = "<group>"; };
+		159A591B19DA772C0038090A /* PinRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinRecord.m; sourceTree = "<group>"; };
+		159A591D19DB11240038090A /* JPChattingRoomMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPChattingRoomMapViewController.h; sourceTree = "<group>"; };
+		159A591E19DB11240038090A /* JPChattingRoomMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPChattingRoomMapViewController.m; sourceTree = "<group>"; };
 		15ABB3E819B17E9A00D97549 /* JPChatContentCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPChatContentCellTableViewCell.h; sourceTree = "<group>"; };
 		15ABB3E919B17E9A00D97549 /* JPChatContentCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPChatContentCellTableViewCell.m; sourceTree = "<group>"; };
 		15ABB3EA19B17E9A00D97549 /* JPChatContentCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JPChatContentCellTableViewCell.xib; sourceTree = "<group>"; };
@@ -603,6 +607,11 @@
 				15ABB3ED19B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.h */,
 				15ABB3EE19B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.m */,
 				15ABB3EF19B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.xib */,
+				1514CF4A19D4D52100033FBC /* JPJoinViewController.h */,
+				1514CF4B19D4D52100033FBC /* JPJoinViewController.m */,
+				1514CF4C19D4D52100033FBC /* JPJoinViewController.xib */,
+				159A591D19DB11240038090A /* JPChattingRoomMapViewController.h */,
+				159A591E19DB11240038090A /* JPChattingRoomMapViewController.m */,
 			);
 			name = Chatting;
 			sourceTree = "<group>";
@@ -1514,10 +1523,10 @@
 				1522A57119B0B46E00B1C54F /* ChatRecord.h */,
 				1522A57219B0B46E00B1C54F /* ChatRecord.m */,
 				159779F9192285D500C7A3DB /* Model.xcdatamodeld */,
-				1500A77419861B8E000AAC47 /* PinRecord.h */,
-				1500A77519861B8E000AAC47 /* PinRecord.m */,
-				1522A56719AE314400B1C54F /* MapRecord.h */,
-				1522A56819AE314400B1C54F /* MapRecord.m */,
+				159A591A19DA772C0038090A /* PinRecord.h */,
+				159A591B19DA772C0038090A /* PinRecord.m */,
+				159A591719DA772B0038090A /* MapRecord.h */,
+				159A591819DA772B0038090A /* MapRecord.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -1525,7 +1534,6 @@
 		159779F21922730C00C7A3DB /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				1522A56F19B03BA800B1C54F /* geo_fence-50.png */,
 				153A728718F2455300C7ABB7 /* JPMapViewController.h */,
 				153A728818F2455300C7ABB7 /* JPMapViewController.m */,
 				153A728918F2455300C7ABB7 /* JPMapViewController.xib */,
@@ -1535,7 +1543,6 @@
 				1522A55619AB353200B1C54F /* JPMapListCell.h */,
 				1522A55719AB353200B1C54F /* JPMapListCell.m */,
 				1522A55819AB353200B1C54F /* JPMapListCell.xib */,
-				1522A54A19AAEB5E00B1C54F /* img.jpg */,
 				1522A54819AAE32500B1C54F /* ClCell.xib */,
 				1500A777198C91A8000AAC47 /* JPMapAnnotation.h */,
 				1500A778198C91A8000AAC47 /* JPMapAnnotation.m */,
@@ -1632,7 +1639,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1522A57019B03BA800B1C54F /* geo_fence-50.png in Resources */,
 				153A729818F2459700C7ABB7 /* JPSettingViewController.xib in Resources */,
 				1540BADF191E544100B1DBE0 /* JPChattingRoomViewController.xib in Resources */,
 				1522A55A19AB353200B1C54F /* JPMapListCell.xib in Resources */,
@@ -1641,12 +1647,12 @@
 				153A728B18F2455300C7ABB7 /* JPMapViewController.xib in Resources */,
 				15ABB3F119B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.xib in Resources */,
 				15951CE818ED0F09008A8868 /* build-libidn.sh in Resources */,
+				1514CF4E19D4D52100033FBC /* JPJoinViewController.xib in Resources */,
 				153A729318F2458500C7ABB7 /* JPChatViewController.xib in Resources */,
 				15951C8818ECF053008A8868 /* InfoPlist.strings in Resources */,
 				15951C9018ECF053008A8868 /* Images.xcassets in Resources */,
 				1540BAD9191DDAEC00B1DBE0 /* JPMakeChatRoomViewController.xib in Resources */,
 				153A728618F244C100C7ABB7 /* JPTabbarController.xib in Resources */,
-				1522A54B19AAEB5E00B1C54F /* img.jpg in Resources */,
 				15951CE318ED0F09008A8868 /* README.txt in Resources */,
 				15ABB3EC19B17E9A00D97549 /* JPChatContentCellTableViewCell.xib in Resources */,
 				15951CB118ECF0B0008A8868 /* JPLoginViewController.xib in Resources */,
@@ -1694,6 +1700,7 @@
 				153A729218F2458500C7ABB7 /* JPChatViewController.m in Sources */,
 				15951E3C18EEE283008A8868 /* XMPPResourceCoreDataStorageObject.m in Sources */,
 				15951D4218EE40B5008A8868 /* XMPPStream.m in Sources */,
+				159A591919DA772B0038090A /* MapRecord.m in Sources */,
 				15951CE418ED0F09008A8868 /* NSString+DDXML.m in Sources */,
 				15951CE118ED0F09008A8868 /* ContextFilterLogFormatter.m in Sources */,
 				15951E5918EEE283008A8868 /* XMPPvCard.xcdatamodeld in Sources */,
@@ -1725,6 +1732,7 @@
 				15951E8E18EEE283008A8868 /* NSXMLElement+XEP_0335.m in Sources */,
 				15951D4418EE40B5008A8868 /* GCDMulticastDelegate.m in Sources */,
 				15951D3C18EE40B5008A8868 /* XMPPIQ.m in Sources */,
+				159A591C19DA772C0038090A /* PinRecord.m in Sources */,
 				15951D3318EE40B5008A8868 /* XMPPDigestMD5Authentication.m in Sources */,
 				15951E7718EEE283008A8868 /* XMPPCapabilities.m in Sources */,
 				15951E8118EEE283008A8868 /* XMPPMessageDeliveryReceipts.m in Sources */,
@@ -1735,7 +1743,6 @@
 				15951E8818EEE283008A8868 /* XEP_0223.m in Sources */,
 				1522A55919AB353200B1C54F /* JPMapListCell.m in Sources */,
 				15951E7F18EEE283008A8868 /* XMPPPresence+XEP_0172.m in Sources */,
-				1500A77619861B8E000AAC47 /* PinRecord.m in Sources */,
 				15951E3F18EEE283008A8868 /* XMPPUserCoreDataStorageObject.m in Sources */,
 				153A729718F2459700C7ABB7 /* JPSettingViewController.m in Sources */,
 				15951D4318EE40B5008A8868 /* DDList.m in Sources */,
@@ -1753,6 +1760,7 @@
 				15951E7018EEE283008A8868 /* XMPPSoftwareVersion.m in Sources */,
 				15951D3418EE40B5008A8868 /* XMPPPlainAuthentication.m in Sources */,
 				15951CE618ED0F09008A8868 /* DDXMLElement.m in Sources */,
+				159A591F19DB11240038090A /* JPChattingRoomMapViewController.m in Sources */,
 				15951E8218EEE283008A8868 /* XMPPBlocking.m in Sources */,
 				15951E6F18EEE283008A8868 /* XMPPMessage+XEP_0085.m in Sources */,
 				15951E6918EEE283008A8868 /* XMPPPubSub.m in Sources */,
@@ -1786,7 +1794,6 @@
 				15951E8C18EEE283008A8868 /* XMPPMessage+XEP_0308.m in Sources */,
 				15951E5718EEE283008A8868 /* XMPPMUC.m in Sources */,
 				15951E4618EEE283008A8868 /* XMPPIQ+JabberRPCResonse.m in Sources */,
-				1522A56919AE314400B1C54F /* MapRecord.m in Sources */,
 				15951E8618EEE283008A8868 /* XMPPTime.m in Sources */,
 				15951E6C18EEE283008A8868 /* XMPPMessage+XEP_0066.m in Sources */,
 				15951E5218EEE283008A8868 /* XMPPRoomOccupantHybridMemoryStorageObject.m in Sources */,
@@ -1800,6 +1807,7 @@
 				15951D4618EE40B5008A8868 /* XMPPIDTracker.m in Sources */,
 				155DCBC219435D320040C6A0 /* JPMapListViewController.m in Sources */,
 				15951E8B18EEE283008A8868 /* NSXMLElement+XEP_0297.m in Sources */,
+				1514CF4D19D4D52100033FBC /* JPJoinViewController.m in Sources */,
 				15951E7918EEE283008A8868 /* XMPPMessageArchiving_Contact_CoreDataObject.m in Sources */,
 				15951D3518EE40B5008A8868 /* XMPPSCRAMSHA1Authentication.m in Sources */,
 				15951D3618EE40B5008A8868 /* XMPPXFacebookPlatformAuthentication.m in Sources */,

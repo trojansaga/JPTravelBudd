@@ -14,7 +14,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		mofbIpV6w9CCnEEuYxKUM2eDU2w=
+		4XmdDvGoCWju2Xg1k1Dm8uzQ3Sw=
 		</data>
 		<key>ClCell.nib</key>
 		<data>
@@ -34,19 +34,23 @@
 		</data>
 		<key>JPChatViewController.nib</key>
 		<data>
-		s4D2S6+t3Ckd/mKu/efZKNg0zIc=
+		XuCV7XOV0cH5SNyFGTa/MNeOqHE=
 		</data>
 		<key>JPChattingRoomViewController.nib</key>
 		<data>
-		kIi9XSqNzQdZPxiBfXI8T+YOdg4=
+		NZKz+VP3jjGpjWQR+mKrwQW6wLk=
+		</data>
+		<key>JPJoinViewController.nib</key>
+		<data>
+		eHcATjUrbiU/QUJo3K3bCVKUgrM=
 		</data>
 		<key>JPLoginViewController.nib</key>
 		<data>
-		thOWDUno3Ks3WLljY8YvKUm8cwA=
+		LDiPc78m4X13XUOEvUt0399WV7k=
 		</data>
 		<key>JPMakeChatRoomViewController.nib</key>
 		<data>
-		kjB8oj95vB6kf+xUmcobhXCwbdQ=
+		r9U+P/feDNWCJ/9NS8D3skamFxA=
 		</data>
 		<key>JPMapCreationViewController.nib</key>
 		<data>
@@ -66,7 +70,7 @@
 		</data>
 		<key>JPSettingViewController.nib</key>
 		<data>
-		/tU+I/3ABlh0ppNNu6jlFsoOcmM=
+		IIT9ZhnYMSWtwERPzSTNOSkPWIg=
 		</data>
 		<key>JPTabbarController.nib</key>
 		<data>
@@ -86,7 +90,7 @@
 		</data>
 		<key>Model.momd/Model.mom</key>
 		<data>
-		FjTXjpl3OYLa+13owRASdapxtDc=
+		D4Uar6DtYZQwxlpM7KEJ2Keb+PY=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -147,10 +151,6 @@
 		<key>en.lproj/InfoPlist.strings</key>
 		<data>
 		zmV6UqBSo6r1NOz798vd5O4zTBA=
-		</data>
-		<key>geo_fence-50.png</key>
-		<data>
-		2de9nU6ZM9900wVv9Ve6KKgq1eg=
 		</data>
 		<key>img.jpg</key>
 		<data>
@@ -173,7 +173,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		mofbIpV6w9CCnEEuYxKUM2eDU2w=
+		4XmdDvGoCWju2Xg1k1Dm8uzQ3Sw=
 		</data>
 		<key>ClCell.nib</key>
 		<data>
@@ -193,19 +193,23 @@
 		</data>
 		<key>JPChatViewController.nib</key>
 		<data>
-		s4D2S6+t3Ckd/mKu/efZKNg0zIc=
+		XuCV7XOV0cH5SNyFGTa/MNeOqHE=
 		</data>
 		<key>JPChattingRoomViewController.nib</key>
 		<data>
-		kIi9XSqNzQdZPxiBfXI8T+YOdg4=
+		NZKz+VP3jjGpjWQR+mKrwQW6wLk=
+		</data>
+		<key>JPJoinViewController.nib</key>
+		<data>
+		eHcATjUrbiU/QUJo3K3bCVKUgrM=
 		</data>
 		<key>JPLoginViewController.nib</key>
 		<data>
-		thOWDUno3Ks3WLljY8YvKUm8cwA=
+		LDiPc78m4X13XUOEvUt0399WV7k=
 		</data>
 		<key>JPMakeChatRoomViewController.nib</key>
 		<data>
-		kjB8oj95vB6kf+xUmcobhXCwbdQ=
+		r9U+P/feDNWCJ/9NS8D3skamFxA=
 		</data>
 		<key>JPMapCreationViewController.nib</key>
 		<data>
@@ -225,7 +229,7 @@
 		</data>
 		<key>JPSettingViewController.nib</key>
 		<data>
-		/tU+I/3ABlh0ppNNu6jlFsoOcmM=
+		IIT9ZhnYMSWtwERPzSTNOSkPWIg=
 		</data>
 		<key>JPTabbarController.nib</key>
 		<data>
@@ -245,7 +249,7 @@
 		</data>
 		<key>Model.momd/Model.mom</key>
 		<data>
-		FjTXjpl3OYLa+13owRASdapxtDc=
+		D4Uar6DtYZQwxlpM7KEJ2Keb+PY=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -306,10 +310,6 @@
 		<key>en.lproj/InfoPlist.strings</key>
 		<data>
 		zmV6UqBSo6r1NOz798vd5O4zTBA=
-		</data>
-		<key>geo_fence-50.png</key>
-		<data>
-		2de9nU6ZM9900wVv9Ve6KKgq1eg=
 		</data>
 		<key>img.jpg</key>
 		<data>

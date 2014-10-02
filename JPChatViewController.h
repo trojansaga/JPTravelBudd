@@ -12,17 +12,27 @@
 #import "JPAppDelegate.h"
 #import <CoreLocation/CoreLocation.h>
 
+@class JPJoinViewController;
+
 @interface JPChatViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NSURLConnectionDataDelegate, CLLocationManagerDelegate> {
     IBOutlet UITableView *chatRoomListTableView;
     int numOfChatRooms;
-    NSArray *chatRoomListArray;
+    int numOfJoinedRooms;
+    
+    NSMutableArray *chatRoomListArray;
+    NSArray *joinedChatRoomListArray;
 
     JPAppDelegate *appDelegate;
 
     
     UIActivityIndicatorView *indicator;
     JPChattingRoomViewController *chattingRoomViewController;
-    IBOutlet UINavigationBar *navBar;
+    JPJoinViewController *joinViewController;
+
+    CLLocationManager *locationManager;
+    IBOutlet UILabel *tempLabel;
+    
+    
     
 }
 //@property (nonatomic, strong) JPConnectionDelegateObject *jpConnectionDelegate;
