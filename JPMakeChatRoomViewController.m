@@ -206,7 +206,7 @@
                    @"m_TotalBudget",
                    ];
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        dateFormatter.dateFormat = @"YYYY-MM-DD HH:mm:ss";
+        dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
         
         NSArray *dataArr = @[
                     [dateFormatter stringFromDate:selectedMapRecord.m_FinishDate],
@@ -224,6 +224,12 @@
 
         JPAppDelegate *appDelegate = (JPAppDelegate *)[[UIApplication sharedApplication] delegate];
         [appDelegate sendDataHttp:dataArr keyForDic:keyArr urlString:URL_FOR_SEND_MAPDATA setDelegate:self];
+        
+        NSLog(@"lat : %@",selectedMapRecord.m_SavedLatitude);
+        NSLog(@"latD : %@",selectedMapRecord.m_SavedLatitudeDelta);
+        NSLog(@"lng : %@",selectedMapRecord.m_SavedLongitude);
+        NSLog(@"lngD : %@",selectedMapRecord.m_SavedLongitudeDelta);
+        
     }
 
     else if([responseType isEqualToString:@"AddMap"]) {
@@ -232,15 +238,17 @@
         NSString *mapID = [[dic objectForKey:@"data"] objectForKey:@"m_MapId"];
 
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        dateFormatter.dateFormat = @"YYYY-MM-DD HH:mm:ss";
+        dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
 
         NSMutableArray *pinsMutableArray = [[NSMutableArray alloc] init];
         
         for (PinRecord *pin in selectedMapRecord.pins) {
             //add pins
             NSArray *keyArr = @[
+                                @"p_Title",
                                 @"p_Budget",
                                 @"p_Description",
+                                @"p_StartDateStr",
                                 @"p_FinishDateStr",
                                 @"p_Latitude",
                                 @"p_Longitude",
@@ -249,8 +257,10 @@
                                 ];
             
             NSArray *dataArr = @[
+                                 pin.p_Title,
                                  [pin.p_Budget stringValue],
                                  pin.p_Description,
+                                 [dateFormatter stringFromDate:pin.p_StartDate],
                                  [dateFormatter stringFromDate:pin.p_FinishDate],
                                  [pin.p_Latitude stringValue],
                                  [pin.p_Longitude stringValue],

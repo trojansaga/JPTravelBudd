@@ -34,15 +34,15 @@
 		</data>
 		<key>JPChatViewController.nib</key>
 		<data>
-		XuCV7XOV0cH5SNyFGTa/MNeOqHE=
+		ajrZUY3UHPu/qU5VDcluRrDtwLU=
 		</data>
 		<key>JPChattingRoomViewController.nib</key>
 		<data>
-		NZKz+VP3jjGpjWQR+mKrwQW6wLk=
+		VKFLxuT2QBCyy+3rQT9WyzsLIpg=
 		</data>
 		<key>JPJoinViewController.nib</key>
 		<data>
-		eHcATjUrbiU/QUJo3K3bCVKUgrM=
+		OE6MP9jFIHBHGeQhBWM4SC0qhrA=
 		</data>
 		<key>JPLoginViewController.nib</key>
 		<data>
@@ -66,7 +66,11 @@
 		</data>
 		<key>JPMapViewController.nib</key>
 		<data>
-		E13z4xbXe0+FDmQGEATkhhdpED8=
+		Fbb3FdePoOnEOQqGHhBj5EQ4n5Y=
+		</data>
+		<key>JPPinInfoView.nib</key>
+		<data>
+		BEi/lPYaF7H55a45GW9VPNtKSx8=
 		</data>
 		<key>JPSettingViewController.nib</key>
 		<data>
@@ -146,7 +150,7 @@
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		VontoV5ANBoLFx9OiT59srIh2+g=
+		jekU4kwa4BKFhAgrFfUy+1OSYkg=
 		</data>
 		<key>en.lproj/InfoPlist.strings</key>
 		<data>
@@ -193,15 +197,15 @@
 		</data>
 		<key>JPChatViewController.nib</key>
 		<data>
-		XuCV7XOV0cH5SNyFGTa/MNeOqHE=
+		ajrZUY3UHPu/qU5VDcluRrDtwLU=
 		</data>
 		<key>JPChattingRoomViewController.nib</key>
 		<data>
-		NZKz+VP3jjGpjWQR+mKrwQW6wLk=
+		VKFLxuT2QBCyy+3rQT9WyzsLIpg=
 		</data>
 		<key>JPJoinViewController.nib</key>
 		<data>
-		eHcATjUrbiU/QUJo3K3bCVKUgrM=
+		OE6MP9jFIHBHGeQhBWM4SC0qhrA=
 		</data>
 		<key>JPLoginViewController.nib</key>
 		<data>
@@ -225,7 +229,11 @@
 		</data>
 		<key>JPMapViewController.nib</key>
 		<data>
-		E13z4xbXe0+FDmQGEATkhhdpED8=
+		Fbb3FdePoOnEOQqGHhBj5EQ4n5Y=
+		</data>
+		<key>JPPinInfoView.nib</key>
+		<data>
+		BEi/lPYaF7H55a45GW9VPNtKSx8=
 		</data>
 		<key>JPSettingViewController.nib</key>
 		<data>
@@ -305,7 +313,7 @@
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		VontoV5ANBoLFx9OiT59srIh2+g=
+		jekU4kwa4BKFhAgrFfUy+1OSYkg=
 		</data>
 		<key>en.lproj/InfoPlist.strings</key>
 		<data>

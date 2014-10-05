@@ -27,6 +27,36 @@
     //temp
     NSString *sendedString;
     
+    //map
+    IBOutlet UILabel *labelForTitle;
+    IBOutlet UILabel *labelForBudget;
+    IBOutlet UILabel *labelForStartDate;
+    IBOutlet UILabel *labelForFinishDate;
+    
+    IBOutlet UIView *pinInfoView;
+    //pin Info
+    IBOutlet UITextField *textFieldForPinTitle;
+    IBOutlet UITextField *textFieldForPinBudget;
+    IBOutlet UITextField *textFieldForPinOrder;
+    IBOutlet UITextField *textFieldForPinDesc;
+    IBOutlet UILabel    *labelForPinStartDate;
+    IBOutlet UILabel    *labelForPinFinishDate;
+    IBOutlet UIButton   *buttonForPinEdit;
+    IBOutlet UIButton   *buttonForPinDelete;
+    
+    //map&pin data
+    NSArray *pinsArr;
+    NSDictionary *mapData;
+    int p_MapId;
+    
+    double pinLatitude;
+    double pinLongitude;
+
+    //polyline drawing
+    MKPolylineRenderer  *routeLineRenderer;
+    MKPlacemark *thePlacemark;
+    MKRoute *theRoute;
+    MKRoute *routeData;
     
 }
 @property (nonatomic, strong) NSString *chatRoomTitle;
@@ -38,6 +68,7 @@
 @property (nonatomic, strong) NSManagedObjectContext *mob;
 
 @property (nonatomic, strong) IBOutlet UIView *viewForMoreButtons;
+@property (nonatomic, strong) IBOutlet UIView *viewForMoreInfo;
 @property (nonatomic, strong) IBOutlet MKMapView *roomMapView;
 //@property (nonatomic, assign) NSInteger countOfChattingContents;
 

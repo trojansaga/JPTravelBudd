@@ -16,6 +16,7 @@
 #import "JPMapViewController.h"
 #import "PinRecord.h"
 
+
 #define kChatContentsCellID     @"chatCellIdentifier"
 #define kChatContentsCellIDMe   @"chatCellIdentifierForMe"
 
@@ -64,10 +65,10 @@
     
 
     UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(showMoreButtons)];
-    UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFastForward target:self action:@selector(action)];
+    UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(showViewForMoreInfo)];
 
 //    self.navigationItem.rightBarButtonItem = button;
-    self.navigationItem.rightBarButtonItems = @[button, mapButton];
+    self.navigationItem.rightBarButtonItems = @[button,mapButton];
     
     [self.view addSubview:_viewForMoreButtons];
     _viewForMoreButtons.alpha = 0;
@@ -80,6 +81,7 @@
     recognizer.numberOfTapsRequired = 1;
     recognizer.numberOfTouchesRequired = 1;
     [self.view addGestureRecognizer:recognizer];
+
     
 
     //키보드 올림 노티 등록
@@ -118,11 +120,25 @@
     //owner or member
     if (_isOwner == YES) {
         roomExitButton.titleLabel.text = @"Delete Room";
+        //LongPress GestureRecognizer
+        UILongPressGestureRecognizer *longPressGestureRecongnizer = [[UILongPressGestureRecognizer alloc]
+                                                                     initWithTarget:self
+                                                                     action:@selector(longPressed:)];
+        [_roomMapView addGestureRecognizer:longPressGestureRecongnizer];
+
     }
     else {
         roomExitButton.titleLabel.text = @"Unjoin Room";
+        buttonForPinEdit.hidden = YES;
+        buttonForPinDelete.hidden = YES;
     }
+    
+//    [_viewForMoreButtons setFrame:CGRectMake(_viewForMoreButtons.frame.origin.x, _viewForMoreButtons.frame.origin.y, 320, self.view.frame.size.height + self.navigationController.navigationBar.frame.size.height)];
+//    _roomMapView.frame = CGRectMake(_roomMapView.frame.origin.x, _roomMapView.frame.origin.y, 320, _viewForMoreButtons.frame.size.height);
+
+
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -135,7 +151,8 @@
     [self enterRoom];
     [self refreshChattingContents];
     self.tabBarController.tabBar.hidden = YES;
-    
+
+    pinInfoView.hidden = YES;
     
     
 }
@@ -198,11 +215,11 @@
 
 - (void)action {
     NSLog(@"af");
-    JPMapViewController *mapViewController = [[JPMapViewController alloc] initWithNibName:@"JPMapViewController" bundle:nil];
-    mapViewController.managedObjectContext = _mob;
-    mapViewController.mapRecord = _mapData;
-    
-    [self.navigationController pushViewController:mapViewController animated:YES];
+//    JPMapViewController *mapViewController = [[JPMapViewController alloc] initWithNibName:@"JPMapViewController" bundle:nil];
+//    mapViewController.managedObjectContext = _mob;
+//    mapViewController.mapRecord = _mapData;
+//    
+//    [self.navigationController pushViewController:mapViewController animated:YES];
     
 }
 
@@ -281,23 +298,257 @@
     }
 }
 
+#pragma mark - Map Data 
 
-#pragma mark - UI
+- (void) pinDataChangedSend {
+    
+}
+
+- (void) pinAddSend {
+    
+}
+
+- (IBAction)pinDelete:(id)sender {
+    for (JPMapAnnotation *anno in [_roomMapView annotations]) {
+        if ([anno.order isEqualToNumber:[NSNumber numberWithInt:[anno.order intValue]]]) {
+            [_roomMapView removeAnnotation:anno];
+            
+            NSArray *data = @[
+                              [NSNumber numberWithInt:[anno.pinId intValue]]
+                              ];
+            NSArray *key = @[
+                             @"p_PinId"
+                             ];
+            
+            [appDelegate sendDataHttp:data keyForDic:key urlString:URL_FOR_DELETE_PINDATA setDelegate:self];
+
+        }
+    }
+    [self hidePinInfoView:nil];
+
+    NSLog(@"deleted");
+
+}
+
+- (IBAction)pinEdit:(id)sender{
+
+    BOOL isFound = NO;
+    //edit
+    NSString *order = textFieldForPinOrder.text;
+    for (JPMapAnnotation *anno in [_roomMapView annotations]) {
+        if ([anno.order isEqualToNumber:[NSNumber numberWithInt:[order intValue]]]) {
+            NSLog(@"edited");
+            NSLog(@"%@,%@", anno.order, textFieldForPinOrder.text);
+            anno.title = textFieldForPinTitle.text;
+            anno.order = [NSNumber numberWithInt:[textFieldForPinOrder.text intValue]];
+            anno.subtitle = textFieldForPinDesc.text;
+            anno.budget = [NSNumber numberWithInt:[textFieldForPinBudget.text intValue]];
+            isFound = YES;
+            
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+            
+            NSArray *data = @[
+                              anno.title,
+                              [anno.budget stringValue],
+                              anno.subtitle,
+                              [dateFormatter stringFromDate:anno.finishDate],
+                              [dateFormatter stringFromDate:anno.startDate],
+                              [NSNumber numberWithInt:p_MapId],
+                              [anno.order stringValue],
+                              anno.pinId
+                              ];
+            NSArray *key = @[
+                             @"p_Title",
+                             @"p_Budget",
+                             @"p_Description",
+                             @"p_FinishDateStr",
+                             @"p_StartDateStr",
+                             @"p_MapId",
+                             @"p_Order",
+                             @"p_PinId"
+                             ];
+            
+            [appDelegate sendDataHttp:data keyForDic:key urlString:URL_FOR_UPDATE_PINDATA setDelegate:self];
+            
+            
+        }
+    }
+    
+    //add - not found from annotations
+    if (isFound == NO) {
+        NSLog(@"added");        
+        JPMapAnnotation *anno = [[JPMapAnnotation alloc] init];
+        anno.title = textFieldForPinTitle.text;
+        anno.budget = [NSNumber numberWithInt:[textFieldForPinBudget.text intValue]];
+        anno.subtitle = textFieldForPinDesc.text;
+        anno.order = [NSNumber numberWithInt:[textFieldForPinOrder.text intValue]];
+        anno.latitude = [NSNumber numberWithDouble:pinLatitude];
+        anno.longitude = [NSNumber numberWithDouble:pinLongitude];
+        
+        [_roomMapView addAnnotation:anno];
+        
+        [self pinAddSend];
+        
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+        
+        NSArray *data = @[
+                          anno.title,
+                          [anno.budget stringValue],
+                          anno.subtitle,
+                          labelForPinFinishDate.text,
+                          labelForPinStartDate.text,
+                          anno.latitude,
+                          anno.longitude,
+                          [NSNumber numberWithInt:p_MapId],
+                          [anno.order stringValue],
+                          
+                          ];
+        NSArray *key = @[
+                         @"p_Title",
+                         @"p_Budget",
+                         @"p_Description",
+                         @"p_FinishDateStr",
+                         @"p_StartDateStr",
+                         @"p_Latitude",
+                         @"p_Longitude",
+                         @"p_MapId",
+                         @"p_Order",
+
+                         ];
+        
+        [appDelegate sendDataHttp:data keyForDic:key urlString:URL_FOR_SEND_PINDATA setDelegate:self];
+    }
+    
+    
+    [self hidePinInfoView:nil];
+    
+    
+}
+
+
+#pragma mark - Map UI
+
+- (void)longPressed:(UILongPressGestureRecognizer *)gr {
+    CGPoint touchPoint = [gr locationInView:_roomMapView];
+    CLLocationCoordinate2D touchMapCoordinate = [_roomMapView convertPoint:touchPoint toCoordinateFromView:_roomMapView];
+    
+    pinLatitude = touchMapCoordinate.latitude;
+    pinLongitude = touchMapCoordinate.longitude;
+    
+    
+    [self showPinInfoView];
+    
+    buttonForPinDelete.hidden = YES;
+
+}
+
+- (IBAction)hidePinInfoView:(id)sender {
+    pinInfoView.hidden = YES;
+    textFieldForPinTitle.text = @"";
+    textFieldForPinBudget.text = @"";
+    textFieldForPinOrder.text = @"";
+    textFieldForPinDesc.text = @"";
+
+}
+
+- (void)showPinInfoView {
+    
+    textFieldForPinOrder.text = [NSString stringWithFormat:@"%li", [_roomMapView.annotations count]];
+    pinInfoView.hidden = NO;
+}
+
+- (void)drawLines {
+    //draw lines
+//    pinsArr = [_roomMapView annotations];
+    NSArray *arr = [_roomMapView annotations];
+    
+    arr = [arr sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
+        NSNumber *first = [(JPMapAnnotation *)a order];
+        NSNumber *second = [(JPMapAnnotation *)b order];
+//        NSNumber *second = [b objectForKey:@"p_Order"];
+        return [first compare:second];
+    }];
+    
+    for (int i = 0; i < [arr count]-1; i++) {
+        MKDirectionsRequest *directionsRequest = [[MKDirectionsRequest alloc] init];
+        
+        double startLat = [[[arr objectAtIndex:i] latitude] doubleValue];
+        double startLng = [[[arr objectAtIndex:i] longitude] doubleValue];
+        double finLat = [[[arr objectAtIndex:i+1] latitude] doubleValue];
+        double finLng = [[[arr objectAtIndex:i+1] longitude] doubleValue];
+        
+        
+        MKPlacemark *sourcePlacemark = [[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake(startLat, startLng) addressDictionary:nil];
+        MKPlacemark *destPlacemark = [[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake(finLat, finLng) addressDictionary:nil];
+        
+        [directionsRequest setSource:[[MKMapItem alloc] initWithPlacemark:sourcePlacemark]];
+        [directionsRequest setDestination:[[MKMapItem alloc] initWithPlacemark:destPlacemark]];
+        
+        directionsRequest.transportType = MKDirectionsTransportTypeWalking;
+        MKDirections *directions = [[MKDirections alloc] initWithRequest:directionsRequest];
+        [directions calculateDirectionsWithCompletionHandler:^(MKDirectionsResponse *response, NSError *error) {
+            if (error) {
+                NSLog(@"Error %@", error.description);
+            } else {
+                routeData = [[response routes] lastObject];
+                [_roomMapView addOverlay:routeData.polyline];
+                //                NSLog(@"one line is drawn.");
+            }
+        }];
+    }
+}
 
 - (void)showMoreButtons {
     if (_viewForMoreButtons.alpha == 1) {
         _viewForMoreButtons.alpha = 0;
+        _viewForMoreInfo.hidden = YES;
+
+        //restore
+        //키보드 올림 노티 등록
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(keyboardWillAnimate:)
+                                                     name:UIKeyboardWillShowNotification
+                                                   object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(keyboardWillAnimate:)
+                                                     name:UIKeyboardWillHideNotification
+                                                   object:nil];
+
     }
     else {
         [UIView animateWithDuration:0.1 animations:^{
             _viewForMoreButtons.alpha = 1;
         }];
+        [self removeKeyboardNotification];
+        
+
     }
+    
+//    if ([self.navigationItem.rightBarButtonItems count] == 1) {
+//        UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(showMoreButtons)];
+//        UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(showViewForMoreInfo)];
+//        self.navigationItem.rightBarButtonItems = @[button, mapButton];
+//    }
+//    else {
+//        UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(showViewForMoreInfo)];
+//        self.navigationItem.rightBarButtonItems = @[mapButton];
+//    }
 }
 
+
+#pragma mark - UI
+
 - (void) resignKeyboard {
+
     [textFieldForMessage resignFirstResponder];
-    _viewForMoreButtons.alpha = 0;
+    [textFieldForPinTitle resignFirstResponder];
+    [textFieldForPinOrder resignFirstResponder];
+    [textFieldForPinDesc resignFirstResponder];
+    [textFieldForPinBudget resignFirstResponder];
+//    _viewForMoreButtons.alpha = 0;
 }
 
 - (void)keyboardWillAnimate:(NSNotification *)notification
@@ -328,7 +579,17 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 }
 
+- (void) showViewForMoreInfo {
+    if (_viewForMoreInfo.hidden == YES) {
+        _viewForMoreInfo.hidden = NO;
 
+    }
+    else {
+        _viewForMoreInfo.hidden = YES;
+        
+        
+    }
+}
 
 #pragma mark - More Buttons
 
@@ -378,6 +639,7 @@
                       _cr_id_room,
                       _crm_id,
                       ];
+
     NSArray *key = @[
                      @"userName",
                      @"userPwd",
@@ -619,8 +881,6 @@
     
     //채팅방 리스트
     if ([responseType isEqualToString:@"Delete ChatRoom"]) {
-//        NSLog(@"//채팅방 지우기//");
-//        NSLog(@"%@", [dic objectForKey:@"message"]);
         [self.navigationController popViewControllerAnimated:YES];
     }
     else if([responseType isEqualToString:@"Deactivate ChatRoom Member"]) {
@@ -642,43 +902,94 @@
 
     }
     
+    
     //map data received
     else if ([responseType isEqualToString:@"GetMap"]) {
         NSLog(@"//Map data received//");
         
         NSDictionary *mapDataDic = [dic objectForKey:@"data"];
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        dateFormatter.dateFormat = @"YYYY-MM-DD hh:mm:ss";
-        //add map data
-        //////////
-        _mapData = [NSEntityDescription insertNewObjectForEntityForName:@"MapRecord" inManagedObjectContext:_mob];
-        _mapData.m_FinishDate = [dateFormatter dateFromString:[mapDataDic objectForKey:@"m_FinishDateStr"]];
-        _mapData.m_StartDate = [dateFormatter dateFromString:[mapDataDic objectForKey:@"m_StartDateStr"]];
-        _mapData.m_MapTitle = [mapDataDic objectForKey:@"m_MapTitle"];
-        _mapData.m_SavedLatitude = [mapDataDic objectForKey:@"m_SavedLatitude"];
-        _mapData.m_SavedLatitudeDelta = [mapDataDic objectForKey:@"SavedLatitudeDelta"];
-        _mapData.m_SavedLongitude = [mapDataDic objectForKey:@"m_SavedLongitude"];
-        _mapData.m_SavedLongitudeDelta = [mapDataDic objectForKey:@"SavedLongitudeDelta"];
-        _mapData.m_TotalBudget = [mapDataDic objectForKey:@"m_TotalBudget"];
+        dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
         
         
-        NSArray *pinsDataArr = [mapDataDic objectForKey:@"pins"];
-        for (NSDictionary *dic in pinsDataArr) {
-            //add pin annotation
-            /////////////////
-            //        _roomMapView addpin!!!!!
-            //        _roomMapView addAnnotation:
-            PinRecord *pin = [NSEntityDescription insertNewObjectForEntityForName:@"PinRecord" inManagedObjectContext:_mob];
-            pin.p_Budget = [dic objectForKey:@"p_Budget"];
-            pin.p_Description = [dic objectForKey:@"p_Description"];
-            pin.p_FinishDate = [dateFormatter dateFromString:[dic objectForKey:@"p_FinishDateStr"]];
-//            pin.p_StartDate = [dateFormatter dateFromString:[dic objectForKey:@""]]//no start date
-            pin.p_Latitude = [dic objectForKey:@"p_Latitude"];
-            pin.p_Longitude =[dic objectForKey:@"p_Longitude"];
-            pin.p_Order = [dic objectForKey:@"p_Order"];
-            [_mapData addPinsObject:pin];
+        
+        //info View
+        labelForTitle.text = [mapDataDic objectForKey:@"m_MapTitle"];
+        labelForBudget.text = [[mapDataDic objectForKey:@"m_TotalBudget"] stringValue];
+        labelForStartDate.text = [mapDataDic objectForKey:@"m_StartDateStr"];
+        labelForFinishDate.text = [mapDataDic objectForKey:@"m_FinishDateStr"];
+        
+        //inner variable
+        mapData = mapDataDic;
+        
+        
+        //map modulation
+        double lat = [[mapDataDic objectForKey:@"m_SavedLatitude"] doubleValue];
+        double lng = [[mapDataDic objectForKey:@"m_SavedLongitude"] doubleValue];
+        double latDelta = [[mapDataDic objectForKey:@"m_SavedLatitudeDelta"] doubleValue];
+        double lngDelta = [[mapDataDic objectForKey:@"m_SavedLongitudeDelta"] doubleValue];
+        
+//        //seoul temp value
+//        double lat = 37.52828105087837;
+//        double lng = 127.0977043415754;
+//        double latDelta = 0.152065721159957;
+//        double lngDelta = 0.1644502557309693;
+        
+        
+//        NSLog(@"lat : %.16lf",lat);
+//        NSLog(@"latD : %.16lf",latDelta);
+//        NSLog(@"lng : %.16lf",lng);
+//        NSLog(@"lngD : %.16lf",lngDelta);
+        
+        [_roomMapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake(lat, lng), MKCoordinateSpanMake(latDelta, lngDelta))];
+        
+        //set pins
+        pinsArr = [mapDataDic objectForKey:@"pins"];
+        for (NSDictionary *pin in pinsArr) {
+            JPMapAnnotation *anno = [[JPMapAnnotation alloc] init];
+            anno.coordinate = CLLocationCoordinate2DMake([[pin objectForKey:@"p_Latitude"] doubleValue], [[pin objectForKey:@"p_Longitude"] doubleValue]);
+            anno.title = [pin objectForKey:@"p_Title"];
+            anno.subtitle = [pin objectForKey:@"p_Description"];
+            anno.order = [pin objectForKey:@"p_Order"];
+            anno.budget = [pin objectForKey:@"p_Budget"];
+            anno.pinId = [pin objectForKey:@"p_PinId"];
+            anno.startDate = [dateFormatter dateFromString:[pin objectForKey:@"p_StartDateStr"]];
+            anno.finishDate = [dateFormatter dateFromString:[pin objectForKey:@"p_FinishDateStr"]];
+            
+            [_roomMapView addAnnotation:anno];
+            NSNumber *num = [mapDataDic objectForKey:@"m_MapId"];
+            p_MapId = [num intValue];
         }
-        [_mob rollback];
+        
+        
+        [self drawLines];
+
+    }
+    
+    else if ([responseType isEqualToString:@"DelPin"]) {
+        NSLog(@"//pin deleted//");
+        
+        //다끝내고 그림 그리기
+        [_roomMapView removeOverlays:[_roomMapView overlays]];
+        [self drawLines];
+
+    }
+    else if ([responseType isEqualToString:@"AddPin"]) {
+        NSLog(@"//pin added//");
+        
+        //다끝내고 그림 그리기
+        [_roomMapView removeOverlays:[_roomMapView overlays]];
+        [self drawLines];
+
+    }
+    else if ([responseType isEqualToString:@"UpdatePin"]) {
+        NSLog(@"//pin updated//");
+        
+        //다끝내고 그림 그리기
+        [_roomMapView removeOverlays:[_roomMapView overlays]];
+        [self drawLines];
+
+//        NSLog(@"%@",[dic objectForKey:@"result"]);
     }
 
     
@@ -740,6 +1051,114 @@
 
     
     
+    
+}
+
+
+#pragma mark - mapview delegate
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay {
+    
+    routeLineRenderer = [[MKPolylineRenderer alloc] initWithPolyline:routeData.polyline];
+    routeLineRenderer.strokeColor = [UIColor brownColor];
+    routeLineRenderer.lineWidth = 3;
+    
+    return routeLineRenderer;
+}
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+    if (![view.annotation isKindOfClass:[MKUserLocation class]]) {
+        JPMapAnnotation *anno = (JPMapAnnotation *)[view annotation];
+        
+    }
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+    //    NSLog(@"click callout");
+    JPMapAnnotation *annoData = view.annotation;
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    
+//    NSLog(@"%@", annoData.title);
+//    NSLog(@"%@", annoData.subtitle);
+//    NSLog(@"%@", [annoData.order stringValue]);
+//    NSLog(@"%@", [annoData.budget stringValue]);
+//    NSLog(@"%@", [dateFormatter stringFromDate:annoData.startDate]);
+//    NSLog(@"%@", [dateFormatter stringFromDate:annoData.finishDate]);
+    
+    textFieldForPinTitle.text = annoData.title;
+    textFieldForPinOrder.text = [annoData.order stringValue];
+    textFieldForPinBudget.text = [annoData.budget stringValue];
+    textFieldForPinDesc.text = annoData.subtitle;
+    labelForPinStartDate.text = [dateFormatter stringFromDate:annoData.startDate];
+    labelForPinFinishDate.text = [dateFormatter stringFromDate:annoData.finishDate];
+    
+    pinInfoView.hidden = NO;
+    if (_isOwner == YES) {
+        buttonForPinDelete.hidden = NO;
+    }
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    // If it's the user location, just return nil.
+    if ([annotation isKindOfClass:[MKUserLocation class]]){
+        //        MKPinAnnotationView *userPin = (MKPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"userLocationAnnotationView"];
+        MKPinAnnotationView *userPin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil];
+        userPin.pinColor = MKPinAnnotationColorGreen;
+        
+        return userPin;
+    }
+    
+    // Handle any custom annotations.
+    if ([annotation isKindOfClass:[MKPointAnnotation class]]) {
+        // Try to dequeue an existing pin view first.
+        MKPinAnnotationView *pinView = (MKPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"CustomPinAnnotationView"];
+        //        NSLog(@"here?1");
+        if (!pinView)
+        {
+            //            NSLog(@"here?2");
+            // If an existing pin view was not available, create one.
+            pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"CustomPinAnnotationView"];
+            pinView.canShowCallout = YES;
+            pinView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+            if (_isOwner == YES) {
+                pinView.draggable = YES;
+            }
+
+            
+        } else {
+            //            NSLog(@"here?3");
+            pinView.annotation = annotation;
+        }
+        return pinView;
+    }
+    return nil;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view didChangeDragState:(MKAnnotationViewDragState)newState fromOldState:(MKAnnotationViewDragState)oldState {
+    
+    if (oldState == MKAnnotationViewDragStateEnding) {
+        NSLog(@"drag ends");
+        
+        JPMapAnnotation *anno = view.annotation;
+        
+        NSArray *data = @[
+                          anno.latitude,
+                          anno.longitude,
+                          [NSNumber numberWithInt:p_MapId],
+                          anno.pinId
+                          ];
+        NSArray *key = @[
+                         @"p_Latitude",
+                         @"p_Longitude",
+                         @"p_MapId",
+                         @"p_PinId"
+                         ];
+        
+        [appDelegate sendDataHttp:data keyForDic:key urlString:URL_FOR_UPDATE_PINDATA setDelegate:self];
+    }
 }
 
 @end
+

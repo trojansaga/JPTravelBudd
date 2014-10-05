@@ -34,8 +34,18 @@
     
     //total list
     NSString *str = [[NSUserDefaults standardUserDefaults] objectForKey:@"XMPPJID"];
-    NSArray *objects = @[str];
-    NSArray *keys = @[@"member_email"];
+    double lat = [[NSUserDefaults standardUserDefaults] doubleForKey:@"CL_lat"];
+    double lng = [[NSUserDefaults standardUserDefaults] doubleForKey:@"CL_lng"];
+    NSArray *objects = @[
+                         [NSNumber numberWithDouble:lat],
+                         [NSNumber numberWithDouble:lng],
+                         str
+                         ];
+    NSArray *keys = @[
+                      @"chat_room_lat",
+                      @"chat_room_lng",
+                      @"userEmail"
+                      ];
     
     [appDelegate sendDataHttp:objects keyForDic:keys urlString:URL_FOR_ROOM_LIST setDelegate:self];
     
@@ -43,6 +53,15 @@
     /////////////////////////////조인드 리스트는 응답없고, 위에 토탈 리스트는 조인안된애들은 안불러와야하는게 맞당
     
     //joined list
+    
+    objects = @[
+                         str
+                         ];
+    keys = @[
+                      @"member_email"
+                      
+                      ];
+    
     
     [appDelegate sendDataHttp:objects keyForDic:keys urlString:URL_FOR_ROOM_MYLIST setDelegate:self];
     
@@ -126,7 +145,40 @@
 #pragma mark - Private Func
 
 - (IBAction)reloadTableView:(id)sender {
-    [chatRoomListTableView reloadData];
+    //total list
+    NSString *str = [[NSUserDefaults standardUserDefaults] objectForKey:@"XMPPJID"];
+    double lat = [[NSUserDefaults standardUserDefaults] doubleForKey:@"CL_lat"];
+    double lng = [[NSUserDefaults standardUserDefaults] doubleForKey:@"CL_lng"];
+    NSArray *objects = @[
+                         [NSNumber numberWithDouble:lat],
+                         [NSNumber numberWithDouble:lng],
+                         str
+                         ];
+    NSArray *keys = @[
+                      @"chat_room_lat",
+                      @"chat_room_lng",
+                      @"userEmail"
+                      ];
+    
+    [appDelegate sendDataHttp:objects keyForDic:keys urlString:URL_FOR_ROOM_LIST setDelegate:self];
+    
+    
+    /////////////////////////////조인드 리스트는 응답없고, 위에 토탈 리스트는 조인안된애들은 안불러와야하는게 맞당
+    
+    //joined list
+    
+    objects = @[
+                str
+                ];
+    keys = @[
+             @"member_email"
+             
+             ];
+    
+    
+    [appDelegate sendDataHttp:objects keyForDic:keys urlString:URL_FOR_ROOM_MYLIST setDelegate:self];
+    
+//    [chatRoomListTableView reloadData];
 }
 - (IBAction)makeRoom:(id)sender {
     JPMakeChatRoomViewController *makeChatRoomViewController = [[JPMakeChatRoomViewController alloc] initWithNibName:@"JPMakeChatRoomViewController" bundle:nil];
@@ -294,9 +346,21 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
 
+    //joined
     if (indexPath.section == 0) {
         cell.textLabel.text = [[joinedChatRoomListArray objectAtIndex:indexPath.row] objectForKey:@"chat_room_name"];
+        
+        NSString *maker = [[[joinedChatRoomListArray objectAtIndex:indexPath.row] objectForKey:@"chat_room_maker"] stringValue];
+        NSString *me = [[NSUserDefaults standardUserDefaults] objectForKey:@"M_ID"];
+        NSLog(@"maker %@ , me %@", maker, me);
+        
+        if ([maker isEqualToString:me]) {
+
+            cell.backgroundColor = [UIColor greenColor];
+        }
     }
+
+    //not joined
     else if (indexPath.section == 1) {
         NSDictionary *data = [chatRoomListArray objectAtIndex:indexPath.row];
         cell.textLabel.text = [data objectForKey:@"chat_room_name"];

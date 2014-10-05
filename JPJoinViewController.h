@@ -14,9 +14,23 @@
 
 
 
-@interface JPJoinViewController : UIViewController {
+@interface JPJoinViewController : UIViewController <MKMapViewDelegate> {
     
     IBOutlet MKMapView *mapView;
+    
+    IBOutlet UILabel *labelForTitle;
+    IBOutlet UILabel *labelForBudget;
+    IBOutlet UILabel *labelForStartDate;
+    IBOutlet UILabel *labelForFinishDate;
+    IBOutlet UIView *infoView;
+
+    
+    
+    MKPolylineRenderer  *routeLineRenderer;
+    //polyline drawing
+    MKPlacemark *thePlacemark;
+    MKRoute *theRoute;
+    MKRoute *routeData;
     
 }
 

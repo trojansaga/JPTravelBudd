@@ -403,7 +403,7 @@
     [datePicker addTarget:self action:@selector(changeFinishDate) forControlEvents:UIControlEventValueChanged];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"MM/dd-HH:mm";
+    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
     
     
     NSDate *startDate = [formatter dateFromString:pinStartDateLabel.text];
@@ -424,14 +424,14 @@
 
 - (void)changeStartDate {
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"MM/dd-HH:mm"];
+    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     pinStartDateLabel.text = [NSString stringWithFormat:@"%@",
                               [dateFormat stringFromDate:datePicker.date]];
 }
 
 - (void)changeFinishDate {
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"MM/dd-HH:mm"];
+    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     pinFinishDateLabel.text = [NSString stringWithFormat:@"%@",
                                [dateFormat stringFromDate:datePicker.date]];
 }
@@ -925,7 +925,7 @@
           
 
             NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-            [dateFormatter setDateFormat:@"MM/dd-HH:mm"];
+            [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
             
             [pinMark setStartDate:[dateFormatter dateFromString:pinStartDateLabel.text]];
             [pinMark setFinishDate:[dateFormatter dateFromString:pinFinishDateLabel.text]];
@@ -946,7 +946,7 @@
         [pinMark setBudget:[NSNumber numberWithInt:[pinTextFieldForBudget.text intValue]]];
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"MM/dd-HH:mm"];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
         
         [pinMark setStartDate:[dateFormatter dateFromString:pinStartDateLabel.text]];
         [pinMark setFinishDate:[dateFormatter dateFromString:pinFinishDateLabel.text]];
@@ -1092,7 +1092,7 @@
     pinTextFieldForBudget.text = [NSString stringWithFormat:@"%i", [annoData.budget intValue]];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"MM/dd-HH:mm"];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     
     pinStartDateLabel.text = [dateFormatter stringFromDate:annoData.startDate];
     pinFinishDateLabel.text = [dateFormatter stringFromDate:annoData.finishDate];

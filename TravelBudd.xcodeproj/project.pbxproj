@@ -188,6 +188,8 @@
 		15ABB3EC19B17E9A00D97549 /* JPChatContentCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15ABB3EA19B17E9A00D97549 /* JPChatContentCellTableViewCell.xib */; };
 		15ABB3F019B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 15ABB3EE19B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.m */; };
 		15ABB3F119B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15ABB3EF19B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.xib */; };
+		15D99A1F19E065E100B862F1 /* JPPinInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15D99A1E19E065E100B862F1 /* JPPinInfoView.xib */; };
+		15D99A2219E0681E00B862F1 /* JPPinInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D99A2119E0681E00B862F1 /* JPPinInfoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -544,6 +546,9 @@
 		15ABB3ED19B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPChatContentCellTableViewCellForMe.h; sourceTree = "<group>"; };
 		15ABB3EE19B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPChatContentCellTableViewCellForMe.m; sourceTree = "<group>"; };
 		15ABB3EF19B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JPChatContentCellTableViewCellForMe.xib; sourceTree = "<group>"; };
+		15D99A1E19E065E100B862F1 /* JPPinInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JPPinInfoView.xib; sourceTree = "<group>"; };
+		15D99A2019E0681E00B862F1 /* JPPinInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPPinInfoView.h; sourceTree = "<group>"; };
+		15D99A2119E0681E00B862F1 /* JPPinInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPPinInfoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -612,6 +617,9 @@
 				1514CF4C19D4D52100033FBC /* JPJoinViewController.xib */,
 				159A591D19DB11240038090A /* JPChattingRoomMapViewController.h */,
 				159A591E19DB11240038090A /* JPChattingRoomMapViewController.m */,
+				15D99A2019E0681E00B862F1 /* JPPinInfoView.h */,
+				15D99A2119E0681E00B862F1 /* JPPinInfoView.m */,
+				15D99A1E19E065E100B862F1 /* JPPinInfoView.xib */,
 			);
 			name = Chatting;
 			sourceTree = "<group>";
@@ -1643,6 +1651,7 @@
 				1540BADF191E544100B1DBE0 /* JPChattingRoomViewController.xib in Resources */,
 				1522A55A19AB353200B1C54F /* JPMapListCell.xib in Resources */,
 				155DCBC319435D320040C6A0 /* JPMapListViewController.xib in Resources */,
+				15D99A1F19E065E100B862F1 /* JPPinInfoView.xib in Resources */,
 				1522A54919AAE32500B1C54F /* ClCell.xib in Resources */,
 				153A728B18F2455300C7ABB7 /* JPMapViewController.xib in Resources */,
 				15ABB3F119B2FE4600D97549 /* JPChatContentCellTableViewCellForMe.xib in Resources */,
@@ -1776,6 +1785,7 @@
 				15951E6718EEE283008A8868 /* XMPPResultSet.m in Sources */,
 				15951E7618EEE283008A8868 /* XMPPCapsResourceCoreDataStorageObject.m in Sources */,
 				15951E7818EEE283008A8868 /* XMPPMessageArchiving.xcdatamodeld in Sources */,
+				15D99A2219E0681E00B862F1 /* JPPinInfoView.m in Sources */,
 				15951E7D18EEE283008A8868 /* XMPPvCardAvatarModule.m in Sources */,
 				15951E5418EEE283008A8868 /* XMPPRoomMessageMemoryStorageObject.m in Sources */,
 				15951E4C18EEE283008A8868 /* XMPPRoomCoreDataStorage.m in Sources */,

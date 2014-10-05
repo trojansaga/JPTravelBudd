@@ -18,6 +18,7 @@
 
 @property (nonatomic, copy) NSString * title;
 @property (nonatomic, copy) NSString * subtitle;
+@property (nonatomic, strong) NSString *pinId;
 
 //@property (nonatomic, retain) NSString * description;
 @property (nonatomic, retain) NSNumber * order;
