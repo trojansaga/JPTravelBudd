@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "XMPPFramework.h"
-
+#import "JPDefs.h"
 
 
 @interface JPAppDelegate : UIResponder <UIApplicationDelegate,XMPPStreamDelegate> {
@@ -28,6 +28,12 @@
 @property (strong, nonatomic) XMPPRosterCoreDataStorage *xmppRosterStorage;
 @property (strong, nonatomic) XMPPCapabilities *xmppCapabilities;
 @property (strong, nonatomic) XMPPCapabilitiesCoreDataStorage *xmppCapabilitiesStorage;
+//@property (strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
 
 - (void)setupStream;
 - (void)teardownStream;
@@ -37,5 +43,7 @@
 
 - (BOOL)connect;
 - (void)disconnect;
+
+-(void)sendDataHttp:(NSArray *)objects keyForDic:(NSArray *)keys urlString:(NSString *)urlStr setDelegate:(id)delegate;
 
 @end

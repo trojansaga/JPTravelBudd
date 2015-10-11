@@ -4,8 +4,10 @@
 <dict>
 	<key>application-identifier</key>
 	<string>ECS4AL7A73.MC-Corporation.TravelBudd</string>
-	<key>com.apple.developer.default-data-protection</key>
-	<string>NSFileProtectionComplete</string>
+	<key>aps-environment</key>
+	<string>development</string>
+	<key>com.apple.developer.team-identifier</key>
+	<string>ECS4AL7A73</string>
 	<key>get-task-allow</key>
 	<true/>
 	<key>keychain-access-groups</key>

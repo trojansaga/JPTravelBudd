@@ -4,41 +4,97 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>AppIcon40x40@2x.png</key>
+		<data>
+		T6ukn3ecotdktClArH381/4skZo=
+		</data>
+		<key>AppIcon60x60@2x.png</key>
+		<data>
+		obsEA1vyNFGhe443H+DsI54+dwc=
+		</data>
 		<key>Assets.car</key>
 		<data>
-		ppP2MyN7Wbfo/LGXvHpHuSHd4lw=
+		4XmdDvGoCWju2Xg1k1Dm8uzQ3Sw=
+		</data>
+		<key>ClCell.nib</key>
+		<data>
+		RwrQPOSzAnKArxB6eCKVJ5YuOKc=
+		</data>
+		<key>CollectionNib.nib</key>
+		<data>
+		OL0ZJy99r9doDrpDhnBM8g+TuJ0=
+		</data>
+		<key>JPChatContentCellTableViewCell.nib</key>
+		<data>
+		D0DPJb0WMKRTkANk3Oiu3mJb2wQ=
+		</data>
+		<key>JPChatContentCellTableViewCellForMe.nib</key>
+		<data>
+		8NyCWJuxmJXJtvKTy3N9C/wOClw=
 		</data>
 		<key>JPChatViewController.nib</key>
 		<data>
-		Bg6hfndD7sZnOPpklunrR9C3/Hs=
+		ajrZUY3UHPu/qU5VDcluRrDtwLU=
 		</data>
 		<key>JPChattingRoomViewController.nib</key>
 		<data>
-		z+oOP9uro6Dcco6uektEw0w9ksY=
+		DuuJfesRh/NuURAHUUwSGHhfzxA=
+		</data>
+		<key>JPJoinViewController.nib</key>
+		<data>
+		OE6MP9jFIHBHGeQhBWM4SC0qhrA=
 		</data>
 		<key>JPLoginViewController.nib</key>
 		<data>
-		Eu+gi7el8zsw7K621SD9z/r4d7c=
+		LDiPc78m4X13XUOEvUt0399WV7k=
 		</data>
 		<key>JPMakeChatRoomViewController.nib</key>
 		<data>
-		jLo/vcdduqFspJ+jSaABTnfHjw0=
+		r9U+P/feDNWCJ/9NS8D3skamFxA=
+		</data>
+		<key>JPMapCreationViewController.nib</key>
+		<data>
+		Jb2PdqyVgqfXWP32Qm4jSHS4Ctc=
+		</data>
+		<key>JPMapListCell.nib</key>
+		<data>
+		V8SEwgBHz10CfoQ1WO1HiQB5E8o=
+		</data>
+		<key>JPMapListViewController.nib</key>
+		<data>
+		S0qxZxmbUoPtuhlaWEuo+HycS0U=
 		</data>
 		<key>JPMapViewController.nib</key>
 		<data>
-		iRtTAH0jSI6S318bA9VIOUgV3hs=
+		Ld+QyN/Y80UQtMv+EJM/irBKCHk=
+		</data>
+		<key>JPPinInfoView.nib</key>
+		<data>
+		BEi/lPYaF7H55a45GW9VPNtKSx8=
 		</data>
 		<key>JPSettingViewController.nib</key>
 		<data>
-		JGUPjYRS4SxBFPdVzBmttKhhdoo=
+		mZKrr1bCqPg1GxmShwhbbYMueFM=
 		</data>
 		<key>JPTabbarController.nib</key>
 		<data>
-		vN73sJks/WB8FgOSXnvwMaa2wcI=
+		W5irW7BZZsJDnTFxDWIl4xy/HgM=
 		</data>
 		<key>LaunchImage-700-568h@2x.png</key>
 		<data>
-		V1VdV48TyrImURVWCaose9yz87E=
+		c6iIYnKPuGhFrqzzRKjRPs3YJGo=
+		</data>
+		<key>LaunchImage-700@2x.png</key>
+		<data>
+		aGH1mY6rL+tG5ZNtFKEe5wGVEyQ=
+		</data>
+		<key>MapTableViewCell.nib</key>
+		<data>
+		InkDf385zrdP8iXlm8tNN/B2GZw=
+		</data>
+		<key>Model.momd/Model.mom</key>
+		<data>
+		D4Uar6DtYZQwxlpM7KEJ2Keb+PY=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -58,7 +114,7 @@
 		</data>
 		<key>XMPPMessageArchiving.momd/XMPPMessageArchiving.omo</key>
 		<data>
-		47dySEapWedvdR/VudK3UdBa+Wg=
+		whB0JSt1UjrSpIDBoeaIBZWHuBA=
 		</data>
 		<key>XMPPRoom.momd/XMPPRoom.mom</key>
 		<data>
@@ -66,7 +122,7 @@
 		</data>
 		<key>XMPPRoom.momd/XMPPRoom.omo</key>
 		<data>
-		gPK+TbgvRGklvWGdK89wqVtuyuI=
+		wfbHwfIJvzJQmd5/88cSuNoMHKo=
 		</data>
 		<key>XMPPRoomHybrid.momd/XMPPRoomHybrid.mom</key>
 		<data>
@@ -74,7 +130,7 @@
 		</data>
 		<key>XMPPRoomHybrid.momd/XMPPRoomHybrid.omo</key>
 		<data>
-		MW9MxVPYWgeloIw+KbDcNl0wblc=
+		6uPFAbX1ioIG3m9UXawovgRJWM0=
 		</data>
 		<key>XMPPRoster.mom</key>
 		<data>
@@ -86,7 +142,7 @@
 		</data>
 		<key>XMPPvCard.momd/XMPPvCard.omo</key>
 		<data>
-		3ADROltMR7ppbcAvNrHt70V3acQ=
+		Xi3oq0ZWPsgz2z7SPfrolJHkJEY=
 		</data>
 		<key>build-libidn.sh</key>
 		<data>
@@ -94,50 +150,114 @@
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		FseTBAXXCJB0KTXlLqrAHB1G2MY=
+		NHtE9V9xv9I6EyLnSXWvQBt+Fis=
 		</data>
 		<key>en.lproj/InfoPlist.strings</key>
 		<data>
 		zmV6UqBSo6r1NOz798vd5O4zTBA=
+		</data>
+		<key>img.jpg</key>
+		<data>
+		RhV980AjXfhjwx5SboVpqRezhOU=
+		</data>
+		<key>titleView.nib</key>
+		<data>
+		2gNUYdwd9Ehs1ycZo1sdqU625Qo=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>AppIcon40x40@2x.png</key>
+		<data>
+		T6ukn3ecotdktClArH381/4skZo=
+		</data>
+		<key>AppIcon60x60@2x.png</key>
+		<data>
+		obsEA1vyNFGhe443H+DsI54+dwc=
+		</data>
 		<key>Assets.car</key>
 		<data>
-		ppP2MyN7Wbfo/LGXvHpHuSHd4lw=
+		4XmdDvGoCWju2Xg1k1Dm8uzQ3Sw=
+		</data>
+		<key>ClCell.nib</key>
+		<data>
+		RwrQPOSzAnKArxB6eCKVJ5YuOKc=
+		</data>
+		<key>CollectionNib.nib</key>
+		<data>
+		OL0ZJy99r9doDrpDhnBM8g+TuJ0=
+		</data>
+		<key>JPChatContentCellTableViewCell.nib</key>
+		<data>
+		D0DPJb0WMKRTkANk3Oiu3mJb2wQ=
+		</data>
+		<key>JPChatContentCellTableViewCellForMe.nib</key>
+		<data>
+		8NyCWJuxmJXJtvKTy3N9C/wOClw=
 		</data>
 		<key>JPChatViewController.nib</key>
 		<data>
-		Bg6hfndD7sZnOPpklunrR9C3/Hs=
+		ajrZUY3UHPu/qU5VDcluRrDtwLU=
 		</data>
 		<key>JPChattingRoomViewController.nib</key>
 		<data>
-		z+oOP9uro6Dcco6uektEw0w9ksY=
+		DuuJfesRh/NuURAHUUwSGHhfzxA=
+		</data>
+		<key>JPJoinViewController.nib</key>
+		<data>
+		OE6MP9jFIHBHGeQhBWM4SC0qhrA=
 		</data>
 		<key>JPLoginViewController.nib</key>
 		<data>
-		Eu+gi7el8zsw7K621SD9z/r4d7c=
+		LDiPc78m4X13XUOEvUt0399WV7k=
 		</data>
 		<key>JPMakeChatRoomViewController.nib</key>
 		<data>
-		jLo/vcdduqFspJ+jSaABTnfHjw0=
+		r9U+P/feDNWCJ/9NS8D3skamFxA=
+		</data>
+		<key>JPMapCreationViewController.nib</key>
+		<data>
+		Jb2PdqyVgqfXWP32Qm4jSHS4Ctc=
+		</data>
+		<key>JPMapListCell.nib</key>
+		<data>
+		V8SEwgBHz10CfoQ1WO1HiQB5E8o=
+		</data>
+		<key>JPMapListViewController.nib</key>
+		<data>
+		S0qxZxmbUoPtuhlaWEuo+HycS0U=
 		</data>
 		<key>JPMapViewController.nib</key>
 		<data>
-		iRtTAH0jSI6S318bA9VIOUgV3hs=
+		Ld+QyN/Y80UQtMv+EJM/irBKCHk=
+		</data>
+		<key>JPPinInfoView.nib</key>
+		<data>
+		BEi/lPYaF7H55a45GW9VPNtKSx8=
 		</data>
 		<key>JPSettingViewController.nib</key>
 		<data>
-		JGUPjYRS4SxBFPdVzBmttKhhdoo=
+		mZKrr1bCqPg1GxmShwhbbYMueFM=
 		</data>
 		<key>JPTabbarController.nib</key>
 		<data>
-		vN73sJks/WB8FgOSXnvwMaa2wcI=
+		W5irW7BZZsJDnTFxDWIl4xy/HgM=
 		</data>
 		<key>LaunchImage-700-568h@2x.png</key>
 		<data>
-		V1VdV48TyrImURVWCaose9yz87E=
+		c6iIYnKPuGhFrqzzRKjRPs3YJGo=
+		</data>
+		<key>LaunchImage-700@2x.png</key>
+		<data>
+		aGH1mY6rL+tG5ZNtFKEe5wGVEyQ=
+		</data>
+		<key>MapTableViewCell.nib</key>
+		<data>
+		InkDf385zrdP8iXlm8tNN/B2GZw=
+		</data>
+		<key>Model.momd/Model.mom</key>
+		<data>
+		D4Uar6DtYZQwxlpM7KEJ2Keb+PY=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -157,7 +277,7 @@
 		</data>
 		<key>XMPPMessageArchiving.momd/XMPPMessageArchiving.omo</key>
 		<data>
-		47dySEapWedvdR/VudK3UdBa+Wg=
+		whB0JSt1UjrSpIDBoeaIBZWHuBA=
 		</data>
 		<key>XMPPRoom.momd/XMPPRoom.mom</key>
 		<data>
@@ -165,7 +285,7 @@
 		</data>
 		<key>XMPPRoom.momd/XMPPRoom.omo</key>
 		<data>
-		gPK+TbgvRGklvWGdK89wqVtuyuI=
+		wfbHwfIJvzJQmd5/88cSuNoMHKo=
 		</data>
 		<key>XMPPRoomHybrid.momd/XMPPRoomHybrid.mom</key>
 		<data>
@@ -173,7 +293,7 @@
 		</data>
 		<key>XMPPRoomHybrid.momd/XMPPRoomHybrid.omo</key>
 		<data>
-		MW9MxVPYWgeloIw+KbDcNl0wblc=
+		6uPFAbX1ioIG3m9UXawovgRJWM0=
 		</data>
 		<key>XMPPRoster.mom</key>
 		<data>
@@ -185,7 +305,7 @@
 		</data>
 		<key>XMPPvCard.momd/XMPPvCard.omo</key>
 		<data>
-		3ADROltMR7ppbcAvNrHt70V3acQ=
+		Xi3oq0ZWPsgz2z7SPfrolJHkJEY=
 		</data>
 		<key>build-libidn.sh</key>
 		<data>
@@ -193,11 +313,19 @@
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		FseTBAXXCJB0KTXlLqrAHB1G2MY=
+		NHtE9V9xv9I6EyLnSXWvQBt+Fis=
 		</data>
 		<key>en.lproj/InfoPlist.strings</key>
 		<data>
 		zmV6UqBSo6r1NOz798vd5O4zTBA=
+		</data>
+		<key>img.jpg</key>
+		<data>
+		RhV980AjXfhjwx5SboVpqRezhOU=
+		</data>
+		<key>titleView.nib</key>
+		<data>
+		2gNUYdwd9Ehs1ycZo1sdqU625Qo=
 		</data>
 	</dict>
 	<key>rules</key>

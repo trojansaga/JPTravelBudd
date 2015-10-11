@@ -1,8 +1,9 @@
 {
   "images" : [
     {
-      "idiom" : "iphone",
       "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "Icon-Spotlight-iOS7.png",
       "scale" : "2x"
     },
     {
@@ -11,8 +12,13 @@
       "scale" : "3x"
     },
     {
+<<<<<<< HEAD
       "idiom" : "iphone",
+=======
+>>>>>>> release
       "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "Icon-Spotlight-iOS7@2x.png",
       "scale" : "2x"
     },
     {
@@ -21,8 +27,13 @@
       "scale" : "3x"
     },
     {
+<<<<<<< HEAD
       "idiom" : "iphone",
+=======
+>>>>>>> release
       "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "Icon-120.png",
       "scale" : "2x"
     },
     {

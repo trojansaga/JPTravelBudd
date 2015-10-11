@@ -23,8 +23,8 @@
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/DDASLLogger.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/JPChatViewController.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPResourceCoreDataStorageObject.o
-/Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/JPChattingController.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPStream.o
+/Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/MapRecord.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/NSString+DDXML.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/ContextFilterLogFormatter.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPGoogleSharedStatus.o
@@ -32,6 +32,7 @@
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPRoomMessageHybridCoreDataStorageObject.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPAnonymousAuthentication.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/NSXMLElement+XMPP.o
+/Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/JPChatContentCellTableViewCellForMe.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPCapsCoreDataStorageObject.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPvCardTempLabel.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/NSXMLElement+XEP_0203.o
@@ -47,9 +48,11 @@
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPElement.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPRoom-60ACA98686E870.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPvCardTempAdrTypes.o
+/Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/ChatRecord.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/NSXMLElement+XEP_0335.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/GCDMulticastDelegate.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPIQ.o
+/Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/PinRecord.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPDigestMD5Authentication.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPCapabilities-2CB5A3CDE77E9D6B.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPMessageDeliveryReceipts.o
@@ -58,13 +61,16 @@
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/DDFileLogger.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPIQ+XEP_0066.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XEP_0223.o
+/Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/JPMapListCell.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPPresence+XEP_0172.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPUserCoreDataStorageObject.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/JPSettingViewController.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/DDList.o
+/Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/JPChatContentCellTableViewCell.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPvCardTemp.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPMessage+XEP_0184.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPModule.o
+/Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/JPMapAnnotation.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPJID.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPGroupCoreDataStorageObject.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPMessage.o
@@ -74,6 +80,7 @@
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPSoftwareVersion.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPPlainAuthentication.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/DDXMLElement.o
+/Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/JPChattingRoomMapViewController.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPBlocking.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPMessage+XEP_0085.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPPubSub.o
@@ -88,6 +95,7 @@
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/JPChattingRoomViewController.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPResultSet.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPCapsResourceCoreDataStorageObject.o
+/Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/JPPinInfoView.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPvCardAvatarModule.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPRoomMessageMemoryStorageObject.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPRoomCoreDataStorage.o
@@ -116,7 +124,9 @@
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPJabberRPCModule.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPvCardCoreDataStorage.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPIDTracker.o
+/Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/JPMapListViewController.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/NSXMLElement+XEP_0297.o
+/Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/JPJoinViewController.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPMessageArchiving_Contact_CoreDataObject.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPSCRAMSHA1Authentication.o
 /Users/trojansaga/Dev/TravelBudd/DerivedData/TravelBudd/Build/Intermediates/TravelBudd.build/Debug-iphonesimulator/TravelBudd.build/Objects-normal/i386/XMPPXFacebookPlatformAuthentication.o

@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JPMapViewController.h"
+//#import "JPMapViewController.h"
+#import "JPMapListViewController.h"
 #import "JPChatViewController.h"
 #import "JPSettingViewController.h"
 
 @interface JPTabbarController : UITabBarController {
-    JPMapViewController     *mapViewController;
+//    JPMapViewController     *mapViewController;
+    JPMapListViewController *mapListViewController;
     JPChatViewController    *chatViewController;
     JPSettingViewController *settingViewController;
 }

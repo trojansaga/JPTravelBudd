@@ -7,21 +7,42 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JPConnectionDelegateObject.h"
+#import "JPChattingRoomViewController.h"
 
-@interface JPChatViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NSURLConnectionDataDelegate> {
+#import "JPAppDelegate.h"
+#import <CoreLocation/CoreLocation.h>
+
+@class JPJoinViewController;
+
+@interface JPChatViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NSURLConnectionDataDelegate, CLLocationManagerDelegate> {
     IBOutlet UITableView *chatRoomListTableView;
     int numOfChatRooms;
-    NSArray *chatRoomListArray;
+    int numOfJoinedRooms;
+    
+    NSMutableArray *chatRoomListArray;
+    NSArray *joinedChatRoomListArray;
 
-    JPConnectionDelegateObject *jpConnectionDelegate;
+    JPAppDelegate *appDelegate;
+
+    
+    UIActivityIndicatorView *indicator;
+    JPChattingRoomViewController *chattingRoomViewController;
+    JPJoinViewController *joinViewController;
+
+    CLLocationManager *locationManager;
+    IBOutlet UILabel *tempLabel;
+    
+    NSMutableArray *nearMembersArray;
+    
     
     
 }
 //@property (nonatomic, strong) JPConnectionDelegateObject *jpConnectionDelegate;
 
 
--(void)sendDataHttp:(NSArray *)objects keyForDic:(NSArray *)keys urlString:(NSString *)urlStr delegate:(id) delegate;
+//-(void)sendDataHttp:(NSArray *)objects keyForDic:(NSArray *)keys urlString:(NSString *)urlStr delegate:(id) delegate;
+
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 
 @end

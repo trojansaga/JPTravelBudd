@@ -10,4 +10,10 @@
 
 @interface JPSettingViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UITextField *idTextField;
+@property (nonatomic, strong) IBOutlet UITextField *pwTextField;
+@property (nonatomic, strong) IBOutlet UITextView *textViewForIntroduction;
+@property (nonatomic, strong) IBOutlet UISwitch *switchForAutoLogin;
+
+
 @end

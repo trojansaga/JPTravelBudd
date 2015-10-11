@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13F34" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="BudgetRecord" syncable="YES">
+        <attribute name="b_Budget" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="b_Description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="b_Location" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ChatRecord" representedClassName="ChatRecord" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fromWhere" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fromWho" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MapRecord" representedClassName="MapRecord" syncable="YES">
+        <attribute name="m_FinishDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="m_Image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="m_MapTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="m_Mid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="m_Owner" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="m_SavedLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="m_SavedLatitudeDelta" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="m_SavedLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="m_SavedLongitudeDelta" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="m_StartDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="m_TotalBudget" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="pins" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PinRecord" inverseName="map" inverseEntity="PinRecord" syncable="YES"/>
+    </entity>
+    <entity name="PinRecord" representedClassName="PinRecord" syncable="YES">
+        <attribute name="p_Budget" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="p_Description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="p_FinishDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="p_Latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="p_Longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="p_Order" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="p_Pid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="p_StartDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="p_Title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="map" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MapRecord" inverseName="pins" inverseEntity="MapRecord" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BudgetRecord" positionX="-272" positionY="-72" width="128" height="88"/>
+        <element name="ChatRecord" positionX="-56" positionY="167" width="128" height="103"/>
+        <element name="MapRecord" positionX="-279" positionY="53" width="137" height="223"/>
+        <element name="PinRecord" positionX="-56" positionY="-81" width="128" height="193"/>
+    </elements>
+</model>
