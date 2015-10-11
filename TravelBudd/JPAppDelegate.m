@@ -33,8 +33,40 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+
+//- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+//    NSLog(@"Remote Notification Received: %@", userInfo);
+//    UILocalNotification *notification = [[UILocalNotification alloc] init];
+//    notification.alertBody = @"message to be displayed";
+//    notification.applicationIconBadgeNumber = 1;
+//    
+//    
+//    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+//    completionHandler(UIBackgroundFetchResultNewData);
+//}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+//    if (launchOptions != nil)
+//	{
+//		NSDictionary *dictionary = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+//		if (dictionary != nil)
+//		{
+//			NSLog(@"Launched from push notification: %@", dictionary);
+//		}
+//	}
+    
+    NSLog(@"--------------------------------------------------");
+//    if (launchOptions != nil)
+//	{
+//		NSDictionary *dictionary = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+//		if (dictionary != nil)
+//		{
+//			NSLog(@"Launched from push notification: %@", dictionary);
+//		}
+//	}
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
@@ -46,7 +78,26 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     [self.window makeKeyAndVisible];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-        
+    
+   
+    
+    
+    //APNS
+    NSDictionary *userInfo = [launchOptions objectForKey:
+                              UIApplicationLaunchOptionsRemoteNotificationKey];
+    
+    if(userInfo != nil)
+    {
+        [self application:application didFinishLaunchingWithOptions:userInfo];
+    }
+    
+    NSLog(@"APNS REGISTER");
+    // APNS에 디바이스를 등록한다.
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+     UIRemoteNotificationTypeAlert|
+     UIRemoteNotificationTypeBadge|
+     UIRemoteNotificationTypeSound];
+
     return YES;
 }
 
@@ -56,29 +107,175 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
+    NSLog(@"resign active");
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
+    NSLog(@"enter background");
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
+    NSLog(@"enter foreground");
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+    NSLog(@"become active");
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
+    NSLog(@"terminated");
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - APNS
+
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSMutableString *deviceId = [NSMutableString string];
+    const unsigned char* ptr = (const unsigned char*) [deviceToken bytes];
+    
+    for(int i = 0 ; i < 32 ; i++)
+    {
+        [deviceId appendFormat:@"%02x", ptr[i]];
+    }
+    NSLog(@"APNS Device Token: %@", deviceId);
+    [[NSUserDefaults standardUserDefaults] setObject:deviceId forKey:@"deviceId"];
+    
+}
+
+- (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {
+    NSLog(@"APNS FAILED");
+}
+
+-(void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    NSLog(@"instead this method, %@", userInfo);
+    
+    NSString *displayName = [userInfo objectForKey:@"from"];
+    NSString *body = [userInfo objectForKey:@"msg"];
+    NSString *where = [userInfo objectForKey:@"cr_id"];
+
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.alertAction = @"Ok";
+    localNotification.alertBody = [NSString stringWithFormat:@"%@:%@",displayName,body];
+    localNotification.applicationIconBadgeNumber = 0;
+
+    
+    [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
+
+    ChatRecord *record = [NSEntityDescription insertNewObjectForEntityForName:@"ChatRecord" inManagedObjectContext:_managedObjectContext];
+    [record setBody:body];
+    [record setFromWho:displayName];
+    [record setFromWhere:where];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yyyy.MM.dd.HH.mm.ss";
+    NSString *date = [formatter stringFromDate:[NSDate date]];
+    
+    [record setTimeStamp:date];
+    
+    
+    NSLog(@"body = %@", body);
+    NSLog(@"where = %@", where);
+    NSLog(@"who = %@", displayName);
+    NSLog(@"date = %@", date);
+    
+    [_managedObjectContext save:nil];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"newMsgArrival" object:nil];
+//    completionHandler(UIBackgroundFetchResultNewData);
+    completionHandler(UIBackgroundFetchResultNoData);
+    
+}
+
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+//    completionHandler(UIBackgroundFetchResultNewData);
+
+//    {“msg” : “메시지" , “cr_id” : “메시지를 보낸 방 이름", “from” : “메시지를 보낸사람"}
+    
+//    NSString *string = [NSString stringWithFormat:@"%@", userInfo];
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+////                                                    message:string delegate:nil
+//                                                    message:@"msg received" delegate:nil
+//                                          cancelButtonTitle:@"OK"
+//                                          otherButtonTitles:nil];
+//    [alert show];
+    
+    NSString *displayName = [userInfo objectForKey:@"from"];
+    NSString *body = [userInfo objectForKey:@"msg"];
+    NSString *where = [userInfo objectForKey:@"cr_id"];
+
+    NSLog(@"%li", [[UIApplication sharedApplication] applicationState]);
+    
+    if ([[UIApplication sharedApplication] applicationState] == UIApplicationStateActive)
+    {
+        NSLog(@"active");
+        
+     NSLog(@"name : %@ , body : %@", displayName, body);
+     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:displayName
+                                                         message:body
+                                                        delegate:nil
+                                               cancelButtonTitle:@"Ok"
+                                               otherButtonTitles:nil];
+     [alertView show];
+
+//        UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+//        localNotification.alertAction = @"Ok";
+//        localNotification.alertBody = [NSString stringWithFormat:@"%@,%@",displayName,body];
+//        
+//        [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
+        
+        
+
+        ChatRecord *record = [NSEntityDescription insertNewObjectForEntityForName:@"ChatRecord" inManagedObjectContext:_managedObjectContext];
+        [record setBody:body];
+        [record setFromWho:displayName];
+        [record setFromWhere:where];
+        
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = @"yyyy.MM.dd.HH.mm.ss";
+        NSString *date = [formatter stringFromDate:[NSDate date]];
+        
+        [record setTimeStamp:date];
+        
+        
+        NSLog(@"body = %@", body);
+        NSLog(@"where = %@", where);
+        NSLog(@"who = %@", displayName);
+        NSLog(@"date = %@", date);
+        
+        [_managedObjectContext save:nil];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"newMsgArrival" object:nil];
+        
+        
+    }
+    else
+    {
+        NSLog(@"non-active");        
+//        // We are not active, so use a local notification instead
+//        UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+//        localNotification.alertAction = @"Ok";
+//        localNotification.alertBody = [NSString stringWithFormat:@"%@,%@",displayName,body];
+//        
+//        [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
+    }
+    
+    
+    
+    
 }
 
 
@@ -135,7 +332,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     XMPPPresence *presence = [XMPPPresence presence];
     NSString *domain = [_xmppStream.myJID domain];
     if ([domain isEqualToString:@"54.199.143.8"]) {
-        NSLog(@"ok, domain : 54.199.143.8");
+        NSLog(@"DOMAIN : 54.199.143.8");
     }
     [[self xmppStream] sendElement:presence];
 }

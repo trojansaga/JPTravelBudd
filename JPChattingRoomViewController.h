@@ -58,6 +58,8 @@
     MKRoute *theRoute;
     MKRoute *routeData;
     
+    UIDatePicker *datePicker;
+    
 }
 @property (nonatomic, strong) NSString *chatRoomTitle;
 @property (nonatomic, strong) NSArray *joinedMemberListArray;

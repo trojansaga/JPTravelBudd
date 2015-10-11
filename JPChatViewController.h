@@ -32,6 +32,8 @@
     CLLocationManager *locationManager;
     IBOutlet UILabel *tempLabel;
     
+    NSMutableArray *nearMembersArray;
+    
     
     
 }

@@ -136,6 +136,18 @@
 //    [_viewForMoreButtons setFrame:CGRectMake(_viewForMoreButtons.frame.origin.x, _viewForMoreButtons.frame.origin.y, 320, self.view.frame.size.height + self.navigationController.navigationBar.frame.size.height)];
 //    _roomMapView.frame = CGRectMake(_roomMapView.frame.origin.x, _roomMapView.frame.origin.y, 320, _viewForMoreButtons.frame.size.height);
 
+    
+    
+    //tabGR for date picker
+    
+    UITapGestureRecognizer *tapGRforStartDate = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPickerForStartDate)];
+    UITapGestureRecognizer *tapGRforFinishDate = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPickerForFinishDate)];
+    
+    labelForPinStartDate.userInteractionEnabled = YES;
+    labelForPinFinishDate.userInteractionEnabled = YES;
+    [labelForPinStartDate addGestureRecognizer:tapGRforStartDate];
+    [labelForPinFinishDate addGestureRecognizer:tapGRforFinishDate];
+
 
 }
 
@@ -330,6 +342,22 @@
 
 }
 
+- (IBAction)refreshMap:(id)sender {
+    //map connection
+    
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@",URL_FOR_RETREIVE_MAPDATA_WITHOUT_ROOMID, _cr_id_room];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    //    NSDictionary *dic = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+    //    NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:0 error:nil];
+    
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPMethod:@"GET"];
+    //    [request setHTTPBody:data];
+    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    [conn start];
+}
+
 - (IBAction)pinEdit:(id)sender{
 
     BOOL isFound = NO;
@@ -337,16 +365,20 @@
     NSString *order = textFieldForPinOrder.text;
     for (JPMapAnnotation *anno in [_roomMapView annotations]) {
         if ([anno.order isEqualToNumber:[NSNumber numberWithInt:[order intValue]]]) {
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+
             NSLog(@"edited");
             NSLog(@"%@,%@", anno.order, textFieldForPinOrder.text);
             anno.title = textFieldForPinTitle.text;
             anno.order = [NSNumber numberWithInt:[textFieldForPinOrder.text intValue]];
             anno.subtitle = textFieldForPinDesc.text;
             anno.budget = [NSNumber numberWithInt:[textFieldForPinBudget.text intValue]];
+            anno.startDate = [dateFormatter dateFromString:labelForPinStartDate.text];
+            anno.finishDate = [dateFormatter dateFromString:labelForPinFinishDate.text];
+            
             isFound = YES;
             
-            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-            dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
             
             NSArray *data = @[
                               anno.title,
@@ -538,6 +570,116 @@
 //    }
 }
 
+- (void) showPickerForStartDate {
+    //    NSLog(@"show picker");
+//    [self hideKeyboard];
+    
+    labelForPinFinishDate.backgroundColor = [UIColor whiteColor];
+    labelForPinStartDate.backgroundColor = [UIColor yellowColor];
+//    pinFinishDateLabel.backgroundColor = [UIColor whiteColor];
+//    pinStartDateLabel.backgroundColor = [UIColor yellowColor];
+    
+    [datePicker removeFromSuperview];
+    
+    
+    datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 0, 320, 216)];
+    [datePicker addTarget:self action:@selector(changeStartDate) forControlEvents:UIControlEventValueChanged];
+    
+    [self.view addSubview:datePicker];
+    datePicker.frame = CGRectMake(0, self.view.frame.size.height - datePicker.frame.size.height, self.view.frame.size.width, datePicker.frame.size.height);
+    datePicker.backgroundColor = [UIColor whiteColor];
+    
+    self.tabBarController.tabBar.hidden = YES;
+    
+    //    UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+    //    numberToolbar.barStyle = UIBarStyleBlackTranslucent;
+    //    numberToolbar.items = [NSArray arrayWithObjects:
+    //                           [[UIBarButtonItem alloc] initWithTitle:@"title" style:UIBarButtonSystemItemDone target:self action:@selector(removePicker)],
+    //                           [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil],
+    //                         nil];
+    //    [numberToolbar sizeToFit];
+    //
+    //    [datePicker addSubview:numberToolbar];
+    //    [numberToolbar setFrame:CGRectMake(0, datePicker.frame.size.height-numberToolbar.frame.size.height, numberToolbar.frame.size.width, numberToolbar.frame.size.height)];
+    
+    
+    
+    
+    //    //action sheet
+    //    UIActionSheet *actionSheet = [[UIActionSheet alloc]
+    //                             initWithTitle:nil
+    //                             delegate:self
+    //                             cancelButtonTitle:nil
+    //                             destructiveButtonTitle:nil
+    //                             otherButtonTitles:nil, nil];
+    //    datePicker.datePickerMode = UIDatePickerModeDateAndTime;
+    //    UIToolbar *datePickerToolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    //    datePickerToolBar.barStyle = UIBarStyleDefault;
+    //    [datePickerToolBar sizeToFit];
+    //    NSMutableArray *barItems = [[NSMutableArray alloc] init];
+    //    UIBarButtonItem *btnDone = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonItemStyleDone target:self action:@selector(removePicker)];
+    //    [barItems addObject:btnDone];
+    //
+    //    [actionSheet addSubview:datePickerToolBar];
+    //    [actionSheet addSubview:datePicker];
+    //
+    //    [actionSheet showInView:self.view];
+    //    [actionSheet setBounds:CGRectMake(0, 0, 320, 500)];
+    
+    
+    
+}
+
+- (void) showPickerForFinishDate {
+    
+//    [self hideKeyboard];
+    
+    labelForPinFinishDate.backgroundColor = [UIColor yellowColor];
+    labelForPinStartDate.backgroundColor = [UIColor whiteColor];
+    
+    [datePicker removeFromSuperview];
+    
+    if ([labelForPinStartDate.text isEqualToString:@"touch here"]) {
+        [self showPickerForStartDate];
+        return;
+    }
+    
+    datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 0, 320, 216)];
+    [datePicker addTarget:self action:@selector(changeFinishDate) forControlEvents:UIControlEventValueChanged];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    
+    
+    NSDate *startDate = [formatter dateFromString:labelForPinStartDate.text];
+    datePicker.date = startDate;
+    datePicker.minimumDate = startDate;
+    datePicker.maximumDate = [NSDate dateWithTimeInterval:60*60*24*7 sinceDate:startDate];
+    
+    //    NSLog(@"min: %@, max: %@", [formatter stringFromDate:startDate], [formatter stringFromDate:datePicker.maximumDate]);
+    datePicker.minuteInterval = 5;
+    
+    [self.view addSubview:datePicker];
+    datePicker.frame = CGRectMake(0, self.view.frame.size.height - datePicker.frame.size.height, self.view.frame.size.width, datePicker.frame.size.height);
+    datePicker.backgroundColor = [UIColor whiteColor];
+    
+    self.tabBarController.tabBar.hidden = YES;
+    
+}
+
+- (void)changeStartDate {
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    labelForPinStartDate.text = [NSString stringWithFormat:@"%@",
+                              [dateFormat stringFromDate:datePicker.date]];
+}
+
+- (void)changeFinishDate {
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    labelForPinFinishDate.text = [NSString stringWithFormat:@"%@",
+                               [dateFormat stringFromDate:datePicker.date]];
+}
 
 #pragma mark - UI
 
@@ -548,6 +690,10 @@
     [textFieldForPinOrder resignFirstResponder];
     [textFieldForPinDesc resignFirstResponder];
     [textFieldForPinBudget resignFirstResponder];
+    
+    [datePicker removeFromSuperview];
+    labelForPinFinishDate.backgroundColor = [UIColor whiteColor];
+    labelForPinStartDate.backgroundColor = [UIColor whiteColor];
 //    _viewForMoreButtons.alpha = 0;
 }
 
@@ -564,6 +710,7 @@
     [UIView setAnimationCurve:[curve intValue]];
     if([notification name] == UIKeyboardWillShowNotification)
     {
+        
         [self.view setFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y - keyboardBounds.size.height, self.view.frame.size.width, self.view.frame.size.height)];
     }
     else if([notification name] == UIKeyboardWillHideNotification)
@@ -580,8 +727,13 @@
 }
 
 - (void) showViewForMoreInfo {
+
+//    [self resignKeyboard];
+//    NSNotification *noti = [[NSNotification alloc] initWithName:UIKeyboardDidHideNotification object:nil userInfo:nil];
+//    [self keyboardWillAnimate:noti];
     if (_viewForMoreInfo.hidden == YES) {
         _viewForMoreInfo.hidden = NO;
+
 
     }
     else {
@@ -944,6 +1096,8 @@
         [_roomMapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake(lat, lng), MKCoordinateSpanMake(latDelta, lngDelta))];
         
         //set pins
+        [_roomMapView removeAnnotations:[_roomMapView annotations]];
+        
         pinsArr = [mapDataDic objectForKey:@"pins"];
         for (NSDictionary *pin in pinsArr) {
             JPMapAnnotation *anno = [[JPMapAnnotation alloc] init];

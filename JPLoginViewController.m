@@ -86,12 +86,14 @@
     
     NSArray *dataArr = @[
                          xmppJID,
-                         textFieldForPW.text
+                         textFieldForPW.text,
+                         [[NSUserDefaults standardUserDefaults] objectForKey:@"deviceId"]
                          ];
     
     NSArray *keyArr = @[
                         @"member_email",
-                        @"member_password"
+                        @"member_password",
+                        @"device_token"
                         ];
     
     

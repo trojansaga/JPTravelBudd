@@ -13,7 +13,6 @@
 
 #import <CoreLocation/CoreLocation.h>
 
-
 @interface JPChatViewController ()
 
 @end
@@ -80,6 +79,7 @@
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
+    [self showNearMembers];
 }
 
 - (void)viewDidLoad
@@ -133,7 +133,7 @@
 
     
     chatRoomListArray = [[NSMutableArray alloc] init];
-
+    nearMembersArray = [[NSMutableArray alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -143,6 +143,22 @@
 }
 
 #pragma mark - Private Func
+
+- (void) showNearMembers {
+    NSArray *data = @[
+                      [NSNumber numberWithDouble:[[NSUserDefaults standardUserDefaults] doubleForKey:@"CL_lat"]],
+                      [NSNumber numberWithDouble:[[NSUserDefaults standardUserDefaults] doubleForKey:@"CL_lng"]],
+                      [[NSUserDefaults standardUserDefaults] objectForKey:@"M_ID"],
+                      ];
+    NSArray *key = @[
+                     @"ml_latitude",
+                     @"ml_longitude",
+                     @"ml_m_id"
+                     ];
+    
+    
+    [appDelegate sendDataHttp:data keyForDic:key urlString:URL_FOR_RETREIVE_USERS_IN_10KM setDelegate:self];
+}
 
 - (IBAction)reloadTableView:(id)sender {
     //total list
@@ -300,7 +316,12 @@
 
 
     }
-    
+    else if ([responseType isEqualToString:@"Get NearMember"]) {
+        NSLog(@"Users within 10km");
+        nearMembersArray = [dic objectForKey:@"data"];
+        [chatRoomListTableView reloadData];        
+
+    }
     else if ([responseType isEqualToString:@"Deactivate ChatRoom Member"]) {
         NSLog(@"채팅방 탈퇴하기 성공");
     }
@@ -323,7 +344,7 @@
 #pragma mark - TableView delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 3;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -332,6 +353,9 @@
     }
     if (section == 1) {
         return @"Not Joined Rooms";
+    }
+    if (section == 2) {
+        return @"Near Members (<10km)";
     }
     else
         return @"Defaults";
@@ -345,14 +369,20 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
+    
+    if (indexPath.section == 2) {
+        cell.textLabel.text = [[nearMembersArray objectAtIndex:indexPath.row] objectForKey:@"member_name"];
+    }
 
+    cell.backgroundColor = [UIColor whiteColor];
     //joined
     if (indexPath.section == 0) {
         cell.textLabel.text = [[joinedChatRoomListArray objectAtIndex:indexPath.row] objectForKey:@"chat_room_name"];
         
         NSString *maker = [[[joinedChatRoomListArray objectAtIndex:indexPath.row] objectForKey:@"chat_room_maker"] stringValue];
         NSString *me = [[NSUserDefaults standardUserDefaults] objectForKey:@"M_ID"];
-        NSLog(@"maker %@ , me %@", maker, me);
+        NSString *roomName = [[joinedChatRoomListArray objectAtIndex:indexPath.row] objectForKey:@"chat_room_name"];
+        NSLog(@"roomname: %@, maker %@ , me %@", roomName, maker, me);
         
         if ([maker isEqualToString:me]) {
 
@@ -388,6 +418,9 @@
     if (section == 1) {
         return numOfChatRooms;
     
+    }
+    if (section == 2) {
+        return [nearMembersArray count];
     }
     return 10;
 }
